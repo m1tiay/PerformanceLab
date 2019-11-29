@@ -1,0 +1,6 @@
+"-----------------------------7e339b381c0af0\r\n"
+"Content-Disposition: form-data; name=\"files\"; filename=\"temp.txt\"\r\n"
+"Content-Type: text/plain\r\n"
+"\r\n"
+"\r\n"
+"-----------------------------7e339b381c0af0--\r\n"

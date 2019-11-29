@@ -1,0 +1,922 @@
+{
+  "FilterHeaders": [
+    {
+      "Header": "x-requested-with",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "user-agent",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "ua-cpu",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "origin",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "if-modified-since",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "cache-control",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept-language",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept-encoding",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept",
+      "IncludeInScript": false
+    }
+  ],
+  "FilterResources": [
+    {
+      "IsNonResource": true,
+      "type": "text/html"
+    },
+    {
+      "IsNonResource": false,
+      "type": "text/css"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/png"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/vnd.ms-fontobject"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/octet-stream"
+    },
+    {
+      "IsNonResource": true,
+      "type": "application/json"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/javascript"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/font-woff"
+    }
+  ],
+  "GeneralInfo": {
+    "BrowserVersion": "",
+    "IsWinInetMode": false,
+    "MaxUsedConnections": 10,
+    "RecordedBrowser": "Internet Explorer",
+    "RecordingDate": "РЅРѕСЏ-25-2019",
+    "RecordingDuration": 285906,
+    "RecordingMode": "N/A",
+    "RecordingTimeStamp": 1574681806,
+    "RecordingType": "Browser",
+    "TotalBytesReceived": 2619341,
+    "TotalBytesSent": 56920,
+    "TotalRequests": 88,
+    "UserAgent": "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"
+  },
+  "HostInfo": [
+    {
+      "DomainName": "pflb.ru",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "94.159.69.182",
+          "IncludeInScript": true,
+          "Name": "learning2.pflb.ru",
+          "Port": 56902,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 16,
+              "EventId": 548,
+              "HttpStatus": 200,
+              "Size": 873,
+              "URL": "http://learning2.pflb.ru:56902/login"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 63,
+              "EventId": 546,
+              "HttpStatus": 204,
+              "Size": 0,
+              "URL": "http://learning2.pflb.ru:56902/api/logout"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 969,
+              "EventId": 540,
+              "HttpStatus": 200,
+              "Size": 8261,
+              "URL": "http://learning2.pflb.ru:56902/api/ticket/?state=-1,0,1,5&page=0&size=10"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 579,
+              "EventId": 537,
+              "HttpStatus": 200,
+              "Size": 8261,
+              "URL": "http://learning2.pflb.ru:56902/api/ticket/?state=-1,0,1,5&page=0&size=10"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 15,
+              "EventId": 534,
+              "HttpStatus": 200,
+              "Size": 214,
+              "URL": "http://learning2.pflb.ru:56902/api/ticket/countByState/"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 0,
+              "EventId": 530,
+              "HttpStatus": 200,
+              "Size": 17498,
+              "URL": "http://learning2.pflb.ru:56902/engineer/tickets/tickets.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 0,
+              "EventId": 528,
+              "HttpStatus": 200,
+              "Size": 720,
+              "URL": "http://learning2.pflb.ru:56902/engineer/tickets/tickets.dust"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 16,
+              "EventId": 526,
+              "HttpStatus": 200,
+              "Size": 214,
+              "URL": "http://learning2.pflb.ru:56902/api/ticket/countByState/"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 0,
+              "EventId": 523,
+              "HttpStatus": 200,
+              "Size": 17498,
+              "URL": "http://learning2.pflb.ru:56902/engineer/tickets/tickets.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 47,
+              "EventId": 521,
+              "HttpStatus": 200,
+              "Size": 720,
+              "URL": "http://learning2.pflb.ru:56902/engineer/tickets/tickets.dust"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 16,
+              "EventId": 518,
+              "HttpStatus": 200,
+              "Size": 52,
+              "URL": "http://learning2.pflb.ru:56902/api/ticket/countByState/4"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 15,
+              "EventId": 513,
+              "HttpStatus": 200,
+              "Size": 34579,
+              "URL": "http://learning2.pflb.ru:56902/engineer/wrapper/wrapper.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 16,
+              "EventId": 509,
+              "HttpStatus": 200,
+              "Size": 20031,
+              "URL": "http://learning2.pflb.ru:56902/engineer/wrapper/wrapper.dust"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 0,
+              "EventId": 506,
+              "HttpStatus": 200,
+              "Size": 277,
+              "URL": "http://learning2.pflb.ru:56902/api/user/info"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 15,
+              "EventId": 503,
+              "HttpStatus": 200,
+              "Size": 92,
+              "URL": "http://learning2.pflb.ru:56902/api/checkLogin"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 0,
+              "EventId": 498,
+              "HttpStatus": 200,
+              "Size": 43891,
+              "URL": "http://learning2.pflb.ru:56902/js/core/jqueryformplugin.js?_=1574682076792"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 16,
+              "EventId": 486,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "http://learning2.pflb.ru:56902/"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 1141,
+              "EventId": 482,
+              "HttpStatus": 200,
+              "Size": 1118,
+              "URL": "http://learning2.pflb.ru:56902/api/ticket/"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 531,
+              "EventId": 479,
+              "HttpStatus": 200,
+              "Size": 465,
+              "URL": "http://learning2.pflb.ru:56902/api/ticket/file/"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 15,
+              "EventId": 471,
+              "HttpStatus": 200,
+              "Size": 235,
+              "URL": "http://learning2.pflb.ru:56902/api/inventoryNumbers?shopId=5&serviceId=2786&serviceId=2786&q=&page=0"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 47,
+              "EventId": 468,
+              "HttpStatus": 200,
+              "Size": 235,
+              "URL": "http://learning2.pflb.ru:56902/api/inventoryNumbers?serviceId=2786&shopId=5"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 15,
+              "EventId": 459,
+              "HttpStatus": 200,
+              "Size": 235,
+              "URL": "http://learning2.pflb.ru:56902/api/inventoryNumbers?serviceId=2782&shopId=5"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 31,
+              "EventId": 456,
+              "HttpStatus": 200,
+              "Size": 6254,
+              "URL": "http://learning2.pflb.ru:56902/engineer/addticket.dust"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 15,
+              "EventId": 453,
+              "HttpStatus": 200,
+              "Size": 214,
+              "URL": "http://learning2.pflb.ru:56902/api/user/catalog/breadcrumbs/146"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 16,
+              "EventId": 450,
+              "HttpStatus": 200,
+              "Size": 3225,
+              "URL": "http://learning2.pflb.ru:56902/api/user/catalog/node/146/service/"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 0,
+              "EventId": 447,
+              "HttpStatus": 200,
+              "Size": 2,
+              "URL": "http://learning2.pflb.ru:56902/api/user/catalog/node/146/children/"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 441,
+              "HttpStatus": 200,
+              "Size": 63526,
+              "URL": "http://learning2.pflb.ru:56902/engineer/catalog/catalog.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 16,
+              "EventId": 439,
+              "HttpStatus": 200,
+              "Size": 510,
+              "URL": "http://learning2.pflb.ru:56902/engineer/catalog/catalog.dust"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 234,
+              "EventId": 426,
+              "HttpStatus": 200,
+              "Size": 75659,
+              "URL": "http://learning2.pflb.ru:56902/api/user/catalog/treeview?shopid=5"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 15,
+              "EventId": 423,
+              "HttpStatus": 200,
+              "Size": 907,
+              "URL": "http://learning2.pflb.ru:56902/api/user/catalog/node/0/children/"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 219,
+              "EventId": 420,
+              "HttpStatus": 200,
+              "Size": 1015,
+              "URL": "http://learning2.pflb.ru:56902/api/shops?q=&page=0"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 15,
+              "EventId": 379,
+              "HttpStatus": 200,
+              "Size": 158478,
+              "URL": "http://learning2.pflb.ru:56902/images/logo-5ka.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 31,
+              "EventId": 370,
+              "HttpStatus": 200,
+              "Size": 907,
+              "URL": "http://learning2.pflb.ru:56902/api/user/catalog/node/0/children/"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 0,
+              "EventId": 362,
+              "HttpStatus": 200,
+              "Size": 63526,
+              "URL": "http://learning2.pflb.ru:56902/engineer/catalog/catalog.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 31,
+              "EventId": 360,
+              "HttpStatus": 200,
+              "Size": 510,
+              "URL": "http://learning2.pflb.ru:56902/engineer/catalog/catalog.dust"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 1140,
+              "EventId": 351,
+              "HttpStatus": 200,
+              "Size": 13190,
+              "URL": "http://learning2.pflb.ru:56902/api/ticket/?state=-1,0,1,5&page=0&size=10"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 15,
+              "EventId": 348,
+              "HttpStatus": 200,
+              "Size": 214,
+              "URL": "http://learning2.pflb.ru:56902/api/ticket/countByState/"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 15,
+              "EventId": 345,
+              "HttpStatus": 200,
+              "Size": 17498,
+              "URL": "http://learning2.pflb.ru:56902/engineer/tickets/tickets.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 0,
+              "EventId": 343,
+              "HttpStatus": 200,
+              "Size": 720,
+              "URL": "http://learning2.pflb.ru:56902/engineer/tickets/tickets.dust"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/font-woff",
+              "DownloadTime": 15,
+              "EventId": 337,
+              "HttpStatus": 200,
+              "Size": 57620,
+              "URL": "http://learning2.pflb.ru:56902/css/fonts/material_icons/MaterialIcons-Regular.woff"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 15,
+              "EventId": 334,
+              "HttpStatus": 200,
+              "Size": 52,
+              "URL": "http://learning2.pflb.ru:56902/api/ticket/countByState/4"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 330,
+              "HttpStatus": 200,
+              "Size": 34579,
+              "URL": "http://learning2.pflb.ru:56902/engineer/wrapper/wrapper.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 15,
+              "EventId": 326,
+              "HttpStatus": 200,
+              "Size": 20031,
+              "URL": "http://learning2.pflb.ru:56902/engineer/wrapper/wrapper.dust"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 0,
+              "EventId": 323,
+              "HttpStatus": 200,
+              "Size": 277,
+              "URL": "http://learning2.pflb.ru:56902/api/user/info"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 16,
+              "EventId": 320,
+              "HttpStatus": 200,
+              "Size": 92,
+              "URL": "http://learning2.pflb.ru:56902/api/checkLogin"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 315,
+              "HttpStatus": 200,
+              "Size": 43891,
+              "URL": "http://learning2.pflb.ru:56902/js/core/jqueryformplugin.js?_=1574681863393"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 306,
+              "HttpStatus": 200,
+              "Size": 26591,
+              "URL": "http://learning2.pflb.ru:56902/js/core/materialTable.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 304,
+              "HttpStatus": 200,
+              "Size": 8369,
+              "URL": "http://learning2.pflb.ru:56902/js/core/polyphills.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 301,
+              "HttpStatus": 200,
+              "Size": 2015,
+              "URL": "http://learning2.pflb.ru:56902/js/core/helpers.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 299,
+              "HttpStatus": 200,
+              "Size": 9274,
+              "URL": "http://learning2.pflb.ru:56902/js/index.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 293,
+              "HttpStatus": 200,
+              "Size": 2295,
+              "URL": "http://learning2.pflb.ru:56902/js/core/custom-helpers.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 15,
+              "EventId": 290,
+              "HttpStatus": 200,
+              "Size": 15055,
+              "URL": "http://learning2.pflb.ru:56902/js/core/materialize-select.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 15,
+              "EventId": 288,
+              "HttpStatus": 200,
+              "Size": 11281,
+              "URL": "http://learning2.pflb.ru:56902/js/core/materialize-pagination.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 283,
+              "HttpStatus": 200,
+              "Size": 160001,
+              "URL": "http://learning2.pflb.ru:56902/js/core/materialize.min.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 279,
+              "HttpStatus": 200,
+              "Size": 12540,
+              "URL": "http://learning2.pflb.ru:56902/js/core/dust-helpers.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 15,
+              "EventId": 270,
+              "HttpStatus": 200,
+              "Size": 3406,
+              "URL": "http://learning2.pflb.ru:56902/js/core/readmore.min.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 46,
+              "EventId": 267,
+              "HttpStatus": 200,
+              "Size": 35688,
+              "URL": "http://learning2.pflb.ru:56902/js/core/jquery.uploadfile.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 78,
+              "EventId": 263,
+              "HttpStatus": 200,
+              "Size": 1657,
+              "URL": "http://learning2.pflb.ru:56902/css/core/uploadfile.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 261,
+              "HttpStatus": 200,
+              "Size": 75005,
+              "URL": "http://learning2.pflb.ru:56902/js/core/select2.full.min.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 259,
+              "HttpStatus": 200,
+              "Size": 1326,
+              "URL": "http://learning2.pflb.ru:56902/js/core/jquery.ee.router.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 62,
+              "EventId": 256,
+              "HttpStatus": 200,
+              "Size": 136870,
+              "URL": "http://learning2.pflb.ru:56902/css/core/materialize.min.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 0,
+              "EventId": 253,
+              "HttpStatus": 200,
+              "Size": 4313,
+              "URL": "http://learning2.pflb.ru:56902/js/core/jquery.maskedinput.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 0,
+              "EventId": 250,
+              "HttpStatus": 200,
+              "Size": 9342,
+              "URL": "http://learning2.pflb.ru:56902/js/core/clamp.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 0,
+              "EventId": 248,
+              "HttpStatus": 200,
+              "Size": 3622,
+              "URL": "http://learning2.pflb.ru:56902/css/company_2.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 0,
+              "EventId": 245,
+              "HttpStatus": 200,
+              "Size": 23302,
+              "URL": "http://learning2.pflb.ru:56902/css/core/quill.snow.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 0,
+              "EventId": 243,
+              "HttpStatus": 200,
+              "Size": 848,
+              "URL": "http://learning2.pflb.ru:56902/css/core/ee-file-upload.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 15,
+              "EventId": 241,
+              "HttpStatus": 200,
+              "Size": 15196,
+              "URL": "http://learning2.pflb.ru:56902/css/core/select2.min.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 16,
+              "EventId": 239,
+              "HttpStatus": 200,
+              "Size": 1909,
+              "URL": "http://learning2.pflb.ru:56902/"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 360,
+              "EventId": 237,
+              "HttpStatus": 200,
+              "Size": 146,
+              "URL": "http://learning2.pflb.ru:56902/api/login"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 16,
+              "EventId": 132,
+              "HttpStatus": 200,
+              "Size": 16219,
+              "URL": "http://learning2.pflb.ru:56902/favicon.ico"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/vnd.ms-fontobject",
+              "DownloadTime": 204,
+              "EventId": 120,
+              "HttpStatus": 200,
+              "Size": 20966,
+              "URL": "http://learning2.pflb.ru:56902/css/fonts/roboto/Roboto-Bold.eot?"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/vnd.ms-fontobject",
+              "DownloadTime": 235,
+              "EventId": 115,
+              "HttpStatus": 200,
+              "Size": 21659,
+              "URL": "http://learning2.pflb.ru:56902/css/fonts/roboto/Roboto-Thin.eot?"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 31,
+              "EventId": 113,
+              "HttpStatus": 200,
+              "Size": 187417,
+              "URL": "http://learning2.pflb.ru:56902/images/logo_2.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/vnd.ms-fontobject",
+              "DownloadTime": 203,
+              "EventId": 107,
+              "HttpStatus": 200,
+              "Size": 21364,
+              "URL": "http://learning2.pflb.ru:56902/css/fonts/roboto/Roboto-Medium.eot?"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/vnd.ms-fontobject",
+              "DownloadTime": 203,
+              "EventId": 105,
+              "HttpStatus": 200,
+              "Size": 21320,
+              "URL": "http://learning2.pflb.ru:56902/css/fonts/roboto/Roboto-Regular.eot?"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/vnd.ms-fontobject",
+              "DownloadTime": 203,
+              "EventId": 103,
+              "HttpStatus": 200,
+              "Size": 20940,
+              "URL": "http://learning2.pflb.ru:56902/css/fonts/roboto/Roboto-Light.eot?"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 47,
+              "EventId": 101,
+              "HttpStatus": 200,
+              "Size": 1590,
+              "URL": "http://learning2.pflb.ru:56902/tpl/login/login.dust"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 93,
+              "EventId": 62,
+              "HttpStatus": 200,
+              "Size": 49195,
+              "URL": "http://learning2.pflb.ru:56902/css/style.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 32,
+              "EventId": 55,
+              "HttpStatus": 200,
+              "Size": 3989,
+              "URL": "http://learning2.pflb.ru:56902/js/page/authorisation.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 41,
+              "HttpStatus": 200,
+              "Size": 346444,
+              "URL": "http://learning2.pflb.ru:56902/js/core/materialize.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 46,
+              "EventId": 39,
+              "HttpStatus": 200,
+              "Size": 267194,
+              "URL": "http://learning2.pflb.ru:56902/js/core/jquery-3.1.1.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 36,
+              "HttpStatus": 200,
+              "Size": 3121,
+              "URL": "http://learning2.pflb.ru:56902/js/core/jquery.cookie.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 34,
+              "HttpStatus": 200,
+              "Size": 162626,
+              "URL": "http://learning2.pflb.ru:56902/js/core/dust.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 47,
+              "EventId": 26,
+              "HttpStatus": 200,
+              "Size": 177560,
+              "URL": "http://learning2.pflb.ru:56902/css/core/materialize.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 24,
+              "HttpStatus": 200,
+              "Size": 438,
+              "URL": "http://learning2.pflb.ru:56902/js/core/legacy.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 32,
+              "EventId": 22,
+              "HttpStatus": 200,
+              "Size": 1201,
+              "URL": "http://learning2.pflb.ru:56902/css/core/material_icons.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 32,
+              "EventId": 12,
+              "HttpStatus": 200,
+              "Size": 873,
+              "URL": "http://learning2.pflb.ru:56902/login"
+            }
+          ],
+          "SSLCipher": "None",
+          "SSLVersion": "None"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "microsoft.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "204.79.197.200",
+          "IncludeInScript": true,
+          "Name": "ieonline.microsoft.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 78,
+              "EventId": 416,
+              "HttpStatus": 200,
+              "Size": 16808,
+              "URL": "https://ieonline.microsoft.com/iedomainsuggestions/ie11/suggestions.ru-RU"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES256-GCM-SHA384",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    }
+  ],
+  "WebSocket": {
+    "IncludeInScript": false,
+    "IsScriptIncludeWebSocket": false
+  },
+  "NumberOfCorrelations": 0
+}

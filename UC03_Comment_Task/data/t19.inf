@@ -1,0 +1,17 @@
+[t19]
+FileName1=t19_4.json
+URL1=http://learning2.pflb.ru:56902/api/ticket/countByState/4
+Total=4
+ContentType=application/json
+SnapshotXmlFile=snapshot_19.xml
+RequestHeaderFile=t19_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t19_ResponseHeader.txt
+FileName2=t19_MaterialIcons-Regular.html
+URL2=http://learning2.pflb.ru:56902/css/fonts/material_icons/MaterialIcons-Regular.woff
+FileName3=t19_tickets.html
+URL3=http://learning2.pflb.ru:56902/engineer/tickets/tickets.dust
+FileName4=t19_tickets.html
+URL4=http://learning2.pflb.ru:56902/engineer/tickets/tickets.js
+[ProtocolInfo]
+ProtocolId=QTWeb

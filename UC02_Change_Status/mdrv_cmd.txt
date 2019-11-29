@@ -1,0 +1,1 @@
+-usr "C:\Users\student\XDesk\UC02_Change_Status\UC02_Change_Status.usr" -compile_only -out "C:\Users\student\XDesk\UC02_Change_Status\" -drv_log_file "C:\Users\student\XDesk\UC02_Change_Status\mdrv.log" -cfg "C:\Users\student\XDesk\UC02_Change_Status\default.cfg" -product_name vugen
