@@ -80,9 +80,9 @@ public class Actions{
 	}
 	
     public int database_query(String SQL_QUERY) {
-       String url = "jdbc:oracle:thin:@{Host_Name}:{Port}:orcl";
+       String url = "jdbc:oracle:thin:@192.168.14.53:1522:orcl";
 
-       try (Connection connection = DriverManager.getConnection(url, "{Login}", "{Password}"); 
+       try (Connection connection = DriverManager.getConnection(url, "c##x5", "c##x5"); 
             Statement statement = connection.createStatement()) {
             	lr.log_message("JDBC Connection Successful");
             	connection.setAutoCommit(false);
