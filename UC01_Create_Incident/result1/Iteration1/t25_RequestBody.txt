@@ -1,3 +1,0 @@
-"{"text":"DTelekhin test description test description test description test description","heade"
-"r":"Посадка кустарников","ticketStateId":0,"serviceId":"2873","files":[4995]"
-","inventoryNumberId":"","shopId":"2"}"

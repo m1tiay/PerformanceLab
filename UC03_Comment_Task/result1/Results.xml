@@ -135,7 +135,7 @@
 <Res><![CDATA[result1]]></Res>
 <Action rID="T2">
 <AName><![CDATA[vuser_init]]></AName>
-<Summary sTime="28.11.2019 - 18:47:08" eTime="28.11.2019 - 18:47:08" passed="0" failed="0" warnings="0" ></Summary>
+<Summary sTime="02.12.2019 - 14:38:31" eTime="02.12.2019 - 14:38:31" passed="0" failed="0" warnings="0" ></Summary>
 <NodeArgs eType="StartAction" icon="2" nRep="5" >
 <Disp><![CDATA[vuser_init Summary]]></Disp>
 </NodeArgs>
@@ -146,8 +146,8 @@
 <Step rID="T5">
 <Obj plainTxt="False" ><![CDATA[Url: login]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:09]]></Time>
-<TimeTick>1574956029</TimeTick>
+<Time><![CDATA[02.12.2019 - 14:38:32]]></Time>
+<TimeTick>1575286712</TimeTick>
 <NodeArgs eType="General" icon="4" nRep="9" status="Passed" >
 <Disp><![CDATA[Url: login]]></Disp>
 <BtmPane vType="HTMLSNSH" >
@@ -156,312 +156,219 @@
 </NodeArgs>
 </Step>
 <Step rID="T6">
-<Obj plainTxt="False" ><![CDATA[Service: Add Header]]></Obj>
-<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to the next HTTP request :<BR><STRONG><FONT COLOR=#00AF00>X-Requested-With: XMLHttpRequest</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:09]]></Time>
-<TimeTick>1574956029</TimeTick>
-<NodeArgs eType="General" icon="5" nRep="10" >
-<Disp><![CDATA[Service: Add Header]]></Disp>
-</NodeArgs>
-</Step>
-<Step rID="T7">
 <Obj plainTxt="False" ><![CDATA[Submit Data: login_2]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:09]]></Time>
-<TimeTick>1574956029</TimeTick>
-<NodeArgs eType="General" icon="6" nRep="11" status="Passed" >
+<Time><![CDATA[02.12.2019 - 14:38:32]]></Time>
+<TimeTick>1575286712</TimeTick>
+<NodeArgs eType="General" icon="5" nRep="10" status="Passed" >
 <Disp><![CDATA[Submit Data: login_2]]></Disp>
 </NodeArgs>
 </Step>
-<Step rID="T8">
-<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
-<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>currentCompany=0; DOMAIN=learning2.pflb.ru</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:09]]></Time>
-<TimeTick>1574956029</TimeTick>
-<NodeArgs eType="General" icon="7" nRep="12" >
-<Disp><![CDATA[Service: Add Cookie]]></Disp>
-</NodeArgs>
-</Step>
-<Step rID="T9">
-<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
-<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>currentUser=master; DOMAIN=learning2.pflb.ru</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:09]]></Time>
-<TimeTick>1574956029</TimeTick>
-<NodeArgs eType="General" icon="7" nRep="13" >
-<Disp><![CDATA[Service: Add Cookie]]></Disp>
-</NodeArgs>
-</Step>
-<Step rID="T10">
-<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
-<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>PFLB.pre.login.link=null; DOMAIN=learning2.pflb.ru</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:09]]></Time>
-<TimeTick>1574956029</TimeTick>
-<NodeArgs eType="General" icon="7" nRep="14" >
-<Disp><![CDATA[Service: Add Cookie]]></Disp>
-</NodeArgs>
-</Step>
-<Step rID="T11">
-<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
-<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>filterSetting=%7B%22page%22%3A%22http%3A%2F%2Flearning2.pflb.ru%3A56902%2F%23tickets%3Fstate%3Dopened%26page%3D1%22%2C%22smho%22%3Anull%2C%22dateStart%22%3A%22%22%2C%22dateEnd%22%3A%22%22%2C%22cat1%22%3Anull%2C%22cat2%22%3Anull%2C%22cat3%22%3Anull%2C%22cat4%22%3Anull%2C%22theme%22%3Anull%2C%22engineer%22%3Anull%2C%22location%22%3Anull%2C%22division%22%3Anull%2C%22overdue%22%3Afalse%2C%22filters%22%3A%7B%22newCheckbox%22%3Atrue%2C%22appointedCheckbox%22%3Atrue%2C%22performedCheckbox%22%3Atrue%2C%22controlCheckbox%22%3Atrue%7D%7D; DOMAIN=learning2.pflb.ru</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:09]]></Time>
-<TimeTick>1574956029</TimeTick>
-<NodeArgs eType="General" icon="7" nRep="15" >
-<Disp><![CDATA[Service: Add Cookie]]></Disp>
-</NodeArgs>
-</Step>
-<Step rID="T12">
-<Obj plainTxt="False" ><![CDATA[Url: {Host_Name}:{Port}]]></Obj>
+<Step rID="T7">
+<Obj plainTxt="False" ><![CDATA[Url: Host_Name:Port]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:09]]></Time>
-<TimeTick>1574956029</TimeTick>
-<NodeArgs eType="General" icon="4" nRep="16" status="Passed" >
-<Disp><![CDATA[Url: {Host_Name}:{Port}]]></Disp>
+<Time><![CDATA[02.12.2019 - 14:38:33]]></Time>
+<TimeTick>1575286713</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="11" status="Passed" >
+<Disp><![CDATA[Url: Host_Name:Port]]></Disp>
 <BtmPane vType="HTMLSNSH" >
 <Path><![CDATA[\Iteration1\t3.inf]]></Path>
 </BtmPane>
 </NodeArgs>
 </Step>
-<Step rID="T13">
-<Obj plainTxt="False" ><![CDATA[Service: Add Auto Header]]></Obj>
-<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to all subsequent HTTP requests :<BR><STRONG><FONT COLOR=#00AF00>X-Requested-With: XMLHttpRequest</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:09]]></Time>
-<TimeTick>1574956029</TimeTick>
-<NodeArgs eType="General" icon="8" nRep="17" >
-<Disp><![CDATA[Service: Add Auto Header]]></Disp>
-</NodeArgs>
-</Step>
-<Step rID="T14">
+<Step rID="T8">
 <Obj plainTxt="False" ><![CDATA[Url: checkLogin]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:10]]></Time>
-<TimeTick>1574956030</TimeTick>
-<NodeArgs eType="General" icon="4" nRep="18" status="Passed" >
+<Time><![CDATA[02.12.2019 - 14:38:33]]></Time>
+<TimeTick>1575286713</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="12" status="Passed" >
 <Disp><![CDATA[Url: checkLogin]]></Disp>
 <BtmPane vType="HTMLSNSH" >
 <Path><![CDATA[\Iteration1\t4.inf]]></Path>
 </BtmPane>
 </NodeArgs>
 </Step>
-<Step rID="T15">
+<Step rID="T9">
 <Obj plainTxt="False" ><![CDATA[Url: info]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:10]]></Time>
-<TimeTick>1574956030</TimeTick>
-<NodeArgs eType="General" icon="4" nRep="19" status="Passed" >
+<Time><![CDATA[02.12.2019 - 14:38:33]]></Time>
+<TimeTick>1575286713</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="13" status="Passed" >
 <Disp><![CDATA[Url: info]]></Disp>
 <BtmPane vType="HTMLSNSH" >
 <Path><![CDATA[\Iteration1\t5.inf]]></Path>
 </BtmPane>
 </NodeArgs>
 </Step>
-<Step rID="T16">
+<Step rID="T10">
 <Obj plainTxt="False" ><![CDATA[Url: 4]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:10]]></Time>
-<TimeTick>1574956030</TimeTick>
-<NodeArgs eType="General" icon="4" nRep="20" status="Passed" >
+<Time><![CDATA[02.12.2019 - 14:38:33]]></Time>
+<TimeTick>1575286713</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="14" status="Passed" >
 <Disp><![CDATA[Url: 4]]></Disp>
 <BtmPane vType="HTMLSNSH" >
 <Path><![CDATA[\Iteration1\t6.inf]]></Path>
 </BtmPane>
 </NodeArgs>
 </Step>
-<Step rID="T17">
+<Step rID="T11">
 <Obj plainTxt="False" ><![CDATA[Url: countByState]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:10]]></Time>
-<TimeTick>1574956030</TimeTick>
-<NodeArgs eType="General" icon="4" nRep="21" status="Passed" >
+<Time><![CDATA[02.12.2019 - 14:38:33]]></Time>
+<TimeTick>1575286713</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="15" status="Passed" >
 <Disp><![CDATA[Url: countByState]]></Disp>
 <BtmPane vType="HTMLSNSH" >
 <Path><![CDATA[\Iteration1\t7.inf]]></Path>
 </BtmPane>
 </NodeArgs>
 </Step>
-<Step rID="T18">
+<Step rID="T12">
 <Obj plainTxt="False" ><![CDATA[Custom Request: ticket]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:11]]></Time>
-<TimeTick>1574956031</TimeTick>
-<NodeArgs eType="General" icon="9" nRep="22" status="Passed" >
+<Time><![CDATA[02.12.2019 - 14:38:34]]></Time>
+<TimeTick>1575286714</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="16" status="Passed" >
 <Disp><![CDATA[Custom Request: ticket]]></Disp>
 <BtmPane vType="HTMLSNSH" >
 <Path><![CDATA[\Iteration1\t8.inf]]></Path>
 </BtmPane>
 </NodeArgs>
 </Step>
-<Summary sTime="28.11.2019 - 18:47:08" eTime="28.11.2019 - 18:47:11" passed="8" failed="0" warnings="0" ></Summary>
+<Summary sTime="02.12.2019 - 14:38:31" eTime="02.12.2019 - 14:38:34" passed="8" failed="0" warnings="0" ></Summary>
 <NodeArgs eType="StartAction" icon="2" nRep="8" status="Passed" >
 <Disp><![CDATA[Login Summary]]></Disp>
 </NodeArgs>
 </Action>
-<Action rID="T19">
+<Action rID="T13">
 <AName><![CDATA[Action]]></AName>
-<Step rID="T20">
+<Step rID="T14">
 <Obj plainTxt="False" ><![CDATA[Url: countByState_2]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:11]]></Time>
-<TimeTick>1574956031</TimeTick>
-<NodeArgs eType="General" icon="4" nRep="25" status="Passed" >
+<Time><![CDATA[02.12.2019 - 14:38:35]]></Time>
+<TimeTick>1575286715</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="19" status="Passed" >
 <Disp><![CDATA[Url: countByState_2]]></Disp>
 <BtmPane vType="HTMLSNSH" >
 <Path><![CDATA[\Iteration1\t9.inf]]></Path>
 </BtmPane>
 </NodeArgs>
 </Step>
-<Step rID="T21">
+<Step rID="T15">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param RegExp]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName = <STRONG><FONT COLOR=#00AF00>taskid</FONT></STRONG><BR>RegExp = <STRONG><FONT COLOR=#00AF00>,"parentId":(.+?),"externalId"</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>All</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:11]]></Time>
-<TimeTick>1574956031</TimeTick>
-<NodeArgs eType="General" icon="10" nRep="26" >
+<Time><![CDATA[02.12.2019 - 14:38:35]]></Time>
+<TimeTick>1575286715</TimeTick>
+<NodeArgs eType="General" icon="7" nRep="20" >
 <Disp><![CDATA[Service: Reg Save Param RegExp]]></Disp>
 </NodeArgs>
 </Step>
-<Step rID="T22">
+<Step rID="T16">
 <Obj plainTxt="False" ><![CDATA[Custom Request: task]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:12]]></Time>
-<TimeTick>1574956032</TimeTick>
-<NodeArgs eType="General" icon="9" nRep="27" status="Passed" >
+<Time><![CDATA[02.12.2019 - 14:38:35]]></Time>
+<TimeTick>1575286715</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="21" status="Passed" >
 <Disp><![CDATA[Custom Request: task]]></Disp>
 <BtmPane vType="HTMLSNSH" >
 <Path><![CDATA[\Iteration1\t11.inf]]></Path>
 </BtmPane>
 </NodeArgs>
 </Step>
-<Step rID="T23">
-<Obj plainTxt="False" ><![CDATA[Url: {taskid_rand}]]></Obj>
+<Step rID="T17">
+<Obj plainTxt="False" ><![CDATA[Url: taskid]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:13]]></Time>
-<TimeTick>1574956033</TimeTick>
-<NodeArgs eType="General" icon="4" nRep="28" status="Passed" >
-<Disp><![CDATA[Url: {taskid_rand}]]></Disp>
+<Time><![CDATA[02.12.2019 - 14:38:36]]></Time>
+<TimeTick>1575286716</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="22" status="Passed" >
+<Disp><![CDATA[Url: taskid]]></Disp>
 <BtmPane vType="HTMLSNSH" >
 <Path><![CDATA[\Iteration1\t12.inf]]></Path>
 </BtmPane>
 </NodeArgs>
 </Step>
-<Step rID="T24">
+<Step rID="T18">
 <Obj plainTxt="False" ><![CDATA[Url: checkLogin_2]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:13]]></Time>
-<TimeTick>1574956033</TimeTick>
-<NodeArgs eType="General" icon="4" nRep="29" status="Passed" >
+<Time><![CDATA[02.12.2019 - 14:38:36]]></Time>
+<TimeTick>1575286716</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="23" status="Passed" >
 <Disp><![CDATA[Url: checkLogin_2]]></Disp>
 <BtmPane vType="HTMLSNSH" >
 <Path><![CDATA[\Iteration1\t13.inf]]></Path>
 </BtmPane>
 </NodeArgs>
 </Step>
-<Step rID="T25">
+<Step rID="T19">
 <Obj plainTxt="False" ><![CDATA[Url: comment]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:13]]></Time>
-<TimeTick>1574956033</TimeTick>
-<NodeArgs eType="General" icon="4" nRep="30" status="Passed" >
+<Time><![CDATA[02.12.2019 - 14:38:36]]></Time>
+<TimeTick>1575286716</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="24" status="Passed" >
 <Disp><![CDATA[Url: comment]]></Disp>
 <BtmPane vType="HTMLSNSH" >
 <Path><![CDATA[\Iteration1\t14.inf]]></Path>
 </BtmPane>
 </NodeArgs>
 </Step>
-<Step rID="T26">
-<Obj plainTxt="False" ><![CDATA[Service: Reg Save Param RegExp]]></Obj>
-<Details plainTxt="False" ><![CDATA[<CENTER>ParamName = <STRONG><FONT COLOR=#00AF00>filesid</FONT></STRONG><BR>RegExp = <STRONG><FONT COLOR=#00AF00>"id":(.+?),"name"</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>1</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:13]]></Time>
-<TimeTick>1574956033</TimeTick>
-<NodeArgs eType="General" icon="10" nRep="31" >
-<Disp><![CDATA[Service: Reg Save Param RegExp]]></Disp>
+<Step rID="T20">
+<Obj plainTxt="False" ><![CDATA[Custom Request: comment_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[02.12.2019 - 14:38:37]]></Time>
+<TimeTick>1575286717</TimeTick>
+<NodeArgs eType="General" icon="6" nRep="25" status="Passed" >
+<Disp><![CDATA[Custom Request: comment_2]]></Disp>
+<BtmPane vType="HTMLSNSH" >
+<Path><![CDATA[\Iteration1\t15.inf]]></Path>
+</BtmPane>
 </NodeArgs>
 </Step>
-<Step rID="T27">
-<Obj plainTxt="False" ><![CDATA[Submit Data: file]]></Obj>
+<Step rID="T21">
+<Obj plainTxt="False" ><![CDATA[Url: comment_3]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:13]]></Time>
-<TimeTick>1574956033</TimeTick>
-<NodeArgs eType="General" icon="6" nRep="32" status="Passed" >
-<Disp><![CDATA[Submit Data: file]]></Disp>
+<Time><![CDATA[02.12.2019 - 14:38:38]]></Time>
+<TimeTick>1575286718</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="26" status="Passed" >
+<Disp><![CDATA[Url: comment_3]]></Disp>
 <BtmPane vType="HTMLSNSH" >
 <Path><![CDATA[\Iteration1\t16.inf]]></Path>
 </BtmPane>
 </NodeArgs>
 </Step>
-<Step rID="T28">
-<Obj plainTxt="False" ><![CDATA[Custom Request: comment_2]]></Obj>
+<Summary sTime="02.12.2019 - 14:38:35" eTime="02.12.2019 - 14:38:38" passed="7" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="18" status="Passed" >
+<Disp><![CDATA[Action Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Action rID="T22">
+<AName><![CDATA[Logout]]></AName>
+<Step rID="T23">
+<Obj plainTxt="False" ><![CDATA[Url: logout]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:14]]></Time>
-<TimeTick>1574956034</TimeTick>
-<NodeArgs eType="General" icon="9" nRep="33" status="Passed" >
-<Disp><![CDATA[Custom Request: comment_2]]></Disp>
+<Time><![CDATA[02.12.2019 - 14:38:38]]></Time>
+<TimeTick>1575286718</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="29" status="Passed" >
+<Disp><![CDATA[Url: logout]]></Disp>
 <BtmPane vType="HTMLSNSH" >
 <Path><![CDATA[\Iteration1\t17.inf]]></Path>
 </BtmPane>
 </NodeArgs>
 </Step>
-<Step rID="T29">
-<Obj plainTxt="False" ><![CDATA[Url: comment_3]]></Obj>
+<Step rID="T24">
+<Obj plainTxt="False" ><![CDATA[Url: login_3]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:14]]></Time>
-<TimeTick>1574956034</TimeTick>
-<NodeArgs eType="General" icon="4" nRep="34" status="Passed" >
-<Disp><![CDATA[Url: comment_3]]></Disp>
+<Time><![CDATA[02.12.2019 - 14:38:38]]></Time>
+<TimeTick>1575286718</TimeTick>
+<NodeArgs eType="General" icon="4" nRep="30" status="Passed" >
+<Disp><![CDATA[Url: login_3]]></Disp>
 <BtmPane vType="HTMLSNSH" >
 <Path><![CDATA[\Iteration1\t18.inf]]></Path>
 </BtmPane>
 </NodeArgs>
 </Step>
-<Summary sTime="28.11.2019 - 18:47:11" eTime="28.11.2019 - 18:47:14" passed="8" failed="0" warnings="0" ></Summary>
-<NodeArgs eType="StartAction" icon="2" nRep="24" status="Passed" >
-<Disp><![CDATA[Action Summary]]></Disp>
-</NodeArgs>
-</Action>
-<Action rID="T30">
-<AName><![CDATA[Logout]]></AName>
-<Step rID="T31">
-<Obj plainTxt="False" ><![CDATA[Url: logout]]></Obj>
-<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:14]]></Time>
-<TimeTick>1574956034</TimeTick>
-<NodeArgs eType="General" icon="4" nRep="37" status="Passed" >
-<Disp><![CDATA[Url: logout]]></Disp>
-<BtmPane vType="HTMLSNSH" >
-<Path><![CDATA[\Iteration1\t19.inf]]></Path>
-</BtmPane>
-</NodeArgs>
-</Step>
-<Step rID="T32">
-<Obj plainTxt="False" ><![CDATA[Service: Add Cookie]]></Obj>
-<Details plainTxt="False" ><![CDATA[<CENTER>Add the following cookie: <STRONG><FONT COLOR=#00AF00>sessionExpired=false; DOMAIN=learning2.pflb.ru</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:14]]></Time>
-<TimeTick>1574956034</TimeTick>
-<NodeArgs eType="General" icon="7" nRep="38" >
-<Disp><![CDATA[Service: Add Cookie]]></Disp>
-</NodeArgs>
-</Step>
-<Step rID="T33">
-<Obj plainTxt="False" ><![CDATA[Service: Remove/Revert Auto Header]]></Obj>
-<Details plainTxt="False" ><![CDATA[<CENTER>Remove/revert <BR><STRONG><FONT COLOR=#00AF00>X-Requested-With</FONT></STRONG> header, implicit generation: <STRONG>Yes</STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:14]]></Time>
-<TimeTick>1574956034</TimeTick>
-<NodeArgs eType="General" icon="11" nRep="39" >
-<Disp><![CDATA[Service: Remove/Revert Auto Header]]></Disp>
-</NodeArgs>
-</Step>
-<Step rID="T34">
-<Obj plainTxt="False" ><![CDATA[Url: login_3]]></Obj>
-<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Step completed successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[28.11.2019 - 18:47:14]]></Time>
-<TimeTick>1574956034</TimeTick>
-<NodeArgs eType="General" icon="4" nRep="40" status="Passed" >
-<Disp><![CDATA[Url: login_3]]></Disp>
-<BtmPane vType="HTMLSNSH" >
-<Path><![CDATA[\Iteration1\t20.inf]]></Path>
-</BtmPane>
-</NodeArgs>
-</Step>
-<Summary sTime="28.11.2019 - 18:47:14" eTime="28.11.2019 - 18:47:14" passed="2" failed="0" warnings="0" ></Summary>
-<NodeArgs eType="StartAction" icon="2" nRep="36" status="Passed" >
+<Summary sTime="02.12.2019 - 14:38:38" eTime="02.12.2019 - 14:38:38" passed="2" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="28" status="Passed" >
 <Disp><![CDATA[Logout Summary]]></Disp>
 </NodeArgs>
 </Action>
@@ -469,14 +376,14 @@
 <Disp><![CDATA[UC03_Comment_Task Iteration 1 (Row 1)]]></Disp>
 </NodeArgs>
 </DIter>
-<Action rID="T35">
+<Action rID="T25">
 <AName><![CDATA[vuser_end]]></AName>
-<Summary sTime="28.11.2019 - 18:47:14" eTime="28.11.2019 - 18:47:14" passed="0" failed="0" warnings="0" ></Summary>
-<NodeArgs eType="StartAction" icon="2" nRep="43" >
+<Summary sTime="02.12.2019 - 14:38:38" eTime="02.12.2019 - 14:38:38" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="33" >
 <Disp><![CDATA[vuser_end Summary]]></Disp>
 </NodeArgs>
 </Action>
-<Summary sTime="28.11.2019 - 18:47:06" eTime="28.11.2019 - 18:47:16" passed="18" failed="0" warnings="0" ></Summary>
+<Summary sTime="02.12.2019 - 14:38:30" eTime="02.12.2019 - 14:38:39" passed="17" failed="0" warnings="0" ></Summary>
 <NodeArgs eType="StartTest" icon="1" nRep="4" status="Passed" >
 <Disp><![CDATA[Test UC03_Comment_Task Summary]]></Disp>
 </NodeArgs>

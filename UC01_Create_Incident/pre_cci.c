@@ -2608,26 +2608,14 @@ Login()
 		"RecContentType=text/html", 
 		"Referer=", 
 		"Snapshot=t1.inf", 
-		"Mode=HTML", 
-		"EXTRARES", 
-		"Url=/tpl/login/login.dust", "ENDITEM", 
-		"Url=/css/fonts/roboto/Roboto-Light.eot?", "ENDITEM", 
-		"Url=/css/fonts/roboto/Roboto-Regular.eot?", "ENDITEM", 
-		"Url=/css/fonts/roboto/Roboto-Medium.eot?", "ENDITEM", 
-		"Url=/images/logo_2.png", "ENDITEM", 
-		"Url=/css/fonts/roboto/Roboto-Thin.eot?", "ENDITEM", 
-		"Url=/css/fonts/roboto/Roboto-Bold.eot?", "ENDITEM", 
-		"Url=/favicon.ico", "Referer=", "ENDITEM", 
+		"Mode=HTML",
 		"LAST");
 	
 	lr_end_transaction("UC01_CI01_Home_Page",2);
 
-	lr_start_transaction("UC01_CI02_Login");
-
-	web_add_header("X-Requested-With", 
-		"XMLHttpRequest");
-
 	lr_think_time(5);
+
+	lr_start_transaction("UC01_CI02_Login");
 
 	web_submit_data("login_2", 
 		"Action=http://{Host_Name}:{Port}/api/login", 
@@ -2642,39 +2630,15 @@ Login()
 		"Name=rememberMe", "Value={RememberMe}", "ENDITEM", 
 		"LAST");
 
-	web_add_cookie("currentCompany=0; DOMAIN={Host_Name}");
-
-	web_add_cookie("currentUser=master; DOMAIN={Host_Name}");
-
-	web_add_cookie("PFLB.pre.login.link=null; DOMAIN={Host_Name}");
-
-	web_add_cookie("filterSetting="
-		"%7B%22page%22%3A%22http%3A%2F%2F{Host_Name}%3A{Port}%2F%23tickets%3Fstate%3Dopened%26page%3D1%22%2C%22smho%22%3Anull%2C%22dateStart%22%3A%22%22%2C%22dateEnd%22%3A%22%22%2C%22cat1%22%3Anull%2C%22cat2%22%3Anull%2C%22cat3%22%3Anull%2C%22cat4%22%3Anull%2C%22theme%22%3Anull%2C%22engineer%22%3Anull%2C%22location%22%3Anull%2C%22division%22%3Anull%2C%22overdue%22%3Afalse%2C%22filters%22%3A%7B%22newCheckbox%22%3Atrue%2C%22appointedCheckbox%22%3Atrue%2C%22performedCheckbox%22%3Atrue%2C%22controlCheckbo"
-		"x%22%3Atrue%7D%7D; DOMAIN={Host_Name}");
-
-	web_url("{Host_Name}:{Port}", 
+	web_url("Host_Name:Port", 
 		"URL=http://{Host_Name}:{Port}/", 
 		"TargetFrame=", 
 		"Resource=0", 
 		"RecContentType=text/html", 
 		"Referer=http://{Host_Name}:{Port}/login", 
 		"Snapshot=t3.inf", 
-		"Mode=HTML", 
-		"EXTRARES", 
-		"Url=/js/core/jqueryformplugin.js?_=1574681863393", "ENDITEM", 
-		"Url=/engineer/wrapper/wrapper.dust", "ENDITEM", 
-		"Url=/engineer/wrapper/wrapper.js", "ENDITEM", 
-		"Url=/css/fonts/material_icons/MaterialIcons-Regular.woff", "ENDITEM", 
-		"Url=/engineer/tickets/tickets.dust", "ENDITEM", 
-		"Url=/engineer/tickets/tickets.js", "ENDITEM", 
-		"Url=/engineer/catalog/catalog.dust", "ENDITEM", 
-		"Url=/engineer/catalog/catalog.js", "ENDITEM", 
-		"Url=/images/logo-5ka.png", "ENDITEM", 
-		"Url=/engineer/addticket.dust", "ENDITEM", 
+		"Mode=HTML",
 		"LAST");
-
-	web_add_auto_header("X-Requested-With", 
-		"XMLHttpRequest");
 
 	web_url("checkLogin", 
 		"URL=http://{Host_Name}:{Port}/api/checkLogin", 
@@ -2748,8 +2712,6 @@ Action()
 		"Snapshot=t9.inf", 
 		"Mode=HTML", 
 		"LAST");
-
-	web_set_sockets_option("SSL_VERSION", "TLS1.2");
 
 	lr_end_transaction("UC01_CI03_New_Incident",2);
 
@@ -2825,7 +2787,13 @@ Action()
     	"RegExp=\"id\":(.+?),\"name\"",
     	"Ordinal=All",
 		"LAST" );
-	
+				
+	web_reg_save_param_regexp (
+    	"ParamName=servicename",
+    	"RegExp=\"name\":\"(.+?)\",\"parentId\"",
+    	"Ordinal=All",
+		"LAST" );
+		
 	web_url("service", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/node/{parentid_rand}/service/", 
 		"TargetFrame=", 
@@ -2847,6 +2815,7 @@ Action()
 		"LAST");
 
 	lr_save_string(lr_paramarr_random("serviceid"), "serviceid_rand");
+	lr_save_string(lr_paramarr_random("servicename"), "servicename_rand");
 	
 	web_url("inventoryNumbers", 
 		"URL=http://{Host_Name}:{Port}/api/inventoryNumbers?serviceId={serviceid_rand}&shopid={shopid_rand}", 
@@ -2913,28 +2882,28 @@ Action()
 
 	lr_think_time(5);
 
-	lr_start_transaction("UC01_CI08_Add_File");
-
-	web_reg_save_param_regexp (
-    	"ParamName=filesid",
-    	"RegExp=\"id\":(.+?),\"name\"",
-    	"Ordinal=1",
-		"LAST" );
-	
-	web_submit_data("file", 
-		"Action=http://{Host_Name}:{Port}/api/ticket/file/", 
-		"Method=POST", 
-		"EncType=multipart/form-data", 
-		"TargetFrame=", 
-		"RecContentType=application/json", 
-		"Referer=http://{Host_Name}:{Port}/", 
-		"Snapshot=t19.inf", 
-		"Mode=HTML", 
-		"ITEMDATA", 
-		"Name=files", "Value=userData.txt", "File=Yes", "ENDITEM", 
-		"LAST");
-
-	lr_end_transaction("UC01_CI08_Add_File",2);
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 	lr_think_time(5);
 
@@ -2950,14 +2919,20 @@ Action()
 		"Snapshot=t20.inf", 
 		"Mode=HTML", 
 		"EncType=application/json; charset=utf-8", 
-		"BodyBinary={\"text\":\"DTelekhin {Description}\",\"header\":\"\\xD0\\x9F\\xD0\\xBE\\xD1\\x81\\xD0\\xB0\\xD0\\xB4\\xD0\\xBA\\xD0\\xB0 \\xD0\\xBA\\xD1\\x83\\xD1\\x81\\xD1\\x82\\xD0\\xB0\\xD1\\x80\\xD0\\xBD\\xD0\\xB8\\xD0\\xBA\\xD0\\xBE\\xD0\\xB2\",\"ticketStateId\":0,\"serviceId\":\"{serviceid_rand}\",\"files\":[{filesid}],\"inventoryNumberId\":\"{inventoryid_rand}\",\"shopId\":\"{shopid_rand}\"}", 
+		"BodyBinary={\"text\":\"DTelekhin {Description}\"," 
+		"\"header\":\"{servicename_rand}\"," 
+		"\"ticketStateId\":0," 
+		"\"serviceId\":\"{serviceid_rand}\"," 
+ 
+		"\"inventoryNumberId\":\"{inventoryid_rand}\"," 
+		"\"shopId\":\"{shopid_rand}\"}",
 		"LAST");
 
 	lr_end_transaction("UC01_CI09_Create_inc_and_add_description",2);
 
 	lr_start_transaction("UC01_CI010_Confirm");
 
-	(web_remove_auto_header("X-Requested-With", "ImplicitGen=Yes", "LAST"));
+ 
 
 	lr_think_time(5);
 
@@ -2968,16 +2943,16 @@ Action()
 		"Referer=http://{Host_Name}:{Port}/", 
 		"Snapshot=t21.inf", 
 		"Mode=HTML", 
-		"EXTRARES", 
-		"Url=/js/core/jqueryformplugin.js?_=1574682076792", "ENDITEM", 
-		"Url=/engineer/wrapper/wrapper.dust", "ENDITEM", 
-		"Url=/engineer/wrapper/wrapper.js", "ENDITEM", 
-		"Url=/engineer/tickets/tickets.dust", "ENDITEM", 
-		"Url=/engineer/tickets/tickets.js", "ENDITEM", 
+ 
+ 
+ 
+ 
+ 
+ 
 		"LAST");
 
-	web_add_auto_header("X-Requested-With", 
-		"XMLHttpRequest");
+ 
+ 
 
 	web_url("checkLogin_2", 
 		"URL=http://{Host_Name}:{Port}/api/checkLogin", 
@@ -3075,9 +3050,9 @@ Logout()
 		"Mode=HTML", 
 		"LAST");
 
-	web_add_cookie("sessionExpired=false; DOMAIN={Host_Name}");
+ 
 
-	(web_remove_auto_header("X-Requested-With", "ImplicitGen=Yes", "LAST"));
+ 
 
 	web_url("login_3", 
 		"URL=http://{Host_Name}:{Port}/login", 

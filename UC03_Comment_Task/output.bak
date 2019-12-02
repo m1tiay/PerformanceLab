@@ -1,4 +1,4 @@
-Virtual User Script started at: 28.11.2019 18:46:20
+Virtual User Script started at: 29.11.2019 11:50:48
 Starting action vuser_init.
 Web Turbo Replay of LoadRunner 12.60.0 for Windows 10; build 971 (рту 09 2018 11:27:13)  	[MsgId: MMSG-26983]
 Run mode: HTML  	[MsgId: MMSG-26993]
@@ -31,7 +31,7 @@ Login.c(5): Downloading resource "http://learning2.pflb.ru:56902/css/fonts/robot
 Login.c(5): Downloading resource "http://learning2.pflb.ru:56902/css/fonts/roboto/Roboto-Bold.eot?" (specified by argument number 22)  	[MsgId: MMSG-26577]
 Login.c(5): Downloading resource "http://learning2.pflb.ru:56902/favicon.ico" (specified by argument number 24)  	[MsgId: MMSG-26577]
 Login.c(5): web_url("login") was successful, 1324116 body bytes, 3727 header bytes  	[MsgId: MMSG-26386]
-Login.c(24): Notify: Transaction "UC01_CI01_Home_Page" ended with a "Pass" status (Duration: 0.7637 Wasted Time: 0.1744).
+Login.c(24): Notify: Transaction "UC01_CI01_Home_Page" ended with a "Pass" status (Duration: 0.7301 Wasted Time: 0.1762).
 Login.c(26): Notify: Transaction "UC01_CI02_Login" started.
 Login.c(28): web_add_header("X-Requested-With") started  	[MsgId: MMSG-26355]
 Login.c(28): web_add_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
@@ -126,14 +126,14 @@ Login.c(110): Notify: Parameter Substitution: parameter "Host_Name" =  "learning
 Login.c(110): Notify: Parameter Substitution: parameter "Port" =  "56902"
 Login.c(110): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
 Login.c(110): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Login.c(110): web_url("countByState") was successful, 168 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Login.c(110): web_url("countByState") was successful, 218 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
 Login.c(120): web_custom_request("ticket") started  	[MsgId: MMSG-26355]
 Login.c(120): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
 Login.c(120): Notify: Parameter Substitution: parameter "Port" =  "56902"
 Login.c(120): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
 Login.c(120): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Login.c(120): web_custom_request("ticket") was successful, 13543 body bytes, 316 header bytes, 21 chunking overhead bytes  	[MsgId: MMSG-26385]
-Login.c(132): Notify: Transaction "UC01_CI02_Login" ended with a "Pass" status (Duration: 2.3059 Wasted Time: 0.2178).
+Login.c(120): web_custom_request("ticket") was successful, 11628 body bytes, 316 header bytes, 20 chunking overhead bytes  	[MsgId: MMSG-26385]
+Login.c(132): Notify: Transaction "UC01_CI02_Login" ended with a "Pass" status (Duration: 2.0375 Wasted Time: 0.2011).
 Ending action Login.
 Starting action Action.
 Action.c(4): Notify: Transaction "UC03_CT03_Select_Tasks" started.
@@ -153,27 +153,27 @@ Action.c(22): Notify: Parameter Substitution: parameter "Port" =  "56902"
 Action.c(22): Notify: Saving Parameter "taskid_1 = 149659".
 Action.c(22): Notify: Saving Parameter "taskid_2 = 149645".
 Action.c(22): Notify: Saving Parameter "taskid_3 = 149632".
-Action.c(22): Notify: Saving Parameter "taskid_4 = 149613".
-Action.c(22): Notify: Saving Parameter "taskid_5 = 149600".
-Action.c(22): Notify: Saving Parameter "taskid_6 = 149598".
-Action.c(22): Notify: Saving Parameter "taskid_7 = 149594".
-Action.c(22): Notify: Saving Parameter "taskid_8 = 149584".
-Action.c(22): Notify: Saving Parameter "taskid_9 = 149583".
-Action.c(22): Notify: Saving Parameter "taskid_10 = 149582".
+Action.c(22): Notify: Saving Parameter "taskid_4 = 149600".
+Action.c(22): Notify: Saving Parameter "taskid_5 = 149598".
+Action.c(22): Notify: Saving Parameter "taskid_6 = 149594".
+Action.c(22): Notify: Saving Parameter "taskid_7 = 149583".
+Action.c(22): Notify: Saving Parameter "taskid_8 = 149578".
+Action.c(22): Notify: Saving Parameter "taskid_9 = 149571".
+Action.c(22): Notify: Saving Parameter "taskid_10 = 149569".
 Action.c(22): Notify: Saving Parameter "taskid_count = 10".
-Action.c(22): web_custom_request("task") was successful, 15722 body bytes, 316 header bytes, 21 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(34): Notify: Transaction "UC03_CT03_Select_Tasks" ended with a "Pass" status (Duration: 0.8219 Wasted Time: 0.0757).
+Action.c(22): web_custom_request("task") was successful, 15450 body bytes, 316 header bytes, 21 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(34): Notify: Transaction "UC03_CT03_Select_Tasks" ended with a "Pass" status (Duration: 0.8963 Wasted Time: 0.0674).
 Action.c(36): Notify: Transaction "UC03_CT04_Choose_Task" started.
 Action.c(38): Notify: Parameter Substitution: parameter "taskid_count" =  "10"
-Action.c(38): Notify: Parameter Substitution: parameter "taskid_1" =  "149659"
-Action.c(38): Notify: Saving Parameter "taskid_rand = 149659".
+Action.c(38): Notify: Parameter Substitution: parameter "taskid_9" =  "149571"
+Action.c(38): Notify: Saving Parameter "taskid_rand = 149571".
 Action.c(40): web_url("{taskid_rand}") started  	[MsgId: MMSG-26355]
 Action.c(40): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
 Action.c(40): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(40): Notify: Parameter Substitution: parameter "taskid_rand" =  "149659"
+Action.c(40): Notify: Parameter Substitution: parameter "taskid_rand" =  "149571"
 Action.c(40): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
 Action.c(40): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(40): web_url("{taskid_rand}") was successful, 1282 body bytes, 316 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(40): web_url("{taskid_rand}") was successful, 1479 body bytes, 316 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
 Action.c(50): web_url("checkLogin_2") started  	[MsgId: MMSG-26355]
 Action.c(50): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
 Action.c(50): Notify: Parameter Substitution: parameter "Port" =  "56902"
@@ -183,11 +183,11 @@ Action.c(50): web_url("checkLogin_2") was successful, 92 body bytes, 316 header 
 Action.c(60): web_url("comment") started  	[MsgId: MMSG-26355]
 Action.c(60): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
 Action.c(60): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(60): Notify: Parameter Substitution: parameter "taskid_rand" =  "149659"
+Action.c(60): Notify: Parameter Substitution: parameter "taskid_rand" =  "149571"
 Action.c(60): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
 Action.c(60): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(60): web_url("comment") was successful, 2 body bytes, 316 header bytes, 10 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(70): Notify: Transaction "UC03_CT04_Choose_Task" ended with a "Pass" status (Duration: 0.4339 Wasted Time: 0.0721).
+Action.c(60): web_url("comment") was successful, 250 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(70): Notify: Transaction "UC03_CT04_Choose_Task" ended with a "Pass" status (Duration: 0.6302 Wasted Time: 0.0651).
 Action.c(74): Notify: Transaction "UC03_CT05_Add_file" started.
 Action.c(76): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
 Action.c(76): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
@@ -196,24 +196,59 @@ Action.c(82): Notify: Parameter Substitution: parameter "Host_Name" =  "learning
 Action.c(82): Notify: Parameter Substitution: parameter "Port" =  "56902"
 Action.c(82): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
 Action.c(82): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(82): Notify: Saving Parameter "filesid = 5006".
+Action.c(82): Notify: Saving Parameter "filesid = 5017".
 Action.c(82): web_submit_data("file") was successful, 161 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(95): Notify: Transaction "UC03_CT05_Add_file" ended with a "Pass" status (Duration: 0.1999 Wasted Time: 0.0344).
+Action.c(95): Notify: Transaction "UC03_CT05_Add_file" ended with a "Pass" status (Duration: 0.1910 Wasted Time: 0.0261).
 Action.c(99): Notify: Transaction "UC03_CT06_Comment_and_Send" started.
 Action.c(101): web_custom_request("comment_2") started  	[MsgId: MMSG-26355]
 Action.c(101): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
 Action.c(101): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(101): Notify: Parameter Substitution: parameter "taskid_rand" =  "149659"
+Action.c(101): Notify: Parameter Substitution: parameter "taskid_rand" =  "149571"
 Action.c(101): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
 Action.c(101): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(101): Notify: Parameter Substitution: parameter "Comment" =  "test Comment test Comment test Comment test Comment"
-Action.c(101): Notify: Parameter Substitution: parameter "filesid" =  "5006"
-Action.c(101): Error -26612: HTTP Status-Code=500 (Internal Server Error) for "http://learning2.pflb.ru:56902/api/ticket/149659/comment/"  	[MsgId: MERR-26612]
-Action.c(101): web_custom_request("comment_2") highest severity level was "ERROR", 200 body bytes, 335 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26387]
-Action.c(101): Notify: Transaction "UC03_CT06_Comment_and_Send" ended with a "Fail" status (Duration: 0.5582 Wasted Time: 0.0259).
-Action.c(101): Notify: Transaction "UC03_CT06_Comment_and_Send" has 1 error message(s).
-Action.c(101): Notify: The 1st error message associated with transaction "UC03_CT06_Comment_and_Send" is "Error -26612: HTTP Status-Code=500 (Internal Server Error) for "http://learning2.pflb.ru:56902/api/ticket/149659/comment/""
+Action.c(101): Notify: Parameter Substitution: parameter "Comment" =  "test Comment"
+Action.c(101): Notify: Parameter Substitution: parameter "filesid" =  "5017"
+Action.c(101): web_custom_request("comment_2") was successful, 216 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(114): web_url("comment_3") started  	[MsgId: MMSG-26355]
+Action.c(114): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(114): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(114): Notify: Parameter Substitution: parameter "taskid_rand" =  "149571"
+Action.c(114): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(114): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(114): web_url("comment_3") was successful, 514 body bytes, 316 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(124): Notify: Transaction "UC03_CT06_Comment_and_Send" ended with a "Pass" status (Duration: 0.5990 Wasted Time: 0.0432).
 Ending action Action.
+Starting action Logout.
+Logout.c(3): Notify: Transaction "UC01_CI011_Logout" started.
+Logout.c(5): web_url("logout") started  	[MsgId: MMSG-26355]
+Logout.c(5): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Logout.c(5): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Logout.c(5): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Logout.c(5): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Logout.c(5): web_url("logout") was successful, 0 body bytes, 421 header bytes  	[MsgId: MMSG-26386]
+Logout.c(14): web_add_cookie started  	[MsgId: MMSG-26355]
+Logout.c(14): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Logout.c(14): web_add_cookie was successful  	[MsgId: MMSG-26392]
+Logout.c(16): web_remove_auto_header("X-Requested-With") started  	[MsgId: MMSG-26355]
+Logout.c(16): Previous automatically added web header for "X-Requested-With" removed  	[MsgId: MMSG-26587]
+Logout.c(16): web_remove/revert_auto_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
+Logout.c(18): web_url("login_3") started  	[MsgId: MMSG-26355]
+Logout.c(18): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Logout.c(18): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Logout.c(18): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Logout.c(18): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Logout.c(18): Resource "http://learning2.pflb.ru:56902/css/core/material_icons.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout.c(18): Resource "http://learning2.pflb.ru:56902/css/core/materialize.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout.c(18): Resource "http://learning2.pflb.ru:56902/css/style.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout.c(18): Resource "http://learning2.pflb.ru:56902/js/core/legacy.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout.c(18): Resource "http://learning2.pflb.ru:56902/js/core/jquery-3.1.1.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout.c(18): Resource "http://learning2.pflb.ru:56902/js/core/dust.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout.c(18): Resource "http://learning2.pflb.ru:56902/js/core/jquery.cookie.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout.c(18): Resource "http://learning2.pflb.ru:56902/js/core/materialize.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout.c(18): Resource "http://learning2.pflb.ru:56902/js/page/authorisation.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout.c(18): web_url("login_3") was successful, 873 body bytes, 395 header bytes  	[MsgId: MMSG-26386]
+Logout.c(28): Notify: Transaction "UC01_CI011_Logout" ended with a "Pass" status (Duration: 0.1803 Wasted Time: 0.0578).
+Ending action Logout.
 Ending iteration 1.
 Ending Vuser...
 Starting action vuser_end.

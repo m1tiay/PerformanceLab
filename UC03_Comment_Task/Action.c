@@ -37,7 +37,7 @@ Action()
 
 	lr_save_string(lr_paramarr_random("taskid"), "taskid_rand");
 	
-	web_url("{taskid_rand}", 
+	web_url("taskid", 
 		"URL=http://{Host_Name}:{Port}/api/task/{taskid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -71,32 +71,7 @@ Action()
 
 	lr_think_time(5);
 
-	lr_start_transaction("UC03_CT05_Add_file");
-	
-	web_reg_save_param_regexp (
-    	"ParamName=filesid",
-    	"RegExp=\"id\":(.+?),\"name\"",
-    	"Ordinal=1",
-		LAST );
-		
-	web_submit_data("file", 
-		"Action=http://{Host_Name}:{Port}/api/ticket/file/", 
-		"Method=POST", 
-		"EncType=multipart/form-data", 
-		"TargetFrame=", 
-		"RecContentType=application/json", 
-		"Referer=http://{Host_Name}:{Port}/", 
-		"Snapshot=t27.inf", 
-		"Mode=HTML", 
-		ITEMDATA, 
-		"Name=files", "Value=temp.txt", "File=Yes", ENDITEM, 
-		LAST);
-
-	lr_end_transaction("UC03_CT05_Add_file",LR_AUTO);
-
-	lr_think_time(5);
-
-	lr_start_transaction("UC03_CT06_Comment_and_Send");
+	lr_start_transaction("UC03_CT05_Comment_and_Send");
 
 	web_custom_request("comment_2", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/{taskid_rand}/comment/", 
@@ -108,7 +83,7 @@ Action()
 		"Snapshot=t28.inf", 
 		"Mode=HTML", 
 		"EncType=application/json; charset=utf-8", 
-		"Body={\"text\":\"DTelekhin {Comment}\",\"files\":[{filesid}]}", 
+		"Body={\"text\":\"DTelekhin {Comment}\"}", 
 		LAST);
 
 	web_url("comment_3", 
@@ -121,7 +96,7 @@ Action()
 		"Mode=HTML", 
 		LAST);
 
-	lr_end_transaction("UC03_CT06_Comment_and_Send",LR_AUTO);
+	lr_end_transaction("UC03_CT05_Comment_and_Send",LR_AUTO);
 
 	lr_think_time(5);
 

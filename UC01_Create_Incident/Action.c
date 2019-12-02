@@ -12,8 +12,6 @@ Action()
 		"Mode=HTML", 
 		LAST);
 
-	web_set_sockets_option("SSL_VERSION", "TLS1.2");
-
 	lr_end_transaction("UC01_CI03_New_Incident",LR_AUTO);
 
 	lr_think_time(5);
@@ -88,7 +86,13 @@ Action()
     	"RegExp=\"id\":(.+?),\"name\"",
     	"Ordinal=All",
 		LAST );
-	
+				
+	web_reg_save_param_regexp (
+    	"ParamName=servicename",
+    	"RegExp=\"name\":\"(.+?)\",\"parentId\"",
+    	"Ordinal=All",
+		LAST );
+		
 	web_url("service", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/node/{parentid_rand}/service/", 
 		"TargetFrame=", 
@@ -110,6 +114,8 @@ Action()
 		LAST);
 
 	lr_save_string(lr_paramarr_random("serviceid"), "serviceid_rand");
+	
+	lr_save_string(lr_paramarr_random("servicename"), "servicename_rand");
 	
 	web_url("inventoryNumbers", 
 		"URL=http://{Host_Name}:{Port}/api/inventoryNumbers?serviceId={serviceid_rand}&shopid={shopid_rand}", 
@@ -153,7 +159,8 @@ Action()
 		LAST );
 	
 	web_url("inventoryNumbers_3", 
-		"URL=http://{Host_Name}:{Port}/api/inventoryNumbers?shopid={shopid_rand}&serviceId={serviceid_rand}&serviceId={serviceid_rand}&q=&page=0", 
+		"URL=http://{Host_Name}:{Port}/api/inventoryNumbers?shopid={shopid_rand}&" 
+		"serviceId={serviceid_rand}&serviceId={serviceid_rand}&q=&page=0",
 		"TargetFrame=", 
 		"Resource=0", 
 		"RecContentType=application/json", 
@@ -176,32 +183,7 @@ Action()
 
 	lr_think_time(5);
 
-	lr_start_transaction("UC01_CI08_Add_File");
-
-	web_reg_save_param_regexp (
-    	"ParamName=filesid",
-    	"RegExp=\"id\":(.+?),\"name\"",
-    	"Ordinal=1",
-		LAST );
-	
-	web_submit_data("file", 
-		"Action=http://{Host_Name}:{Port}/api/ticket/file/", 
-		"Method=POST", 
-		"EncType=multipart/form-data", 
-		"TargetFrame=", 
-		"RecContentType=application/json", 
-		"Referer=http://{Host_Name}:{Port}/", 
-		"Snapshot=t19.inf", 
-		"Mode=HTML", 
-		ITEMDATA, 
-		"Name=files", "Value=userData.txt", "File=Yes", ENDITEM, 
-		LAST);
-
-	lr_end_transaction("UC01_CI08_Add_File",LR_AUTO);
-
-	lr_think_time(5);
-
-	lr_start_transaction("UC01_CI09_Create_inc_and_add_description");
+	lr_start_transaction("UC01_CI08_Create_inc_and_add_description");
 
 	web_custom_request("ticket_2", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/", 
@@ -213,34 +195,28 @@ Action()
 		"Snapshot=t20.inf", 
 		"Mode=HTML", 
 		"EncType=application/json; charset=utf-8", 
-		"BodyBinary={\"text\":\"DTelekhin {Description}\",\"header\":\"\\xD0\\x9F\\xD0\\xBE\\xD1\\x81\\xD0\\xB0\\xD0\\xB4\\xD0\\xBA\\xD0\\xB0 \\xD0\\xBA\\xD1\\x83\\xD1\\x81\\xD1\\x82\\xD0\\xB0\\xD1\\x80\\xD0\\xBD\\xD0\\xB8\\xD0\\xBA\\xD0\\xBE\\xD0\\xB2\",\"ticketStateId\":0,\"serviceId\":\"{serviceid_rand}\",\"files\":[{filesid}],\"inventoryNumberId\":\"{inventoryid_rand}\",\"shopId\":\"{shopid_rand}\"}", 
+		"BodyBinary={\"text\":\"DTelekhin {Description}\"," 
+		"\"header\":\"{servicename_rand}\"," 
+		"\"ticketStateId\":0," 
+		"\"serviceId\":\"{serviceid_rand}\"," 
+		"\"inventoryNumberId\":\"{inventoryid_rand}\"," 
+		"\"shopId\":\"{shopid_rand}\"}",
 		LAST);
 
-	lr_end_transaction("UC01_CI09_Create_inc_and_add_description",LR_AUTO);
+	lr_end_transaction("UC01_CI08_Create_inc_and_add_description",LR_AUTO);
 
-	lr_start_transaction("UC01_CI010_Confirm");
-
-	web_revert_auto_header("X-Requested-With");
+	lr_start_transaction("UC01_CI09_Confirm");
 
 	lr_think_time(5);
 
-	web_url("{Host_Name}:{Port}_2", 
+	web_url("Host_Name:Port_2", 
 		"URL=http://{Host_Name}:{Port}/", 
 		"TargetFrame=", 
 		"Resource=0", 
 		"Referer=http://{Host_Name}:{Port}/", 
 		"Snapshot=t21.inf", 
 		"Mode=HTML", 
-		EXTRARES, 
-		"Url=/js/core/jqueryformplugin.js?_=1574682076792", ENDITEM, 
-		"Url=/engineer/wrapper/wrapper.dust", ENDITEM, 
-		"Url=/engineer/wrapper/wrapper.js", ENDITEM, 
-		"Url=/engineer/tickets/tickets.dust", ENDITEM, 
-		"Url=/engineer/tickets/tickets.js", ENDITEM, 
 		LAST);
-
-	web_add_auto_header("X-Requested-With", 
-		"XMLHttpRequest");
 
 	web_url("checkLogin_2", 
 		"URL=http://{Host_Name}:{Port}/api/checkLogin", 
@@ -316,7 +292,7 @@ Action()
 		"EncType=application/json; charset=utf-8", 
 		LAST);
 
-	lr_end_transaction("UC01_CI010_Confirm",LR_AUTO);
+	lr_end_transaction("UC01_CI09_Confirm",LR_AUTO);
 
 	lr_think_time(5);
 

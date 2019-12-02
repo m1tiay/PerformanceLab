@@ -1,7 +1,0 @@
-"-----------------------------7d025e2b16b064e\r\n"
-"Content-Disposition: form-data; name="files"; filename="C:\Users\student\XDesk\UC03_Comment_Ta"
-"sk\temp.txt"\r\n"
-"Content-Type: application/octet-stream\r\n"
-"\r\n"
-"\r\n"
-"-----------------------------7d025e2b16b064e--\r\n"

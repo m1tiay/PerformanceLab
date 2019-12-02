@@ -1,4 +1,4 @@
-Virtual User Script started at: 28.11.2019 16:56:01
+Virtual User Script started at: 02.12.2019 14:14:39
 Starting action vuser_init.
 Web Turbo Replay of LoadRunner 12.60.0 for Windows 10; build 971 (��� 09 2018 11:27:13)  	[MsgId: MMSG-26983]
 Run mode: HTML  	[MsgId: MMSG-26993]
@@ -9,131 +9,95 @@ Running Vuser...
 Starting iteration 1.
 Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
 Starting action Login.
-Login.c(3): Notify: Transaction "UC01_CI01_Home_Page" started.
-Login.c(5): web_url("login") started  	[MsgId: MMSG-26355]
-Login.c(5): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Login.c(5): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Login.c(5): Found resource "http://learning2.pflb.ru:56902/css/core/material_icons.css" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
-Login.c(5): Found resource "http://learning2.pflb.ru:56902/css/core/materialize.css" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
-Login.c(5): Found resource "http://learning2.pflb.ru:56902/css/style.css" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
-Login.c(5): Found resource "http://learning2.pflb.ru:56902/js/core/legacy.js" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
-Login.c(5): Found resource "http://learning2.pflb.ru:56902/js/core/jquery-3.1.1.js" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
-Login.c(5): Found resource "http://learning2.pflb.ru:56902/js/core/dust.js" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
-Login.c(5): Found resource "http://learning2.pflb.ru:56902/js/core/jquery.cookie.js" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
-Login.c(5): Found resource "http://learning2.pflb.ru:56902/js/core/materialize.js" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
-Login.c(5): Found resource "http://learning2.pflb.ru:56902/js/page/authorisation.js" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
-Login.c(5): Downloading resource "http://learning2.pflb.ru:56902/tpl/login/login.dust" (specified by argument number 10)  	[MsgId: MMSG-26577]
-Login.c(5): Downloading resource "http://learning2.pflb.ru:56902/css/fonts/roboto/Roboto-Light.eot?" (specified by argument number 12)  	[MsgId: MMSG-26577]
-Login.c(5): Downloading resource "http://learning2.pflb.ru:56902/css/fonts/roboto/Roboto-Regular.eot?" (specified by argument number 14)  	[MsgId: MMSG-26577]
-Login.c(5): Downloading resource "http://learning2.pflb.ru:56902/css/fonts/roboto/Roboto-Medium.eot?" (specified by argument number 16)  	[MsgId: MMSG-26577]
-Login.c(5): Downloading resource "http://learning2.pflb.ru:56902/images/logo_2.png" (specified by argument number 18)  	[MsgId: MMSG-26577]
-Login.c(5): Downloading resource "http://learning2.pflb.ru:56902/css/fonts/roboto/Roboto-Thin.eot?" (specified by argument number 20)  	[MsgId: MMSG-26577]
-Login.c(5): Downloading resource "http://learning2.pflb.ru:56902/css/fonts/roboto/Roboto-Bold.eot?" (specified by argument number 22)  	[MsgId: MMSG-26577]
-Login.c(5): Downloading resource "http://learning2.pflb.ru:56902/favicon.ico" (specified by argument number 24)  	[MsgId: MMSG-26577]
-Login.c(5): web_url("login") was successful, 1324116 body bytes, 3727 header bytes  	[MsgId: MMSG-26386]
-Login.c(24): Notify: Transaction "UC01_CI01_Home_Page" ended with a "Pass" status (Duration: 0.8187 Wasted Time: 0.1662).
-Login.c(26): Notify: Transaction "UC01_CI02_Login" started.
-Login.c(28): web_add_header("X-Requested-With") started  	[MsgId: MMSG-26355]
-Login.c(28): web_add_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
-Login.c(33): web_submit_data("login_2") started  	[MsgId: MMSG-26355]
-Login.c(33): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Login.c(33): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Login.c(33): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Login.c(33): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Login.c(33): Notify: Parameter Substitution: parameter "Username" =  "master"
-Login.c(33): Notify: Parameter Substitution: parameter "Password" =  "123"
-Login.c(33): Notify: Parameter Substitution: parameter "RememberMe" =  ""
-Login.c(33): web_submit_data("login_2") was successful, 146 body bytes, 339 header bytes  	[MsgId: MMSG-26386]
-Login.c(46): web_add_cookie started  	[MsgId: MMSG-26355]
-Login.c(46): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Login.c(46): web_add_cookie was successful  	[MsgId: MMSG-26392]
-Login.c(48): web_add_cookie started  	[MsgId: MMSG-26355]
-Login.c(48): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Login.c(48): web_add_cookie was successful  	[MsgId: MMSG-26392]
-Login.c(50): web_add_cookie started  	[MsgId: MMSG-26355]
-Login.c(50): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Login.c(50): web_add_cookie was successful  	[MsgId: MMSG-26392]
-Login.c(52): web_add_cookie started  	[MsgId: MMSG-26355]
-Login.c(52): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Login.c(52): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Login.c(52): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Login.c(52): web_add_cookie was successful  	[MsgId: MMSG-26392]
-Login.c(56): web_url("{Host_Name}:{Port}") started  	[MsgId: MMSG-26355]
-Login.c(56): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Login.c(56): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Login.c(56): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Login.c(56): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Login.c(56): Resource "http://learning2.pflb.ru:56902/css/core/material_icons.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/css/core/materialize.min.css" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/css/core/uploadfile.css" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/css/core/quill.snow.css" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/css/core/select2.min.css" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/css/core/ee-file-upload.css" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Resource "http://learning2.pflb.ru:56902/css/style.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/css/company_2.css" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Resource "http://learning2.pflb.ru:56902/js/core/legacy.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Login.c(56): Resource "http://learning2.pflb.ru:56902/js/core/jquery-3.1.1.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/js/core/clamp.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Resource "http://learning2.pflb.ru:56902/js/core/jquery.cookie.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/js/core/jquery.uploadfile.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/js/core/jquery.maskedinput.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/js/core/jquery.ee.router.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/js/core/select2.full.min.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/js/core/readmore.min.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Resource "http://learning2.pflb.ru:56902/js/core/dust.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/js/core/dust-helpers.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/js/core/custom-helpers.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/js/core/materialize.min.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/js/core/materialize-select.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/js/core/materialize-pagination.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/js/core/polyphills.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/js/core/helpers.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/js/index.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Found resource "http://learning2.pflb.ru:56902/js/core/materialTable.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
-Login.c(56): Downloading resource "http://learning2.pflb.ru:56902/js/core/jqueryformplugin.js?_=1574681863393" (specified by argument number 10)  	[MsgId: MMSG-26577]
-Login.c(56): Downloading resource "http://learning2.pflb.ru:56902/engineer/wrapper/wrapper.dust" (specified by argument number 12)  	[MsgId: MMSG-26577]
-Login.c(56): Downloading resource "http://learning2.pflb.ru:56902/engineer/wrapper/wrapper.js" (specified by argument number 14)  	[MsgId: MMSG-26577]
-Login.c(56): Downloading resource "http://learning2.pflb.ru:56902/css/fonts/material_icons/MaterialIcons-Regular.woff" (specified by argument number 16)  	[MsgId: MMSG-26577]
-Login.c(56): Downloading resource "http://learning2.pflb.ru:56902/engineer/tickets/tickets.dust" (specified by argument number 18)  	[MsgId: MMSG-26577]
-Login.c(56): Downloading resource "http://learning2.pflb.ru:56902/engineer/tickets/tickets.js" (specified by argument number 20)  	[MsgId: MMSG-26577]
-Login.c(56): Downloading resource "http://learning2.pflb.ru:56902/engineer/catalog/catalog.dust" (specified by argument number 22)  	[MsgId: MMSG-26577]
-Login.c(56): Downloading resource "http://learning2.pflb.ru:56902/engineer/catalog/catalog.js" (specified by argument number 24)  	[MsgId: MMSG-26577]
-Login.c(56): Downloading resource "http://learning2.pflb.ru:56902/images/logo-5ka.png" (specified by argument number 26)  	[MsgId: MMSG-26577]
-Login.c(56): Downloading resource "http://learning2.pflb.ru:56902/engineer/addticket.dust" (specified by argument number 28)  	[MsgId: MMSG-26577]
-Login.c(56): web_url("{Host_Name}:{Port}") was successful, 963012 body bytes, 7527 header bytes  	[MsgId: MMSG-26386]
-Login.c(77): web_add_auto_header("X-Requested-With") started  	[MsgId: MMSG-26355]
-Login.c(77): web_add_auto_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
-Login.c(80): web_url("checkLogin") started  	[MsgId: MMSG-26355]
-Login.c(80): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Login.c(80): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Login.c(80): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Login.c(80): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Login.c(80): web_url("checkLogin") was successful, 92 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
-Login.c(90): web_url("info") started  	[MsgId: MMSG-26355]
-Login.c(90): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Login.c(90): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Login.c(90): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Login.c(90): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Login.c(90): web_url("info") was successful, 277 body bytes, 316 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
-Login.c(100): web_url("4") started  	[MsgId: MMSG-26355]
-Login.c(100): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Login.c(100): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Login.c(100): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Login.c(100): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Login.c(100): web_url("4") was successful, 52 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
-Login.c(110): web_url("countByState") started  	[MsgId: MMSG-26355]
-Login.c(110): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Login.c(110): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Login.c(110): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Login.c(110): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Login.c(110): web_url("countByState") was successful, 217 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
-Login.c(120): web_custom_request("ticket") started  	[MsgId: MMSG-26355]
-Login.c(120): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Login.c(120): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Login.c(120): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Login.c(120): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Login.c(120): web_custom_request("ticket") was successful, 14020 body bytes, 316 header bytes, 21 chunking overhead bytes  	[MsgId: MMSG-26385]
-Login.c(132): Notify: Transaction "UC01_CI02_Login" ended with a "Pass" status (Duration: 2.2818 Wasted Time: 0.2483).
+Login.c(5): Notify: Transaction "UC01_CI01_Home_Page" started.
+Login.c(7): web_url("login") started  	[MsgId: MMSG-26355]
+Login.c(7): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(7): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(7): Found resource "http://learning2.pflb.ru:56902/css/core/material_icons.css" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
+Login.c(7): Found resource "http://learning2.pflb.ru:56902/css/core/materialize.css" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
+Login.c(7): Found resource "http://learning2.pflb.ru:56902/css/style.css" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
+Login.c(7): Found resource "http://learning2.pflb.ru:56902/js/core/legacy.js" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
+Login.c(7): Found resource "http://learning2.pflb.ru:56902/js/core/jquery-3.1.1.js" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
+Login.c(7): Found resource "http://learning2.pflb.ru:56902/js/core/dust.js" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
+Login.c(7): Found resource "http://learning2.pflb.ru:56902/js/core/jquery.cookie.js" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
+Login.c(7): Found resource "http://learning2.pflb.ru:56902/js/core/materialize.js" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
+Login.c(7): Found resource "http://learning2.pflb.ru:56902/js/page/authorisation.js" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
+Login.c(7): web_url("login") was successful, 1012641 body bytes, 2125 header bytes  	[MsgId: MMSG-26386]
+Login.c(26): Notify: Transaction "UC01_CI01_Home_Page" ended with a "Pass" status (Duration: 0.7788 Wasted Time: 0.1390).
+Login.c(30): Notify: Transaction "UC01_CI02_Login" started.
+Login.c(35): web_submit_data("login_2") started  	[MsgId: MMSG-26355]
+Login.c(35): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(35): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(35): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(35): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(35): Notify: Parameter Substitution: parameter "Username" =  "master"
+Login.c(35): Notify: Parameter Substitution: parameter "Password" =  "123"
+Login.c(35): Notify: Parameter Substitution: parameter "RememberMe" =  "false"
+Login.c(35): web_submit_data("login_2") was successful, 146 body bytes, 339 header bytes  	[MsgId: MMSG-26386]
+Login.c(58): web_url("{Host_Name}:{Port}") started  	[MsgId: MMSG-26355]
+Login.c(58): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(58): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(58): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(58): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(58): Resource "http://learning2.pflb.ru:56902/css/core/material_icons.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/css/core/materialize.min.css" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/css/core/uploadfile.css" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/css/core/quill.snow.css" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/css/core/select2.min.css" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/css/core/ee-file-upload.css" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): Resource "http://learning2.pflb.ru:56902/css/style.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/css/company_2.css" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): Resource "http://learning2.pflb.ru:56902/js/core/legacy.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Login.c(58): Resource "http://learning2.pflb.ru:56902/js/core/jquery-3.1.1.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/js/core/clamp.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): Resource "http://learning2.pflb.ru:56902/js/core/jquery.cookie.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/js/core/jquery.uploadfile.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/js/core/jquery.maskedinput.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/js/core/jquery.ee.router.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/js/core/select2.full.min.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/js/core/readmore.min.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): Resource "http://learning2.pflb.ru:56902/js/core/dust.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/js/core/dust-helpers.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/js/core/custom-helpers.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/js/core/materialize.min.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/js/core/materialize-select.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/js/core/materialize-pagination.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/js/core/polyphills.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/js/core/helpers.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/js/index.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): Found resource "http://learning2.pflb.ru:56902/js/core/materialTable.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(58): web_url("{Host_Name}:{Port}") was successful, 559905 body bytes, 4251 header bytes  	[MsgId: MMSG-26386]
+Login.c(82): web_url("checkLogin") started  	[MsgId: MMSG-26355]
+Login.c(82): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(82): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(82): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(82): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(82): web_url("checkLogin") was successful, 92 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Login.c(92): web_url("info") started  	[MsgId: MMSG-26355]
+Login.c(92): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(92): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(92): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(92): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(92): web_url("info") was successful, 277 body bytes, 316 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+Login.c(102): web_url("4") started  	[MsgId: MMSG-26355]
+Login.c(102): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(102): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(102): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(102): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(102): web_url("4") was successful, 52 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Login.c(112): web_url("countByState") started  	[MsgId: MMSG-26355]
+Login.c(112): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(112): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(112): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(112): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(112): web_url("countByState") was successful, 218 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Login.c(122): web_custom_request("ticket") started  	[MsgId: MMSG-26355]
+Login.c(122): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(122): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(122): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(122): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(122): web_custom_request("ticket") was successful, 11074 body bytes, 316 header bytes, 20 chunking overhead bytes  	[MsgId: MMSG-26385]
+Login.c(134): Notify: Transaction "UC01_CI02_Login" ended with a "Pass" status (Duration: 1.9749 Wasted Time: 0.1652).
 Ending action Login.
 Starting action Action.
 Action.c(3): Notify: Transaction "UC01_CI03_New_Incident" started.
@@ -143,457 +107,444 @@ Action.c(5): Notify: Parameter Substitution: parameter "Port" =  "56902"
 Action.c(5): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
 Action.c(5): Notify: Parameter Substitution: parameter "Port" =  "56902"
 Action.c(5): web_url("children") was successful, 907 body bytes, 316 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(15): web_set_sockets_option started  	[MsgId: MMSG-26355]
-Action.c(15): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
-Action.c(17): Notify: Transaction "UC01_CI03_New_Incident" ended with a "Pass" status (Duration: 0.1399 Wasted Time: 0.0249).
-Action.c(21): Notify: Transaction "UC01_CI04_Location" started.
-Action.c(24): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
-Action.c(24): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
-Action.c(30): web_url("shops") started  	[MsgId: MMSG-26355]
-Action.c(30): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(30): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(30): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(30): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(30): Notify: Saving Parameter "shopid_1 = -1".
-Action.c(30): Notify: Saving Parameter "shopid_2 = -2".
-Action.c(30): Notify: Saving Parameter "shopid_3 = 4".
-Action.c(30): Notify: Saving Parameter "shopid_4 = 5".
-Action.c(30): Notify: Saving Parameter "shopid_5 = 1".
-Action.c(30): Notify: Saving Parameter "shopid_6 = 2".
-Action.c(30): Notify: Saving Parameter "shopid_count = 6".
-Action.c(30): web_url("shops") was successful, 1015 body bytes, 316 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(42): web_url("children_2") started  	[MsgId: MMSG-26355]
-Action.c(42): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(42): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(42): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(42): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(42): web_url("children_2") was successful, 907 body bytes, 316 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(52): Notify: Parameter Substitution: parameter "shopid_count" =  "6"
-Action.c(52): Notify: Parameter Substitution: parameter "shopid_3" =  "4"
-Action.c(52): Notify: Saving Parameter "shopid_rand = 4".
-Action.c(54): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
-Action.c(54): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
-Action.c(60): web_url("treeview") started  	[MsgId: MMSG-26355]
-Action.c(60): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(60): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(60): Notify: Parameter Substitution: parameter "shopid_rand" =  "4"
-Action.c(60): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(60): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(60): Notify: Saving Parameter "parentid_1 = 146".
-Action.c(60): Notify: Saving Parameter "parentid_2 = 146".
-Action.c(60): Notify: Saving Parameter "parentid_3 = 146".
-Action.c(60): Notify: Saving Parameter "parentid_4 = 146".
-Action.c(60): Notify: Saving Parameter "parentid_5 = 146".
-Action.c(60): Notify: Saving Parameter "parentid_6 = 146".
-Action.c(60): Notify: Saving Parameter "parentid_7 = 146".
-Action.c(60): Notify: Saving Parameter "parentid_8 = 146".
-Action.c(60): Notify: Saving Parameter "parentid_9 = 146".
-Action.c(60): Notify: Saving Parameter "parentid_10 = 146".
-Action.c(60): Notify: Saving Parameter "parentid_11 = 146".
-Action.c(60): Notify: Saving Parameter "parentid_12 = 146".
-Action.c(60): Notify: Saving Parameter "parentid_13 = 146".
-Action.c(60): Notify: Saving Parameter "parentid_14 = 147".
-Action.c(60): Notify: Saving Parameter "parentid_15 = 147".
-Action.c(60): Notify: Saving Parameter "parentid_16 = 147".
-Action.c(60): Notify: Saving Parameter "parentid_17 = 147".
-Action.c(60): Notify: Saving Parameter "parentid_18 = 147".
-Action.c(60): Notify: Saving Parameter "parentid_19 = 147".
-Action.c(60): Notify: Saving Parameter "parentid_20 = 147".
-Action.c(60): Notify: Saving Parameter "parentid_21 = 143".
-Action.c(60): Notify: Saving Parameter "parentid_22 = 144".
-Action.c(60): Notify: Saving Parameter "parentid_23 = 144".
-Action.c(60): Notify: Saving Parameter "parentid_24 = 144".
-Action.c(60): Notify: Saving Parameter "parentid_25 = 148".
-Action.c(60): Notify: Saving Parameter "parentid_26 = 148".
-Action.c(60): Notify: Saving Parameter "parentid_27 = 148".
-Action.c(60): Notify: Saving Parameter "parentid_28 = 148".
-Action.c(60): Notify: Saving Parameter "parentid_29 = 148".
-Action.c(60): Notify: Saving Parameter "parentid_30 = 148".
-Action.c(60): Notify: Saving Parameter "parentid_31 = 148".
-Action.c(60): Notify: Saving Parameter "parentid_32 = 148".
-Action.c(60): Notify: Saving Parameter "parentid_33 = 151".
-Action.c(60): Notify: Saving Parameter "parentid_34 = 149".
-Action.c(60): Notify: Saving Parameter "parentid_35 = 150".
-Action.c(60): Notify: Saving Parameter "parentid_36 = 153".
-Action.c(60): Notify: Saving Parameter "parentid_37 = 153".
-Action.c(60): Notify: Saving Parameter "parentid_38 = 152".
-Action.c(60): Notify: Saving Parameter "parentid_39 = 179".
-Action.c(60): Notify: Saving Parameter "parentid_40 = 179".
-Action.c(60): Notify: Saving Parameter "parentid_41 = 179".
-Action.c(60): Notify: Saving Parameter "parentid_42 = 179".
-Action.c(60): Notify: Saving Parameter "parentid_43 = 179".
-Action.c(60): Notify: Saving Parameter "parentid_44 = 180".
-Action.c(60): Notify: Saving Parameter "parentid_45 = 180".
-Action.c(60): Notify: Saving Parameter "parentid_46 = 180".
-Action.c(60): Notify: Saving Parameter "parentid_47 = 180".
-Action.c(60): Notify: Saving Parameter "parentid_48 = 180".
-Action.c(60): Notify: Saving Parameter "parentid_49 = 180".
-Action.c(60): Notify: Saving Parameter "parentid_50 = 181".
-Action.c(60): Notify: Saving Parameter "parentid_51 = 181".
-Action.c(60): Notify: Saving Parameter "parentid_52 = 181".
-Action.c(60): Notify: Saving Parameter "parentid_53 = 182".
-Action.c(60): Notify: Saving Parameter "parentid_54 = 183".
-Action.c(60): Notify: Saving Parameter "parentid_55 = 185".
-Action.c(60): Notify: Saving Parameter "parentid_56 = 185".
-Action.c(60): Notify: Saving Parameter "parentid_57 = 185".
-Action.c(60): Notify: Saving Parameter "parentid_58 = 185".
-Action.c(60): Notify: Saving Parameter "parentid_59 = 184".
-Action.c(60): Notify: Saving Parameter "parentid_60 = 184".
-Action.c(60): Notify: Saving Parameter "parentid_61 = 184".
-Action.c(60): Notify: Saving Parameter "parentid_62 = 184".
-Action.c(60): Notify: Saving Parameter "parentid_63 = 184".
-Action.c(60): Notify: Saving Parameter "parentid_64 = 184".
-Action.c(60): Notify: Saving Parameter "parentid_65 = 186".
-Action.c(60): Notify: Saving Parameter "parentid_66 = 187".
-Action.c(60): Notify: Saving Parameter "parentid_67 = 188".
-Action.c(60): Notify: Saving Parameter "parentid_68 = 189".
-Action.c(60): Notify: Saving Parameter "parentid_69 = 189".
-Action.c(60): Notify: Saving Parameter "parentid_70 = 189".
-Action.c(60): Notify: Saving Parameter "parentid_71 = 189".
-Action.c(60): Notify: Saving Parameter "parentid_72 = 190".
-Action.c(60): Notify: Saving Parameter "parentid_73 = 190".
-Action.c(60): Notify: Saving Parameter "parentid_74 = 190".
-Action.c(60): Notify: Saving Parameter "parentid_75 = 191".
-Action.c(60): Notify: Saving Parameter "parentid_76 = 191".
-Action.c(60): Notify: Saving Parameter "parentid_77 = 191".
-Action.c(60): Notify: Saving Parameter "parentid_78 = 191".
-Action.c(60): Notify: Saving Parameter "parentid_79 = 191".
-Action.c(60): Notify: Saving Parameter "parentid_80 = 192".
-Action.c(60): Notify: Saving Parameter "parentid_81 = 192".
-Action.c(60): Notify: Saving Parameter "parentid_82 = 192".
-Action.c(60): Notify: Saving Parameter "parentid_83 = 193".
-Action.c(60): Notify: Saving Parameter "parentid_84 = 193".
-Action.c(60): Notify: Saving Parameter "parentid_85 = 193".
-Action.c(60): Notify: Saving Parameter "parentid_86 = 193".
-Action.c(60): Notify: Saving Parameter "parentid_87 = 194".
-Action.c(60): Notify: Saving Parameter "parentid_88 = 194".
-Action.c(60): Notify: Saving Parameter "parentid_89 = 194".
-Action.c(60): Notify: Saving Parameter "parentid_90 = 195".
-Action.c(60): Notify: Saving Parameter "parentid_91 = 195".
-Action.c(60): Notify: Saving Parameter "parentid_92 = 195".
-Action.c(60): Notify: Saving Parameter "parentid_93 = 195".
-Action.c(60): Notify: Saving Parameter "parentid_94 = 195".
-Action.c(60): Notify: Saving Parameter "parentid_95 = 196".
-Action.c(60): Notify: Saving Parameter "parentid_96 = 196".
-Action.c(60): Notify: Saving Parameter "parentid_97 = 196".
-Action.c(60): Notify: Saving Parameter "parentid_98 = 197".
-Action.c(60): Notify: Saving Parameter "parentid_99 = 197".
-Action.c(60): Notify: Saving Parameter "parentid_100 = 197".
-Action.c(60): Notify: Saving Parameter "parentid_101 = 198".
-Action.c(60): Notify: Saving Parameter "parentid_102 = 198".
-Action.c(60): Notify: Saving Parameter "parentid_103 = 198".
-Action.c(60): Notify: Saving Parameter "parentid_104 = 198".
-Action.c(60): Notify: Saving Parameter "parentid_105 = 198".
-Action.c(60): Notify: Saving Parameter "parentid_106 = 199".
-Action.c(60): Notify: Saving Parameter "parentid_107 = 199".
-Action.c(60): Notify: Saving Parameter "parentid_108 = 199".
-Action.c(60): Notify: Saving Parameter "parentid_109 = 200".
-Action.c(60): Notify: Saving Parameter "parentid_110 = 200".
-Action.c(60): Notify: Saving Parameter "parentid_111 = 200".
-Action.c(60): Notify: Saving Parameter "parentid_112 = 200".
-Action.c(60): Notify: Saving Parameter "parentid_113 = 201".
-Action.c(60): Notify: Saving Parameter "parentid_114 = 201".
-Action.c(60): Notify: Saving Parameter "parentid_115 = 201".
-Action.c(60): Notify: Saving Parameter "parentid_116 = 201".
-Action.c(60): Notify: Saving Parameter "parentid_117 = 201".
-Action.c(60): Notify: Saving Parameter "parentid_118 = 201".
-Action.c(60): Notify: Saving Parameter "parentid_119 = 201".
-Action.c(60): Notify: Saving Parameter "parentid_120 = 202".
-Action.c(60): Notify: Saving Parameter "parentid_121 = 202".
-Action.c(60): Notify: Saving Parameter "parentid_122 = 202".
-Action.c(60): Notify: Saving Parameter "parentid_123 = 202".
-Action.c(60): Notify: Saving Parameter "parentid_124 = 202".
-Action.c(60): Notify: Saving Parameter "parentid_125 = 202".
-Action.c(60): Notify: Saving Parameter "parentid_126 = 202".
-Action.c(60): Notify: Saving Parameter "parentid_127 = 202".
-Action.c(60): Notify: Saving Parameter "parentid_128 = 202".
-Action.c(60): Notify: Saving Parameter "parentid_129 = 202".
-Action.c(60): Notify: Saving Parameter "parentid_130 = 202".
-Action.c(60): Notify: Saving Parameter "parentid_131 = 203".
-Action.c(60): Notify: Saving Parameter "parentid_132 = 203".
-Action.c(60): Notify: Saving Parameter "parentid_133 = 203".
-Action.c(60): Notify: Saving Parameter "parentid_134 = 204".
-Action.c(60): Notify: Saving Parameter "parentid_135 = 204".
-Action.c(60): Notify: Saving Parameter "parentid_136 = 204".
-Action.c(60): Notify: Saving Parameter "parentid_137 = 204".
-Action.c(60): Notify: Saving Parameter "parentid_138 = 204".
-Action.c(60): Notify: Saving Parameter "parentid_139 = 204".
-Action.c(60): Notify: Saving Parameter "parentid_140 = 204".
-Action.c(60): Notify: Saving Parameter "parentid_141 = 204".
-Action.c(60): Notify: Saving Parameter "parentid_142 = 205".
-Action.c(60): Notify: Saving Parameter "parentid_143 = 205".
-Action.c(60): Notify: Saving Parameter "parentid_144 = 205".
-Action.c(60): Notify: Saving Parameter "parentid_145 = 205".
-Action.c(60): Notify: Saving Parameter "parentid_146 = 205".
-Action.c(60): Notify: Saving Parameter "parentid_147 = 205".
-Action.c(60): Notify: Saving Parameter "parentid_148 = 206".
-Action.c(60): Notify: Saving Parameter "parentid_149 = 206".
-Action.c(60): Notify: Saving Parameter "parentid_150 = 206".
-Action.c(60): Notify: Saving Parameter "parentid_151 = 206".
-Action.c(60): Notify: Saving Parameter "parentid_152 = 206".
-Action.c(60): Notify: Saving Parameter "parentid_153 = 206".
-Action.c(60): Notify: Saving Parameter "parentid_154 = 206".
-Action.c(60): Notify: Saving Parameter "parentid_155 = 206".
-Action.c(60): Notify: Saving Parameter "parentid_156 = 154".
-Action.c(60): Notify: Saving Parameter "parentid_157 = 154".
-Action.c(60): Notify: Saving Parameter "parentid_158 = 154".
-Action.c(60): Notify: Saving Parameter "parentid_159 = 155".
-Action.c(60): Notify: Saving Parameter "parentid_160 = 155".
-Action.c(60): Notify: Saving Parameter "parentid_161 = 155".
-Action.c(60): Notify: Saving Parameter "parentid_162 = 156".
-Action.c(60): Notify: Saving Parameter "parentid_163 = 156".
-Action.c(60): Notify: Saving Parameter "parentid_164 = 156".
-Action.c(60): Notify: Saving Parameter "parentid_165 = 156".
-Action.c(60): Notify: Saving Parameter "parentid_166 = 157".
-Action.c(60): Notify: Saving Parameter "parentid_167 = 157".
-Action.c(60): Notify: Saving Parameter "parentid_168 = 157".
-Action.c(60): Notify: Saving Parameter "parentid_169 = 157".
-Action.c(60): Notify: Saving Parameter "parentid_170 = 157".
-Action.c(60): Notify: Saving Parameter "parentid_171 = 158".
-Action.c(60): Notify: Saving Parameter "parentid_172 = 158".
-Action.c(60): Notify: Saving Parameter "parentid_173 = 158".
-Action.c(60): Notify: Saving Parameter "parentid_174 = 159".
-Action.c(60): Notify: Saving Parameter "parentid_175 = 159".
-Action.c(60): Notify: Saving Parameter "parentid_176 = 160".
-Action.c(60): Notify: Saving Parameter "parentid_177 = 160".
-Action.c(60): Notify: Saving Parameter "parentid_178 = 161".
-Action.c(60): Notify: Saving Parameter "parentid_179 = 161".
-Action.c(60): Notify: Saving Parameter "parentid_180 = 161".
-Action.c(60): Notify: Saving Parameter "parentid_181 = 162".
-Action.c(60): Notify: Saving Parameter "parentid_182 = 164".
-Action.c(60): Notify: Saving Parameter "parentid_183 = 164".
-Action.c(60): Notify: Saving Parameter "parentid_184 = 165".
-Action.c(60): Notify: Saving Parameter "parentid_185 = 165".
-Action.c(60): Notify: Saving Parameter "parentid_186 = 166".
-Action.c(60): Notify: Saving Parameter "parentid_187 = 166".
-Action.c(60): Notify: Saving Parameter "parentid_188 = 163".
-Action.c(60): Notify: Saving Parameter "parentid_189 = 163".
-Action.c(60): Notify: Saving Parameter "parentid_190 = 163".
-Action.c(60): Notify: Saving Parameter "parentid_191 = 163".
-Action.c(60): Notify: Saving Parameter "parentid_192 = 167".
-Action.c(60): Notify: Saving Parameter "parentid_193 = 167".
-Action.c(60): Notify: Saving Parameter "parentid_194 = 167".
-Action.c(60): Notify: Saving Parameter "parentid_195 = 169".
-Action.c(60): Notify: Saving Parameter "parentid_196 = 169".
-Action.c(60): Notify: Saving Parameter "parentid_197 = 169".
-Action.c(60): Notify: Saving Parameter "parentid_198 = 169".
-Action.c(60): Notify: Saving Parameter "parentid_199 = 168".
-Action.c(60): Notify: Saving Parameter "parentid_200 = 168".
-Action.c(60): Notify: Saving Parameter "parentid_201 = 170".
-Action.c(60): Notify: Saving Parameter "parentid_202 = 171".
-Action.c(60): Notify: Saving Parameter "parentid_203 = 171".
-Action.c(60): Notify: Saving Parameter "parentid_204 = 171".
-Action.c(60): Notify: Saving Parameter "parentid_205 = 172".
-Action.c(60): Notify: Saving Parameter "parentid_206 = 172".
-Action.c(60): Notify: Saving Parameter "parentid_207 = 172".
-Action.c(60): Notify: Saving Parameter "parentid_208 = 172".
-Action.c(60): Notify: Saving Parameter "parentid_209 = 172".
-Action.c(60): Notify: Saving Parameter "parentid_210 = 173".
-Action.c(60): Notify: Saving Parameter "parentid_211 = 174".
-Action.c(60): Notify: Saving Parameter "parentid_212 = 174".
-Action.c(60): Notify: Saving Parameter "parentid_213 = 174".
-Action.c(60): Notify: Saving Parameter "parentid_214 = 175".
-Action.c(60): Notify: Saving Parameter "parentid_215 = 175".
-Action.c(60): Notify: Saving Parameter "parentid_216 = 178".
-Action.c(60): Notify: Saving Parameter "parentid_217 = 176".
-Action.c(60): Notify: Saving Parameter "parentid_218 = 176".
-Action.c(60): Notify: Saving Parameter "parentid_219 = 177".
-Action.c(60): Notify: Saving Parameter "parentid_220 = 217".
-Action.c(60): Notify: Saving Parameter "parentid_221 = 217".
-Action.c(60): Notify: Saving Parameter "parentid_222 = 7".
-Action.c(60): Notify: Saving Parameter "parentid_223 = 207".
-Action.c(60): Notify: Saving Parameter "parentid_224 = 207".
-Action.c(60): Notify: Saving Parameter "parentid_225 = 207".
-Action.c(60): Notify: Saving Parameter "parentid_226 = 207".
-Action.c(60): Notify: Saving Parameter "parentid_227 = 208".
-Action.c(60): Notify: Saving Parameter "parentid_228 = 208".
-Action.c(60): Notify: Saving Parameter "parentid_229 = 209".
-Action.c(60): Notify: Saving Parameter "parentid_230 = 216".
-Action.c(60): Notify: Saving Parameter "parentid_count = 230".
-Action.c(60): web_url("treeview") was successful, 75659 body bytes, 316 header bytes, 84 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(70): Notify: Transaction "UC01_CI04_Location" ended with a "Pass" status (Duration: 0.5070 Wasted Time: 0.1077).
-Action.c(72): Notify: Parameter Substitution: parameter "parentid_count" =  "230"
-Action.c(72): Notify: Parameter Substitution: parameter "parentid_86" =  "193"
-Action.c(72): Notify: Saving Parameter "parentid_rand = 193".
-Action.c(74): Notify: Transaction "UC01_CI05_Theme" started.
-Action.c(76): web_url("children_3") started  	[MsgId: MMSG-26355]
-Action.c(76): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(76): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(76): Notify: Parameter Substitution: parameter "parentid_rand" =  "193"
-Action.c(76): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(76): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(76): web_url("children_3") was successful, 2 body bytes, 316 header bytes, 10 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(86): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
-Action.c(86): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
-Action.c(92): web_url("service") started  	[MsgId: MMSG-26355]
-Action.c(92): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(92): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(92): Notify: Parameter Substitution: parameter "parentid_rand" =  "193"
-Action.c(92): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(92): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(92): Notify: Saving Parameter "serviceid_1 = 2923".
-Action.c(92): Notify: Saving Parameter "serviceid_2 = 2924".
-Action.c(92): Notify: Saving Parameter "serviceid_3 = 2925".
-Action.c(92): Notify: Saving Parameter "serviceid_4 = 2927".
-Action.c(92): Notify: Saving Parameter "serviceid_count = 4".
-Action.c(92): web_url("service") was successful, 697 body bytes, 316 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(102): web_url("{parentid_rand}") started  	[MsgId: MMSG-26355]
-Action.c(102): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(102): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(102): Notify: Parameter Substitution: parameter "parentid_rand" =  "193"
-Action.c(102): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(102): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(102): web_url("{parentid_rand}") was successful, 217 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(112): Notify: Parameter Substitution: parameter "serviceid_count" =  "4"
-Action.c(112): Notify: Parameter Substitution: parameter "serviceid_3" =  "2925"
-Action.c(112): Notify: Saving Parameter "serviceid_rand = 2925".
-Action.c(114): web_url("inventoryNumbers") started  	[MsgId: MMSG-26355]
-Action.c(114): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(114): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(114): Notify: Parameter Substitution: parameter "serviceid_rand" =  "2925"
-Action.c(114): Notify: Parameter Substitution: parameter "shopid_rand" =  "4"
-Action.c(114): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(114): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(114): web_url("inventoryNumbers") was successful, 114 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(124): Notify: Transaction "UC01_CI05_Theme" ended with a "Pass" status (Duration: 0.4189 Wasted Time: 0.0897).
-Action.c(128): Notify: Transaction "UC01_CI06_Change_Theme" started.
-Action.c(130): Notify: Parameter Substitution: parameter "serviceid_count" =  "4"
-Action.c(130): Notify: Parameter Substitution: parameter "serviceid_1" =  "2923"
-Action.c(130): Notify: Saving Parameter "serviceid_rand = 2923".
-Action.c(132): web_url("inventoryNumbers_2") started  	[MsgId: MMSG-26355]
-Action.c(132): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(132): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(132): Notify: Parameter Substitution: parameter "serviceid_rand" =  "2923"
-Action.c(132): Notify: Parameter Substitution: parameter "shopid_rand" =  "4"
-Action.c(132): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(132): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(132): web_url("inventoryNumbers_2") was successful, 114 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(142): Notify: Transaction "UC01_CI06_Change_Theme" ended with a "Pass" status (Duration: 0.1369 Wasted Time: 0.0243).
-Action.c(146): Notify: Transaction "UC01_CI07_Inventory" started.
-Action.c(148): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
-Action.c(148): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
-Action.c(155): web_url("inventoryNumbers_3") started  	[MsgId: MMSG-26355]
-Action.c(155): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(155): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(155): Notify: Parameter Substitution: parameter "shopid_rand" =  "4"
-Action.c(155): Notify: Parameter Substitution: parameter "serviceid_rand" =  "2923"
-Action.c(155): Notify: Parameter Substitution: parameter "serviceid_rand" =  "2923"
-Action.c(155): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(155): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(155): Warning -35049: No match found for the requested parameter "inventoryid". Check whether the requested regular expression exists in the response data  	[MsgId: MWAR-35049]
-Action.c(155): Notify: Saving Parameter "inventoryid_count = 0".
-Action.c(155): web_url("inventoryNumbers_3") highest severity level was "warning", 114 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26387]
-Action.c(165): Notify: Parameter Substitution: parameter "inventoryid_count" =  "0"
-Action.c(172): Notify: Saving Parameter "inventoryid_rand = ".
-Action.c(175): Notify: Transaction "UC01_CI07_Inventory" ended with a "Pass" status (Duration: 0.1409 Wasted Time: 0.0251).
-Action.c(179): Notify: Transaction "UC01_CI08_Add_File" started.
-Action.c(181): web_submit_data("file") started  	[MsgId: MMSG-26355]
-Action.c(181): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(181): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(181): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(181): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(181): web_submit_data("file") was successful, 514 body bytes, 316 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(194): Notify: Transaction "UC01_CI08_Add_File" ended with a "Pass" status (Duration: 0.1909 Wasted Time: 0.0310).
-Action.c(198): Notify: Transaction "UC01_CI09_Create_inc_and_add_description" started.
-Action.c(200): web_custom_request("ticket_2") started  	[MsgId: MMSG-26355]
-Action.c(200): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(200): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(200): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(200): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(200): Notify: Parameter Substitution: parameter "Description" =  "test description test description test description test description"
-Action.c(200): Notify: Parameter Substitution: parameter "serviceid_rand" =  "2923"
-Action.c(200): Notify: Parameter Substitution: parameter "inventoryid_rand" =  ""
-Action.c(200): Notify: Parameter Substitution: parameter "shopid_rand" =  "4"
-Action.c(200): web_custom_request("ticket_2") was successful, 1132 body bytes, 316 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(213): Notify: Transaction "UC01_CI09_Create_inc_and_add_description" ended with a "Pass" status (Duration: 0.6109 Wasted Time: 0.0307).
-Action.c(215): Notify: Transaction "UC01_CI010_Confirm" started.
-Action.c(217): web_remove_auto_header("X-Requested-With") started  	[MsgId: MMSG-26355]
-Action.c(217): Previous automatically added web header for "X-Requested-With" removed  	[MsgId: MMSG-26587]
-Action.c(217): web_remove/revert_auto_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
-Action.c(221): web_url("{Host_Name}:{Port}_2") started  	[MsgId: MMSG-26355]
-Action.c(221): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(221): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(221): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(221): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(221): Retrieving data from cache for "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26558]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/css/core/material_icons.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/css/core/materialize.min.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/css/core/uploadfile.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/css/core/quill.snow.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/css/core/select2.min.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/css/core/ee-file-upload.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/css/style.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/css/company_2.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/js/core/legacy.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/js/core/jquery-3.1.1.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/js/core/clamp.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/js/core/jquery.cookie.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/js/core/jquery.uploadfile.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/js/core/jquery.maskedinput.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/js/core/jquery.ee.router.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/js/core/select2.full.min.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/js/core/readmore.min.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/js/core/dust.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/js/core/dust-helpers.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/js/core/custom-helpers.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/js/core/materialize.min.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/js/core/materialize-select.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/js/core/materialize-pagination.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/js/core/polyphills.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/js/core/helpers.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/js/index.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Resource "http://learning2.pflb.ru:56902/js/core/materialTable.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-Action.c(221): Downloading resource "http://learning2.pflb.ru:56902/js/core/jqueryformplugin.js?_=1574682076792" (specified by argument number 9)  	[MsgId: MMSG-26577]
-Action.c(221): Downloading resource "http://learning2.pflb.ru:56902/engineer/wrapper/wrapper.dust" (specified by argument number 11)  	[MsgId: MMSG-26577]
-Action.c(221): Downloading resource "http://learning2.pflb.ru:56902/engineer/wrapper/wrapper.js" (specified by argument number 13)  	[MsgId: MMSG-26577]
-Action.c(221): Downloading resource "http://learning2.pflb.ru:56902/engineer/tickets/tickets.dust" (specified by argument number 15)  	[MsgId: MMSG-26577]
-Action.c(221): Downloading resource "http://learning2.pflb.ru:56902/engineer/tickets/tickets.js" (specified by argument number 17)  	[MsgId: MMSG-26577]
-Action.c(221): web_url("{Host_Name}:{Port}_2") was successful, 116719 body bytes, 1739 header bytes  	[MsgId: MMSG-26386]
-Action.c(236): web_add_auto_header("X-Requested-With") started  	[MsgId: MMSG-26355]
-Action.c(236): web_add_auto_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
-Action.c(239): web_url("checkLogin_2") started  	[MsgId: MMSG-26355]
-Action.c(239): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(239): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(239): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(239): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(239): web_url("checkLogin_2") was successful, 92 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(249): web_url("info_2") started  	[MsgId: MMSG-26355]
-Action.c(249): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(249): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(249): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(249): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(249): web_url("info_2") was successful, 277 body bytes, 316 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(259): web_url("4_2") started  	[MsgId: MMSG-26355]
-Action.c(259): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(259): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(259): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(259): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(259): web_url("4_2") was successful, 52 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(269): web_url("countByState_2") started  	[MsgId: MMSG-26355]
-Action.c(269): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(269): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(269): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(269): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(269): web_url("countByState_2") was successful, 217 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(279): web_url("countByState_3") started  	[MsgId: MMSG-26355]
-Action.c(279): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(279): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(279): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(279): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(279): web_url("countByState_3") was successful, 217 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(289): web_custom_request("ticket_3") started  	[MsgId: MMSG-26355]
-Action.c(289): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(289): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(289): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(289): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(289): web_custom_request("ticket_3") was successful, 13429 body bytes, 316 header bytes, 21 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(301): web_custom_request("ticket_4") started  	[MsgId: MMSG-26355]
-Action.c(301): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(301): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(301): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Action.c(301): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Action.c(301): web_custom_request("ticket_4") was successful, 13429 body bytes, 316 header bytes, 21 chunking overhead bytes  	[MsgId: MMSG-26385]
-Action.c(313): Notify: Transaction "UC01_CI010_Confirm" ended with a "Pass" status (Duration: 2.9499 Wasted Time: 0.1924).
+Action.c(15): Notify: Transaction "UC01_CI03_New_Incident" ended with a "Pass" status (Duration: 0.1189 Wasted Time: 0.0177).
+Action.c(19): Notify: Transaction "UC01_CI04_Location" started.
+Action.c(22): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+Action.c(22): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+Action.c(28): web_url("shops") started  	[MsgId: MMSG-26355]
+Action.c(28): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(28): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(28): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(28): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(28): Notify: Saving Parameter "shopid_1 = -1".
+Action.c(28): Notify: Saving Parameter "shopid_2 = -2".
+Action.c(28): Notify: Saving Parameter "shopid_3 = 4".
+Action.c(28): Notify: Saving Parameter "shopid_4 = 5".
+Action.c(28): Notify: Saving Parameter "shopid_5 = 1".
+Action.c(28): Notify: Saving Parameter "shopid_6 = 2".
+Action.c(28): Notify: Saving Parameter "shopid_count = 6".
+Action.c(28): web_url("shops") was successful, 1015 body bytes, 316 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(40): web_url("children_2") started  	[MsgId: MMSG-26355]
+Action.c(40): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(40): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(40): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(40): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(40): web_url("children_2") was successful, 907 body bytes, 316 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(50): Notify: Parameter Substitution: parameter "shopid_count" =  "6"
+Action.c(50): Notify: Parameter Substitution: parameter "shopid_5" =  "1"
+Action.c(50): Notify: Saving Parameter "shopid_rand = 1".
+Action.c(52): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+Action.c(52): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+Action.c(58): web_url("treeview") started  	[MsgId: MMSG-26355]
+Action.c(58): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(58): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(58): Notify: Parameter Substitution: parameter "shopid_rand" =  "1"
+Action.c(58): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(58): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(58): Notify: Saving Parameter "parentid_1 = 146".
+Action.c(58): Notify: Saving Parameter "parentid_2 = 146".
+Action.c(58): Notify: Saving Parameter "parentid_3 = 146".
+Action.c(58): Notify: Saving Parameter "parentid_4 = 146".
+Action.c(58): Notify: Saving Parameter "parentid_5 = 146".
+Action.c(58): Notify: Saving Parameter "parentid_6 = 146".
+Action.c(58): Notify: Saving Parameter "parentid_7 = 146".
+Action.c(58): Notify: Saving Parameter "parentid_8 = 146".
+Action.c(58): Notify: Saving Parameter "parentid_9 = 146".
+Action.c(58): Notify: Saving Parameter "parentid_10 = 146".
+Action.c(58): Notify: Saving Parameter "parentid_11 = 146".
+Action.c(58): Notify: Saving Parameter "parentid_12 = 146".
+Action.c(58): Notify: Saving Parameter "parentid_13 = 146".
+Action.c(58): Notify: Saving Parameter "parentid_14 = 147".
+Action.c(58): Notify: Saving Parameter "parentid_15 = 147".
+Action.c(58): Notify: Saving Parameter "parentid_16 = 147".
+Action.c(58): Notify: Saving Parameter "parentid_17 = 147".
+Action.c(58): Notify: Saving Parameter "parentid_18 = 147".
+Action.c(58): Notify: Saving Parameter "parentid_19 = 147".
+Action.c(58): Notify: Saving Parameter "parentid_20 = 147".
+Action.c(58): Notify: Saving Parameter "parentid_21 = 143".
+Action.c(58): Notify: Saving Parameter "parentid_22 = 144".
+Action.c(58): Notify: Saving Parameter "parentid_23 = 144".
+Action.c(58): Notify: Saving Parameter "parentid_24 = 144".
+Action.c(58): Notify: Saving Parameter "parentid_25 = 148".
+Action.c(58): Notify: Saving Parameter "parentid_26 = 148".
+Action.c(58): Notify: Saving Parameter "parentid_27 = 148".
+Action.c(58): Notify: Saving Parameter "parentid_28 = 148".
+Action.c(58): Notify: Saving Parameter "parentid_29 = 148".
+Action.c(58): Notify: Saving Parameter "parentid_30 = 148".
+Action.c(58): Notify: Saving Parameter "parentid_31 = 148".
+Action.c(58): Notify: Saving Parameter "parentid_32 = 148".
+Action.c(58): Notify: Saving Parameter "parentid_33 = 151".
+Action.c(58): Notify: Saving Parameter "parentid_34 = 149".
+Action.c(58): Notify: Saving Parameter "parentid_35 = 150".
+Action.c(58): Notify: Saving Parameter "parentid_36 = 153".
+Action.c(58): Notify: Saving Parameter "parentid_37 = 153".
+Action.c(58): Notify: Saving Parameter "parentid_38 = 152".
+Action.c(58): Notify: Saving Parameter "parentid_39 = 179".
+Action.c(58): Notify: Saving Parameter "parentid_40 = 179".
+Action.c(58): Notify: Saving Parameter "parentid_41 = 179".
+Action.c(58): Notify: Saving Parameter "parentid_42 = 179".
+Action.c(58): Notify: Saving Parameter "parentid_43 = 179".
+Action.c(58): Notify: Saving Parameter "parentid_44 = 180".
+Action.c(58): Notify: Saving Parameter "parentid_45 = 180".
+Action.c(58): Notify: Saving Parameter "parentid_46 = 180".
+Action.c(58): Notify: Saving Parameter "parentid_47 = 180".
+Action.c(58): Notify: Saving Parameter "parentid_48 = 180".
+Action.c(58): Notify: Saving Parameter "parentid_49 = 180".
+Action.c(58): Notify: Saving Parameter "parentid_50 = 181".
+Action.c(58): Notify: Saving Parameter "parentid_51 = 181".
+Action.c(58): Notify: Saving Parameter "parentid_52 = 181".
+Action.c(58): Notify: Saving Parameter "parentid_53 = 182".
+Action.c(58): Notify: Saving Parameter "parentid_54 = 183".
+Action.c(58): Notify: Saving Parameter "parentid_55 = 185".
+Action.c(58): Notify: Saving Parameter "parentid_56 = 185".
+Action.c(58): Notify: Saving Parameter "parentid_57 = 185".
+Action.c(58): Notify: Saving Parameter "parentid_58 = 185".
+Action.c(58): Notify: Saving Parameter "parentid_59 = 184".
+Action.c(58): Notify: Saving Parameter "parentid_60 = 184".
+Action.c(58): Notify: Saving Parameter "parentid_61 = 184".
+Action.c(58): Notify: Saving Parameter "parentid_62 = 184".
+Action.c(58): Notify: Saving Parameter "parentid_63 = 184".
+Action.c(58): Notify: Saving Parameter "parentid_64 = 184".
+Action.c(58): Notify: Saving Parameter "parentid_65 = 186".
+Action.c(58): Notify: Saving Parameter "parentid_66 = 187".
+Action.c(58): Notify: Saving Parameter "parentid_67 = 188".
+Action.c(58): Notify: Saving Parameter "parentid_68 = 189".
+Action.c(58): Notify: Saving Parameter "parentid_69 = 189".
+Action.c(58): Notify: Saving Parameter "parentid_70 = 189".
+Action.c(58): Notify: Saving Parameter "parentid_71 = 189".
+Action.c(58): Notify: Saving Parameter "parentid_72 = 190".
+Action.c(58): Notify: Saving Parameter "parentid_73 = 190".
+Action.c(58): Notify: Saving Parameter "parentid_74 = 190".
+Action.c(58): Notify: Saving Parameter "parentid_75 = 191".
+Action.c(58): Notify: Saving Parameter "parentid_76 = 191".
+Action.c(58): Notify: Saving Parameter "parentid_77 = 191".
+Action.c(58): Notify: Saving Parameter "parentid_78 = 191".
+Action.c(58): Notify: Saving Parameter "parentid_79 = 191".
+Action.c(58): Notify: Saving Parameter "parentid_80 = 192".
+Action.c(58): Notify: Saving Parameter "parentid_81 = 192".
+Action.c(58): Notify: Saving Parameter "parentid_82 = 192".
+Action.c(58): Notify: Saving Parameter "parentid_83 = 193".
+Action.c(58): Notify: Saving Parameter "parentid_84 = 193".
+Action.c(58): Notify: Saving Parameter "parentid_85 = 193".
+Action.c(58): Notify: Saving Parameter "parentid_86 = 193".
+Action.c(58): Notify: Saving Parameter "parentid_87 = 194".
+Action.c(58): Notify: Saving Parameter "parentid_88 = 194".
+Action.c(58): Notify: Saving Parameter "parentid_89 = 194".
+Action.c(58): Notify: Saving Parameter "parentid_90 = 195".
+Action.c(58): Notify: Saving Parameter "parentid_91 = 195".
+Action.c(58): Notify: Saving Parameter "parentid_92 = 195".
+Action.c(58): Notify: Saving Parameter "parentid_93 = 195".
+Action.c(58): Notify: Saving Parameter "parentid_94 = 195".
+Action.c(58): Notify: Saving Parameter "parentid_95 = 196".
+Action.c(58): Notify: Saving Parameter "parentid_96 = 196".
+Action.c(58): Notify: Saving Parameter "parentid_97 = 196".
+Action.c(58): Notify: Saving Parameter "parentid_98 = 197".
+Action.c(58): Notify: Saving Parameter "parentid_99 = 197".
+Action.c(58): Notify: Saving Parameter "parentid_100 = 197".
+Action.c(58): Notify: Saving Parameter "parentid_101 = 198".
+Action.c(58): Notify: Saving Parameter "parentid_102 = 198".
+Action.c(58): Notify: Saving Parameter "parentid_103 = 198".
+Action.c(58): Notify: Saving Parameter "parentid_104 = 198".
+Action.c(58): Notify: Saving Parameter "parentid_105 = 198".
+Action.c(58): Notify: Saving Parameter "parentid_106 = 199".
+Action.c(58): Notify: Saving Parameter "parentid_107 = 199".
+Action.c(58): Notify: Saving Parameter "parentid_108 = 199".
+Action.c(58): Notify: Saving Parameter "parentid_109 = 200".
+Action.c(58): Notify: Saving Parameter "parentid_110 = 200".
+Action.c(58): Notify: Saving Parameter "parentid_111 = 200".
+Action.c(58): Notify: Saving Parameter "parentid_112 = 200".
+Action.c(58): Notify: Saving Parameter "parentid_113 = 201".
+Action.c(58): Notify: Saving Parameter "parentid_114 = 201".
+Action.c(58): Notify: Saving Parameter "parentid_115 = 201".
+Action.c(58): Notify: Saving Parameter "parentid_116 = 201".
+Action.c(58): Notify: Saving Parameter "parentid_117 = 201".
+Action.c(58): Notify: Saving Parameter "parentid_118 = 201".
+Action.c(58): Notify: Saving Parameter "parentid_119 = 201".
+Action.c(58): Notify: Saving Parameter "parentid_120 = 202".
+Action.c(58): Notify: Saving Parameter "parentid_121 = 202".
+Action.c(58): Notify: Saving Parameter "parentid_122 = 202".
+Action.c(58): Notify: Saving Parameter "parentid_123 = 202".
+Action.c(58): Notify: Saving Parameter "parentid_124 = 202".
+Action.c(58): Notify: Saving Parameter "parentid_125 = 202".
+Action.c(58): Notify: Saving Parameter "parentid_126 = 202".
+Action.c(58): Notify: Saving Parameter "parentid_127 = 202".
+Action.c(58): Notify: Saving Parameter "parentid_128 = 202".
+Action.c(58): Notify: Saving Parameter "parentid_129 = 202".
+Action.c(58): Notify: Saving Parameter "parentid_130 = 202".
+Action.c(58): Notify: Saving Parameter "parentid_131 = 203".
+Action.c(58): Notify: Saving Parameter "parentid_132 = 203".
+Action.c(58): Notify: Saving Parameter "parentid_133 = 203".
+Action.c(58): Notify: Saving Parameter "parentid_134 = 204".
+Action.c(58): Notify: Saving Parameter "parentid_135 = 204".
+Action.c(58): Notify: Saving Parameter "parentid_136 = 204".
+Action.c(58): Notify: Saving Parameter "parentid_137 = 204".
+Action.c(58): Notify: Saving Parameter "parentid_138 = 204".
+Action.c(58): Notify: Saving Parameter "parentid_139 = 204".
+Action.c(58): Notify: Saving Parameter "parentid_140 = 204".
+Action.c(58): Notify: Saving Parameter "parentid_141 = 204".
+Action.c(58): Notify: Saving Parameter "parentid_142 = 205".
+Action.c(58): Notify: Saving Parameter "parentid_143 = 205".
+Action.c(58): Notify: Saving Parameter "parentid_144 = 205".
+Action.c(58): Notify: Saving Parameter "parentid_145 = 205".
+Action.c(58): Notify: Saving Parameter "parentid_146 = 205".
+Action.c(58): Notify: Saving Parameter "parentid_147 = 205".
+Action.c(58): Notify: Saving Parameter "parentid_148 = 206".
+Action.c(58): Notify: Saving Parameter "parentid_149 = 206".
+Action.c(58): Notify: Saving Parameter "parentid_150 = 206".
+Action.c(58): Notify: Saving Parameter "parentid_151 = 206".
+Action.c(58): Notify: Saving Parameter "parentid_152 = 206".
+Action.c(58): Notify: Saving Parameter "parentid_153 = 206".
+Action.c(58): Notify: Saving Parameter "parentid_154 = 206".
+Action.c(58): Notify: Saving Parameter "parentid_155 = 206".
+Action.c(58): Notify: Saving Parameter "parentid_156 = 154".
+Action.c(58): Notify: Saving Parameter "parentid_157 = 154".
+Action.c(58): Notify: Saving Parameter "parentid_158 = 154".
+Action.c(58): Notify: Saving Parameter "parentid_159 = 155".
+Action.c(58): Notify: Saving Parameter "parentid_160 = 155".
+Action.c(58): Notify: Saving Parameter "parentid_161 = 155".
+Action.c(58): Notify: Saving Parameter "parentid_162 = 156".
+Action.c(58): Notify: Saving Parameter "parentid_163 = 156".
+Action.c(58): Notify: Saving Parameter "parentid_164 = 156".
+Action.c(58): Notify: Saving Parameter "parentid_165 = 156".
+Action.c(58): Notify: Saving Parameter "parentid_166 = 157".
+Action.c(58): Notify: Saving Parameter "parentid_167 = 157".
+Action.c(58): Notify: Saving Parameter "parentid_168 = 157".
+Action.c(58): Notify: Saving Parameter "parentid_169 = 157".
+Action.c(58): Notify: Saving Parameter "parentid_170 = 157".
+Action.c(58): Notify: Saving Parameter "parentid_171 = 158".
+Action.c(58): Notify: Saving Parameter "parentid_172 = 158".
+Action.c(58): Notify: Saving Parameter "parentid_173 = 158".
+Action.c(58): Notify: Saving Parameter "parentid_174 = 159".
+Action.c(58): Notify: Saving Parameter "parentid_175 = 159".
+Action.c(58): Notify: Saving Parameter "parentid_176 = 160".
+Action.c(58): Notify: Saving Parameter "parentid_177 = 160".
+Action.c(58): Notify: Saving Parameter "parentid_178 = 161".
+Action.c(58): Notify: Saving Parameter "parentid_179 = 161".
+Action.c(58): Notify: Saving Parameter "parentid_180 = 161".
+Action.c(58): Notify: Saving Parameter "parentid_181 = 162".
+Action.c(58): Notify: Saving Parameter "parentid_182 = 164".
+Action.c(58): Notify: Saving Parameter "parentid_183 = 164".
+Action.c(58): Notify: Saving Parameter "parentid_184 = 165".
+Action.c(58): Notify: Saving Parameter "parentid_185 = 165".
+Action.c(58): Notify: Saving Parameter "parentid_186 = 166".
+Action.c(58): Notify: Saving Parameter "parentid_187 = 166".
+Action.c(58): Notify: Saving Parameter "parentid_188 = 163".
+Action.c(58): Notify: Saving Parameter "parentid_189 = 163".
+Action.c(58): Notify: Saving Parameter "parentid_190 = 163".
+Action.c(58): Notify: Saving Parameter "parentid_191 = 163".
+Action.c(58): Notify: Saving Parameter "parentid_192 = 167".
+Action.c(58): Notify: Saving Parameter "parentid_193 = 167".
+Action.c(58): Notify: Saving Parameter "parentid_194 = 167".
+Action.c(58): Notify: Saving Parameter "parentid_195 = 169".
+Action.c(58): Notify: Saving Parameter "parentid_196 = 169".
+Action.c(58): Notify: Saving Parameter "parentid_197 = 169".
+Action.c(58): Notify: Saving Parameter "parentid_198 = 169".
+Action.c(58): Notify: Saving Parameter "parentid_199 = 168".
+Action.c(58): Notify: Saving Parameter "parentid_200 = 168".
+Action.c(58): Notify: Saving Parameter "parentid_201 = 170".
+Action.c(58): Notify: Saving Parameter "parentid_202 = 171".
+Action.c(58): Notify: Saving Parameter "parentid_203 = 171".
+Action.c(58): Notify: Saving Parameter "parentid_204 = 171".
+Action.c(58): Notify: Saving Parameter "parentid_205 = 172".
+Action.c(58): Notify: Saving Parameter "parentid_206 = 172".
+Action.c(58): Notify: Saving Parameter "parentid_207 = 172".
+Action.c(58): Notify: Saving Parameter "parentid_208 = 172".
+Action.c(58): Notify: Saving Parameter "parentid_209 = 172".
+Action.c(58): Notify: Saving Parameter "parentid_210 = 173".
+Action.c(58): Notify: Saving Parameter "parentid_211 = 174".
+Action.c(58): Notify: Saving Parameter "parentid_212 = 174".
+Action.c(58): Notify: Saving Parameter "parentid_213 = 174".
+Action.c(58): Notify: Saving Parameter "parentid_214 = 175".
+Action.c(58): Notify: Saving Parameter "parentid_215 = 175".
+Action.c(58): Notify: Saving Parameter "parentid_216 = 178".
+Action.c(58): Notify: Saving Parameter "parentid_217 = 176".
+Action.c(58): Notify: Saving Parameter "parentid_218 = 176".
+Action.c(58): Notify: Saving Parameter "parentid_219 = 177".
+Action.c(58): Notify: Saving Parameter "parentid_220 = 217".
+Action.c(58): Notify: Saving Parameter "parentid_221 = 217".
+Action.c(58): Notify: Saving Parameter "parentid_222 = 7".
+Action.c(58): Notify: Saving Parameter "parentid_223 = 207".
+Action.c(58): Notify: Saving Parameter "parentid_224 = 207".
+Action.c(58): Notify: Saving Parameter "parentid_225 = 207".
+Action.c(58): Notify: Saving Parameter "parentid_226 = 207".
+Action.c(58): Notify: Saving Parameter "parentid_227 = 208".
+Action.c(58): Notify: Saving Parameter "parentid_228 = 208".
+Action.c(58): Notify: Saving Parameter "parentid_229 = 209".
+Action.c(58): Notify: Saving Parameter "parentid_230 = 216".
+Action.c(58): Notify: Saving Parameter "parentid_count = 230".
+Action.c(58): web_url("treeview") was successful, 75659 body bytes, 316 header bytes, 84 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(68): Notify: Transaction "UC01_CI04_Location" ended with a "Pass" status (Duration: 0.5020 Wasted Time: 0.0934).
+Action.c(70): Notify: Parameter Substitution: parameter "parentid_count" =  "230"
+Action.c(70): Notify: Parameter Substitution: parameter "parentid_176" =  "160"
+Action.c(70): Notify: Saving Parameter "parentid_rand = 160".
+Action.c(72): Notify: Transaction "UC01_CI05_Theme" started.
+Action.c(74): web_url("children_3") started  	[MsgId: MMSG-26355]
+Action.c(74): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(74): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(74): Notify: Parameter Substitution: parameter "parentid_rand" =  "160"
+Action.c(74): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(74): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(74): web_url("children_3") was successful, 2 body bytes, 316 header bytes, 10 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(84): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+Action.c(84): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+Action.c(90): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+Action.c(90): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+Action.c(96): web_url("service") started  	[MsgId: MMSG-26355]
+Action.c(96): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(96): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(96): Notify: Parameter Substitution: parameter "parentid_rand" =  "160"
+Action.c(96): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(96): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(96): Notify: Saving Parameter "serviceid_1 = 2836".
+Action.c(96): Notify: Saving Parameter "serviceid_2 = 2837".
+Action.c(96): Notify: Saving Parameter "servicename_1 = Не горят лампы в светильниках".
+Action.c(96): Notify: Saving Parameter "servicename_2 = Треск и искрение в светильниках в рабочем режиме".
+Action.c(96): Notify: Saving Parameter "serviceid_count = 2".
+Action.c(96): Notify: Saving Parameter "servicename_count = 2".
+Action.c(96): web_url("service") was successful, 548 body bytes, 316 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(106): web_url("{parentid_rand}") started  	[MsgId: MMSG-26355]
+Action.c(106): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(106): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(106): Notify: Parameter Substitution: parameter "parentid_rand" =  "160"
+Action.c(106): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(106): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(106): web_url("{parentid_rand}") was successful, 228 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(116): Notify: Parameter Substitution: parameter "serviceid_count" =  "2"
+Action.c(116): Notify: Parameter Substitution: parameter "serviceid_2" =  "2837"
+Action.c(116): Notify: Saving Parameter "serviceid_rand = 2837".
+Action.c(117): Notify: Parameter Substitution: parameter "servicename_count" =  "2"
+Action.c(117): Notify: Parameter Substitution: parameter "servicename_2" =  "Треск и искрение в светильниках в рабочем режиме"
+Action.c(117): Notify: Saving Parameter "servicename_rand = Треск и искрение в светильниках в рабочем режиме".
+Action.c(119): web_url("inventoryNumbers") started  	[MsgId: MMSG-26355]
+Action.c(119): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(119): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(119): Notify: Parameter Substitution: parameter "serviceid_rand" =  "2837"
+Action.c(119): Notify: Parameter Substitution: parameter "shopid_rand" =  "1"
+Action.c(119): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(119): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(119): web_url("inventoryNumbers") was successful, 114 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(129): Notify: Transaction "UC01_CI05_Theme" ended with a "Pass" status (Duration: 0.4237 Wasted Time: 0.0750).
+Action.c(133): Notify: Transaction "UC01_CI06_Change_Theme" started.
+Action.c(135): Notify: Parameter Substitution: parameter "serviceid_count" =  "2"
+Action.c(135): Notify: Parameter Substitution: parameter "serviceid_1" =  "2836"
+Action.c(135): Notify: Saving Parameter "serviceid_rand = 2836".
+Action.c(137): web_url("inventoryNumbers_2") started  	[MsgId: MMSG-26355]
+Action.c(137): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(137): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(137): Notify: Parameter Substitution: parameter "serviceid_rand" =  "2836"
+Action.c(137): Notify: Parameter Substitution: parameter "shopid_rand" =  "1"
+Action.c(137): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(137): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(137): web_url("inventoryNumbers_2") was successful, 114 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(147): Notify: Transaction "UC01_CI06_Change_Theme" ended with a "Pass" status (Duration: 0.1319 Wasted Time: 0.0189).
+Action.c(151): Notify: Transaction "UC01_CI07_Inventory" started.
+Action.c(153): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+Action.c(153): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+Action.c(160): web_url("inventoryNumbers_3") started  	[MsgId: MMSG-26355]
+Action.c(160): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(160): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(160): Notify: Parameter Substitution: parameter "shopid_rand" =  "1"
+Action.c(160): Notify: Parameter Substitution: parameter "serviceid_rand" =  "2836"
+Action.c(160): Notify: Parameter Substitution: parameter "serviceid_rand" =  "2836"
+Action.c(160): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(160): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(160): Warning -35049: No match found for the requested parameter "inventoryid". Check whether the requested regular expression exists in the response data  	[MsgId: MWAR-35049]
+Action.c(160): Notify: Saving Parameter "inventoryid_count = 0".
+Action.c(160): web_url("inventoryNumbers_3") highest severity level was "warning", 114 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26387]
+Action.c(170): Notify: Parameter Substitution: parameter "inventoryid_count" =  "0"
+Action.c(177): Notify: Saving Parameter "inventoryid_rand = ".
+Action.c(180): Notify: Transaction "UC01_CI07_Inventory" ended with a "Pass" status (Duration: 0.1329 Wasted Time: 0.0195).
+Action.c(209): Notify: Transaction "UC01_CI09_Create_inc_and_add_description" started.
+Action.c(211): web_custom_request("ticket_2") started  	[MsgId: MMSG-26355]
+Action.c(211): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(211): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(211): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(211): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(211): Notify: Parameter Substitution: parameter "Description" =  "test description test description"
+Action.c(211): Notify: Parameter Substitution: parameter "servicename_rand" =  "Треск и искрение в светильниках в рабочем режиме"
+Action.c(211): Notify: Parameter Substitution: parameter "serviceid_rand" =  "2836"
+Action.c(211): Notify: Parameter Substitution: parameter "inventoryid_rand" =  ""
+Action.c(211): Notify: Parameter Substitution: parameter "shopid_rand" =  "1"
+Action.c(211): web_custom_request("ticket_2") was successful, 1463 body bytes, 316 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(230): Notify: Transaction "UC01_CI09_Create_inc_and_add_description" ended with a "Pass" status (Duration: 0.7129 Wasted Time: 0.0203).
+Action.c(232): Notify: Transaction "UC01_CI010_Confirm" started.
+Action.c(238): web_url("{Host_Name}:{Port}_2") started  	[MsgId: MMSG-26355]
+Action.c(238): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(238): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(238): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(238): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(238): Retrieving data from cache for "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26558]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/css/core/material_icons.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/css/core/materialize.min.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/css/core/uploadfile.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/css/core/quill.snow.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/css/core/select2.min.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/css/core/ee-file-upload.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/css/style.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/css/company_2.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/js/core/legacy.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/js/core/jquery-3.1.1.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/js/core/clamp.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/js/core/jquery.cookie.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/js/core/jquery.uploadfile.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/js/core/jquery.maskedinput.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/js/core/jquery.ee.router.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/js/core/select2.full.min.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/js/core/readmore.min.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/js/core/dust.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/js/core/dust-helpers.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/js/core/custom-helpers.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/js/core/materialize.min.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/js/core/materialize-select.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/js/core/materialize-pagination.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/js/core/polyphills.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/js/core/helpers.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/js/index.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): Resource "http://learning2.pflb.ru:56902/js/core/materialTable.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(238): web_url("{Host_Name}:{Port}_2") was successful, 0 body bytes, 0 header bytes  	[MsgId: MMSG-26386]
+Action.c(256): web_url("checkLogin_2") started  	[MsgId: MMSG-26355]
+Action.c(256): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(256): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(256): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(256): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(256): web_url("checkLogin_2") was successful, 92 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(266): web_url("info_2") started  	[MsgId: MMSG-26355]
+Action.c(266): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(266): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(266): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(266): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(266): web_url("info_2") was successful, 277 body bytes, 316 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(276): web_url("4_2") started  	[MsgId: MMSG-26355]
+Action.c(276): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(276): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(276): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(276): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(276): web_url("4_2") was successful, 52 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(286): web_url("countByState_2") started  	[MsgId: MMSG-26355]
+Action.c(286): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(286): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(286): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(286): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(286): web_url("countByState_2") was successful, 219 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(296): web_url("countByState_3") started  	[MsgId: MMSG-26355]
+Action.c(296): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(296): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(296): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(296): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(296): web_url("countByState_3") was successful, 219 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(306): web_custom_request("ticket_3") started  	[MsgId: MMSG-26355]
+Action.c(306): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(306): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(306): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(306): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(306): web_custom_request("ticket_3") was successful, 11533 body bytes, 316 header bytes, 20 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(318): web_custom_request("ticket_4") started  	[MsgId: MMSG-26355]
+Action.c(318): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(318): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(318): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action.c(318): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action.c(318): web_custom_request("ticket_4") was successful, 11533 body bytes, 316 header bytes, 20 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(330): Notify: Transaction "UC01_CI010_Confirm" ended with a "Pass" status (Duration: 2.6512 Wasted Time: 0.1429).
 Ending action Action.
 Starting action Logout.
 Logout.c(3): Notify: Transaction "UC01_CI011_Logout" started.
@@ -602,13 +553,18 @@ Logout.c(5): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2
 Logout.c(5): Notify: Parameter Substitution: parameter "Port" =  "56902"
 Logout.c(5): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
 Logout.c(5): Notify: Parameter Substitution: parameter "Port" =  "56902"
-Logout.c(5): web_url("logout") was successful, 0 body bytes, 421 header bytes  	[MsgId: MMSG-26386]
-Logout.c(14): web_add_cookie started  	[MsgId: MMSG-26355]
-Logout.c(14): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
-Logout.c(14): web_add_cookie was successful  	[MsgId: MMSG-26392]
-Logout.c(16): web_remove_auto_header("X-Requested-With") started  	[MsgId: MMSG-26355]
-Logout.c(16): Previous automatically added web header for "X-Requested-With" removed  	[MsgId: MMSG-26587]
-Logout.c(16): web_remove/revert_auto_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
+Logout.c(5): Redirecting "http://learning2.pflb.ru:56902/api/logout" (redirection depth is 0)  	[MsgId: MMSG-26694]
+Logout.c(5): To location "http://learning2.pflb.ru:56902/login.html"  	[MsgId: MMSG-26693]
+Logout.c(5): Resource "http://learning2.pflb.ru:56902/css/core/material_icons.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout.c(5): Resource "http://learning2.pflb.ru:56902/css/core/materialize.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout.c(5): Resource "http://learning2.pflb.ru:56902/css/style.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout.c(5): Resource "http://learning2.pflb.ru:56902/js/core/legacy.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout.c(5): Resource "http://learning2.pflb.ru:56902/js/core/jquery-3.1.1.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout.c(5): Resource "http://learning2.pflb.ru:56902/js/core/dust.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout.c(5): Resource "http://learning2.pflb.ru:56902/js/core/jquery.cookie.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout.c(5): Resource "http://learning2.pflb.ru:56902/js/core/materialize.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout.c(5): Resource "http://learning2.pflb.ru:56902/js/page/authorisation.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Logout.c(5): web_url("logout") was successful, 873 body bytes, 675 header bytes  	[MsgId: MMSG-26386]
 Logout.c(18): web_url("login_3") started  	[MsgId: MMSG-26355]
 Logout.c(18): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
 Logout.c(18): Notify: Parameter Substitution: parameter "Port" =  "56902"
@@ -624,7 +580,7 @@ Logout.c(18): Resource "http://learning2.pflb.ru:56902/js/core/jquery.cookie.js"
 Logout.c(18): Resource "http://learning2.pflb.ru:56902/js/core/materialize.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
 Logout.c(18): Resource "http://learning2.pflb.ru:56902/js/page/authorisation.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
 Logout.c(18): web_url("login_3") was successful, 873 body bytes, 395 header bytes  	[MsgId: MMSG-26386]
-Logout.c(28): Notify: Transaction "UC01_CI011_Logout" ended with a "Pass" status (Duration: 0.1589 Wasted Time: 0.0624).
+Logout.c(28): Notify: Transaction "UC01_CI011_Logout" ended with a "Pass" status (Duration: 0.1609 Wasted Time: 0.0461).
 Ending action Logout.
 Ending iteration 1.
 Ending Vuser...

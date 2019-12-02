@@ -1,6 +1,6 @@
 Logout()
 {
-	lr_start_transaction("UC01_CI011_Logout");
+	lr_start_transaction("UC01_CI010_Logout");
 
 	web_url("logout", 
 		"URL=http://{Host_Name}:{Port}/api/logout", 
@@ -10,10 +10,6 @@ Logout()
 		"Snapshot=t29.inf", 
 		"Mode=HTML", 
 		LAST);
-
-	web_add_cookie("sessionExpired=false; DOMAIN={Host_Name}");
-
-	web_revert_auto_header("X-Requested-With");
 
 	web_url("login_3", 
 		"URL=http://{Host_Name}:{Port}/login", 
@@ -25,7 +21,7 @@ Logout()
 		"Mode=HTML", 
 		LAST);
 
-	lr_end_transaction("UC01_CI011_Logout",LR_AUTO);
+	lr_end_transaction("UC01_CI010_Logout",LR_AUTO);
 	
 	return 0;
 }

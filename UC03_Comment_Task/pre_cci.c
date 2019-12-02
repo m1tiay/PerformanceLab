@@ -2601,7 +2601,7 @@ vuser_init()
 # 1 "Login.c" 1
 Login()
 {
-	lr_start_transaction("UC01_CI01_Home_Page");
+	lr_start_transaction("UC03_CT01_Home_Page");
 	
 	web_url("login", 
 		"URL=http://{Host_Name}:{Port}/login", 
@@ -2611,25 +2611,13 @@ Login()
 		"Referer=", 
 		"Snapshot=t1.inf", 
 		"Mode=HTML", 
-		"EXTRARES", 
-		"Url=/tpl/login/login.dust", "ENDITEM", 
-		"Url=/css/fonts/roboto/Roboto-Light.eot?", "ENDITEM", 
-		"Url=/css/fonts/roboto/Roboto-Regular.eot?", "ENDITEM", 
-		"Url=/css/fonts/roboto/Roboto-Medium.eot?", "ENDITEM", 
-		"Url=/images/logo_2.png", "ENDITEM", 
-		"Url=/css/fonts/roboto/Roboto-Thin.eot?", "ENDITEM", 
-		"Url=/css/fonts/roboto/Roboto-Bold.eot?", "ENDITEM", 
-		"Url=/favicon.ico", "Referer=", "ENDITEM", 
 		"LAST");
 	
-	lr_end_transaction("UC01_CI01_Home_Page",2);
-
-	lr_start_transaction("UC01_CI02_Login");
-
-	web_add_header("X-Requested-With", 
-		"XMLHttpRequest");
+	lr_end_transaction("UC03_CT01_Home_Page",2);
 
 	lr_think_time(5);
+
+	lr_start_transaction("UC03_CT02_Login");
 
 	web_submit_data("login_2", 
 		"Action=http://{Host_Name}:{Port}/api/login", 
@@ -2644,17 +2632,7 @@ Login()
 		"Name=rememberMe", "Value={RememberMe}", "ENDITEM", 
 		"LAST");
 
-	web_add_cookie("currentCompany=0; DOMAIN={Host_Name}");
-
-	web_add_cookie("currentUser=master; DOMAIN={Host_Name}");
-
-	web_add_cookie("PFLB.pre.login.link=null; DOMAIN={Host_Name}");
-
-	web_add_cookie("filterSetting="
-		"%7B%22page%22%3A%22http%3A%2F%2F{Host_Name}%3A{Port}%2F%23tickets%3Fstate%3Dopened%26page%3D1%22%2C%22smho%22%3Anull%2C%22dateStart%22%3A%22%22%2C%22dateEnd%22%3A%22%22%2C%22cat1%22%3Anull%2C%22cat2%22%3Anull%2C%22cat3%22%3Anull%2C%22cat4%22%3Anull%2C%22theme%22%3Anull%2C%22engineer%22%3Anull%2C%22location%22%3Anull%2C%22division%22%3Anull%2C%22overdue%22%3Afalse%2C%22filters%22%3A%7B%22newCheckbox%22%3Atrue%2C%22appointedCheckbox%22%3Atrue%2C%22performedCheckbox%22%3Atrue%2C%22controlCheckbo"
-		"x%22%3Atrue%7D%7D; DOMAIN={Host_Name}");
-
-	web_url("{Host_Name}:{Port}", 
+	web_url("Host_Name:Port", 
 		"URL=http://{Host_Name}:{Port}/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2662,21 +2640,7 @@ Login()
 		"Referer=http://{Host_Name}:{Port}/login", 
 		"Snapshot=t3.inf", 
 		"Mode=HTML", 
-		"EXTRARES", 
-		"Url=/js/core/jqueryformplugin.js?_=1574681863393", "ENDITEM", 
-		"Url=/engineer/wrapper/wrapper.dust", "ENDITEM", 
-		"Url=/engineer/wrapper/wrapper.js", "ENDITEM", 
-		"Url=/css/fonts/material_icons/MaterialIcons-Regular.woff", "ENDITEM", 
-		"Url=/engineer/tickets/tickets.dust", "ENDITEM", 
-		"Url=/engineer/tickets/tickets.js", "ENDITEM", 
-		"Url=/engineer/catalog/catalog.dust", "ENDITEM", 
-		"Url=/engineer/catalog/catalog.js", "ENDITEM", 
-		"Url=/images/logo-5ka.png", "ENDITEM", 
-		"Url=/engineer/addticket.dust", "ENDITEM", 
 		"LAST");
-
-	web_add_auto_header("X-Requested-With", 
-		"XMLHttpRequest");
 
 	web_url("checkLogin", 
 		"URL=http://{Host_Name}:{Port}/api/checkLogin", 
@@ -2730,7 +2694,7 @@ Login()
 		"EncType=application/json; charset=utf-8", 
 		"LAST");
 
-	lr_end_transaction("UC01_CI02_Login",2);
+	lr_end_transaction("UC03_CT02_Login",2);
 	
 	return 0;
 }
@@ -2776,7 +2740,7 @@ Action()
 
 	lr_save_string(lr_paramarr_random("taskid"), "taskid_rand");
 	
-	web_url("{taskid_rand}", 
+	web_url("taskid", 
 		"URL=http://{Host_Name}:{Port}/api/task/{taskid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2810,32 +2774,32 @@ Action()
 
 	lr_think_time(5);
 
-	lr_start_transaction("UC03_CT05_Add_file");
-	
-	web_reg_save_param_regexp (
-    	"ParamName=filesid",
-    	"RegExp=\"id\":(.+?),\"name\"",
-    	"Ordinal=1",
-		"LAST" );
-		
-	web_submit_data("file", 
-		"Action=http://{Host_Name}:{Port}/api/ticket/file/", 
-		"Method=POST", 
-		"EncType=multipart/form-data", 
-		"TargetFrame=", 
-		"RecContentType=application/json", 
-		"Referer=http://{Host_Name}:{Port}/", 
-		"Snapshot=t27.inf", 
-		"Mode=HTML", 
-		"ITEMDATA", 
-		"Name=files", "Value=temp.txt", "File=Yes", "ENDITEM", 
-		"LAST");
-
-	lr_end_transaction("UC03_CT05_Add_file",2);
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 	lr_think_time(5);
 
-	lr_start_transaction("UC03_CT06_Comment_and_Send");
+	lr_start_transaction("UC03_CT05_Comment_and_Send");
 
 	web_custom_request("comment_2", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/{taskid_rand}/comment/", 
@@ -2847,7 +2811,7 @@ Action()
 		"Snapshot=t28.inf", 
 		"Mode=HTML", 
 		"EncType=application/json; charset=utf-8", 
-		"Body={\"text\":\"DTelekhin {Comment}\",\"files\":[{filesid}]}", 
+		"Body={\"text\":\"DTelekhin {Comment}\"}", 
 		"LAST");
 
 	web_url("comment_3", 
@@ -2860,7 +2824,7 @@ Action()
 		"Mode=HTML", 
 		"LAST");
 
-	lr_end_transaction("UC03_CT06_Comment_and_Send",2);
+	lr_end_transaction("UC03_CT05_Comment_and_Send",2);
 
 	lr_think_time(5);
 
@@ -2871,7 +2835,7 @@ Action()
 # 1 "Logout.c" 1
 Logout()
 {
-	lr_start_transaction("UC01_CI011_Logout");
+	lr_start_transaction("UC03_CT06_Logout");
 
 	web_url("logout", 
 		"URL=http://{Host_Name}:{Port}/api/logout", 
@@ -2881,10 +2845,6 @@ Logout()
 		"Snapshot=t29.inf", 
 		"Mode=HTML", 
 		"LAST");
-
-	web_add_cookie("sessionExpired=false; DOMAIN={Host_Name}");
-
-	(web_remove_auto_header("X-Requested-With", "ImplicitGen=Yes", "LAST"));
 
 	web_url("login_3", 
 		"URL=http://{Host_Name}:{Port}/login", 
@@ -2896,7 +2856,7 @@ Logout()
 		"Mode=HTML", 
 		"LAST");
 
-	lr_end_transaction("UC01_CI011_Logout",2);
+	lr_end_transaction("UC03_CT06_Logout",2);
 	
 	return 0;
 }

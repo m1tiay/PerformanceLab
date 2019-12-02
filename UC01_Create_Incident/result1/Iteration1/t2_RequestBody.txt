@@ -1,1 +1,1 @@
-"login=master&password=123&rememberMe="
+"login=master&password=123&rememberMe=false"
