@@ -1,47 +1,23 @@
-/*
- * LoadRunner Java script. (Build: _build_number_)
- * 
- * Script Description: 
- *                     
- */
-
 import lrapi.lr;
 import java.sql.*;
 
-public class Actions
-{
-
-	// Create global connection variable
-	private Connection connection;
-
-	public int init() throws ClassNotFoundException, SQLException {
+public class Actions{
+	public int init() {
 
   		try {
-    		// Load Oracle JDBC Driver
     		Class.forName("oracle.jdbc.driver.OracleDriver");
-  		} catch (Exception ex) {
-    		// If driver load is unsuccessful
+  		} catch (ClassNotFoundException ex) {
     		lr.log_message("Database Driver not found");
     		lr.abort();
   		}
-  		try {
-    		// Specify the JDBC Connection String (jdbc:oracle:thin:@HOST:PORT:SID)
-    		String url = "jdbc:oracle:thin:@192.168.14.53:1522:orcl";
-    		// Connect to URL using USERNAME and PASSWORD
-    		connection = DriverManager.getConnection(url,"c##x5",lr.decrypt("c##x5"));
-    		lr.log_message("JDBC Connection Successful");
-  		} catch (SQLException e) {
-    		// If Connection Failed
-    		lr.log_message("Database Connection Failed, Please check your connection string");
-    		lr.abort();
-  		}
+  		
   		return 0;
-	} //end of init
+	}
 
 
-	public int action() throws ClassNotFoundException, SQLException {
+	public int action() {
 
-		lr.start_transaction("Database_Insert_1");
+		lr.start_transaction("UC02_CS01_Insert");
 		database_query("INSERT INTO Task t1(t1.id, "+  
                     "t1.change_id, "+
                     "t1.ticket_id, "+
@@ -89,41 +65,43 @@ public class Actions
 			"FROM Ticket t2 "+
 			"WHERE t2.text LIKE 'DTelekhin%' "+
 			"AND t2.state_id = -1");
-		lr.end_transaction("Database_Insert_1", lr.AUTO);
+		lr.end_transaction("UC02_CS01_Insert", lr.AUTO);
 
-		lr.start_transaction("Database_Update_2");
+		lr.start_transaction("UC02_CS02_Update");
 		database_query("UPDATE Ticket SET state_id = 1 WHERE state_id = -1 AND TEXT LIKE 'DTelekhin%'");
-		lr.end_transaction("Database_Update_2", lr.AUTO);
+		lr.end_transaction("UC02_CS02_Update", lr.AUTO);
 
-		lr.start_transaction("Database_Commite_3");
-		database_query("COMMIT");
-		lr.end_transaction("Database_Commite_3", lr.AUTO);
-		
 		return 0;
-	}//end of action
+	}
 
 	
-	public int end() throws Throwable {
-		connection.close();
+	public int end() {
 		return 0;
-	}//end of end
+	}
 	
     public int database_query(String SQL_QUERY) {
-       Statement stmt = null;
-       ResultSet rset = null;
+       String url = "jdbc:oracle:thin:@{Host_Name}:{Port}:orcl";
 
-       try {
-	   connection.setAutoCommit(false);
-	   stmt = connection.createStatement();
-	   rset = stmt.executeQuery(SQL_QUERY);
-	   lr.set_transaction_status(lr.PASS);
-	   rset.close();
-	} catch (SQLException e) {
-	    // SQL Query has failed
-	    lr.log_message("Caught Exception: " + e.getMessage());
-	    lr.set_transaction_status(lr.FAIL);
-	    return 1;
-	}
+       try (Connection connection = DriverManager.getConnection(url, "{Login}", "{Password}"); 
+            Statement statement = connection.createStatement()) {
+            	lr.log_message("JDBC Connection Successful");
+            	connection.setAutoCommit(false);
+            	
+            	try {
+            		statement.executeQuery(SQL_QUERY);
+	   				lr.log_message("SQL Query Executed Successfully");
+	   				connection.commit();
+            	} catch (SQLException e) {
+            		lr.log_message("Caught Exception: " + e.getMessage());
+            		connection.rollback();
+	    			lr.log_message("Rollback complete");
+            	}
+				lr.log_message("Commit complete");
+            } catch (SQLException e) {
+            	lr.log_message("Caught Exception: " + e.getMessage());
+	    		lr.set_transaction_status(lr.STOP);
+	    		return 1;
+            }
 	return 0;
     }
 }

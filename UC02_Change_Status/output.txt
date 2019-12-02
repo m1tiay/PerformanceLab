@@ -1,16 +1,15 @@
-Virtual User Script started at: 28.11.2019 12:55:20
+Virtual User Script started at: 02.12.2019 17:18:49
 Starting action vuser_init.
-JDBC Connection Successful
 Ending action vuser_init.
 Running Vuser...
 Starting iteration 1.
 Starting action Actions.
-Actions.java(45): Notify: Transaction "Database_Query_1" started.
-Actions.java(93): Notify: Transaction "Database_Query_1" ended with a "Pass" status (Duration: 0,0797).
-Actions.java(96): Notify: Transaction "Database_Query_2" started.
-Actions.java(98): Notify: Transaction "Database_Query_2" ended with a "Pass" status (Duration: 0,0259).
-Actions.java(101): Notify: Transaction "Database_Query_3" started.
-Actions.java(103): Notify: Transaction "Database_Query_3" ended with a "Pass" status (Duration: 0,0249).
+Actions.java(20): Notify: Transaction "UC02_CS01_Insert" started.
+Caught Exception: Ошибка ввода/вывода: Invalid number format for port number
+Actions.java(68): Notify: Transaction "UC02_CS01_Insert" ended with a "Stop" status (Duration: 0,1696).
+Actions.java(70): Notify: Transaction "UC02_CS02_Update" started.
+Caught Exception: Ошибка ввода/вывода: Invalid number format for port number
+Actions.java(72): Notify: Transaction "UC02_CS02_Update" ended with a "Stop" status (Duration: 0,0159).
 Ending action Actions.
 Ending iteration 1.
 Ending Vuser...
