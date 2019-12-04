@@ -2585,7 +2585,7 @@ void
 
  
  
-
+int ThinkTime = 5;
 
 # 3 "c:\\users\\student\\xdesk\\uc01_create_incident\\\\combined_UC01_Create_Incident.c" 2
 
@@ -2600,100 +2600,100 @@ vuser_init()
 Login()
 {
 	lr_start_transaction("UC01_CI01_Home_Page");
-	
-	web_url("login", 
-		"URL=http://{Host_Name}:{Port}/login", 
-		"TargetFrame=", 
-		"Resource=0", 
-		"RecContentType=text/html", 
-		"Referer=", 
-		"Snapshot=t1.inf", 
+
+	web_url("login",
+		"URL=http://{Host_Name}:{Port}/login",
+		"TargetFrame=",
+		"Resource=0",
+		"RecContentType=text/html",
+		"Referer=",
+		"Snapshot=t1.inf",
 		"Mode=HTML",
 		"LAST");
-	
+
 	lr_end_transaction("UC01_CI01_Home_Page",2);
 
-	lr_think_time(5);
+	lr_think_time(ThinkTime);
 
 	lr_start_transaction("UC01_CI02_Login");
 
-	web_submit_data("login_2", 
-		"Action=http://{Host_Name}:{Port}/api/login", 
-		"Method=POST", 
-		"TargetFrame=", 
-		"Referer=http://{Host_Name}:{Port}/login", 
-		"Snapshot=t2.inf", 
-		"Mode=HTML", 
-		"ITEMDATA", 
-		"Name=login", "Value={Username}", "ENDITEM", 
+	web_submit_data("api/login",
+		"Action=http://{Host_Name}:{Port}/api/login",
+		"Method=POST",
+		"TargetFrame=",
+		"Referer=http://{Host_Name}:{Port}/login",
+		"Snapshot=t2.inf",
+		"Mode=HTML",
+		"ITEMDATA",
+		"Name=login", "Value={Username}", "ENDITEM",
 		"Name=password", "Value={Password}", "ENDITEM",
-		"Name=rememberMe", "Value={RememberMe}", "ENDITEM", 
+		"Name=rememberMe", "Value={RememberMe}", "ENDITEM",
 		"LAST");
 
-	web_url("Host_Name:Port", 
-		"URL=http://{Host_Name}:{Port}/", 
-		"TargetFrame=", 
-		"Resource=0", 
-		"RecContentType=text/html", 
-		"Referer=http://{Host_Name}:{Port}/login", 
-		"Snapshot=t3.inf", 
+	web_url("Url",
+		"URL=http://{Host_Name}:{Port}/",
+		"TargetFrame=",
+		"Resource=0",
+		"RecContentType=text/html",
+		"Referer=http://{Host_Name}:{Port}/login",
+		"Snapshot=t3.inf",
 		"Mode=HTML",
 		"LAST");
 
-	web_url("checkLogin", 
-		"URL=http://{Host_Name}:{Port}/api/checkLogin", 
-		"TargetFrame=", 
-		"Resource=0", 
-		"RecContentType=application/json", 
-		"Referer=http://{Host_Name}:{Port}/", 
-		"Snapshot=t4.inf", 
-		"Mode=HTML", 
+	web_url("api/checkLogin",
+		"URL=http://{Host_Name}:{Port}/api/checkLogin",
+		"TargetFrame=",
+		"Resource=0",
+		"RecContentType=application/json",
+		"Referer=http://{Host_Name}:{Port}/",
+		"Snapshot=t4.inf",
+		"Mode=HTML",
 		"LAST");
 
-	web_url("info", 
-		"URL=http://{Host_Name}:{Port}/api/user/info", 
-		"TargetFrame=", 
-		"Resource=0", 
-		"RecContentType=application/json", 
-		"Referer=http://{Host_Name}:{Port}/", 
-		"Snapshot=t5.inf", 
-		"Mode=HTML", 
+	web_url("api/user/info",
+		"URL=http://{Host_Name}:{Port}/api/user/info",
+		"TargetFrame=",
+		"Resource=0",
+		"RecContentType=application/json",
+		"Referer=http://{Host_Name}:{Port}/",
+		"Snapshot=t5.inf",
+		"Mode=HTML",
 		"LAST");
 
-	web_url("4", 
-		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/4", 
-		"TargetFrame=", 
-		"Resource=0", 
-		"RecContentType=application/json", 
-		"Referer=http://{Host_Name}:{Port}/", 
-		"Snapshot=t6.inf", 
-		"Mode=HTML", 
+	web_url("api/ticket/countByState",
+		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/4",
+		"TargetFrame=",
+		"Resource=0",
+		"RecContentType=application/json",
+		"Referer=http://{Host_Name}:{Port}/",
+		"Snapshot=t6.inf",
+		"Mode=HTML",
 		"LAST");
 
-	web_url("countByState", 
-		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/", 
-		"TargetFrame=", 
-		"Resource=0", 
-		"RecContentType=application/json", 
-		"Referer=http://{Host_Name}:{Port}/", 
-		"Snapshot=t7.inf", 
-		"Mode=HTML", 
+	web_url("api/ticket/countByState_2",
+		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/",
+		"TargetFrame=",
+		"Resource=0",
+		"RecContentType=application/json",
+		"Referer=http://{Host_Name}:{Port}/",
+		"Snapshot=t7.inf",
+		"Mode=HTML",
 		"LAST");
 
-	web_custom_request("ticket", 
-		"URL=http://{Host_Name}:{Port}/api/ticket/?state=-1,0,1,5&page=0&size=10", 
-		"Method=GET", 
-		"TargetFrame=", 
-		"Resource=0", 
-		"RecContentType=application/json", 
-		"Referer=http://{Host_Name}:{Port}/", 
-		"Snapshot=t8.inf", 
-		"Mode=HTML", 
-		"EncType=application/json; charset=utf-8", 
+	web_custom_request("api/ticket", 
+		"URL=http://{Host_Name}:{Port}/api/ticket/?state=-1,0,1,5&page=0&size=10",
+		"Method=GET",
+		"TargetFrame=",
+		"Resource=0",
+		"RecContentType=application/json",
+		"Referer=http://{Host_Name}:{Port}/",
+		"Snapshot=t8.inf",
+		"Mode=HTML",
+		"EncType=application/json; charset=utf-8",
 		"LAST");
 
 	lr_end_transaction("UC01_CI02_Login",2);
-	
+
 	return 0;
 }
 # 5 "c:\\users\\student\\xdesk\\uc01_create_incident\\\\combined_UC01_Create_Incident.c" 2
@@ -2703,7 +2703,7 @@ Action()
 {
 	lr_start_transaction("UC01_CI03_New_Incident");
 
-	web_url("children", 
+	web_url("api/user/catalog/node/0/children", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/node/0/children/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2715,7 +2715,7 @@ Action()
 
 	lr_end_transaction("UC01_CI03_New_Incident",2);
 
-	lr_think_time(5);
+	lr_think_time(ThinkTime);
 
 	lr_start_transaction("UC01_CI04_Location");
 
@@ -2726,7 +2726,7 @@ Action()
     	"Ordinal=All",
 		"LAST" );
 	
-	web_url("shops", 
+	web_url("api/shops", 
 		"URL=http://{Host_Name}:{Port}/api/shops?q=&page=0", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2736,9 +2736,9 @@ Action()
 		"Mode=HTML", 
 		"LAST");
 
-	lr_think_time(5);
+	lr_think_time(ThinkTime);
 
-	web_url("children_2", 
+	web_url("api/user/catalog/node/0/children_2", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/node/0/children/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2756,7 +2756,7 @@ Action()
     	"Ordinal=All",
 		"LAST" );
 	
-	web_url("treeview", 
+	web_url("api/user/catalog/treeview", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/treeview?shopid={shopid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2772,7 +2772,7 @@ Action()
 	
 	lr_start_transaction("UC01_CI05_Theme");
 
-	web_url("children_3", 
+	web_url("api/user/catalog", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/node/{parentid_rand}/children/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2794,7 +2794,7 @@ Action()
     	"Ordinal=All",
 		"LAST" );
 		
-	web_url("service", 
+	web_url("api/user/catalog_2", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/node/{parentid_rand}/service/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2804,7 +2804,7 @@ Action()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("{parentid_rand}", 
+	web_url("api/user/catalog/breadcrumbs", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/breadcrumbs/{parentid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2815,9 +2815,10 @@ Action()
 		"LAST");
 
 	lr_save_string(lr_paramarr_random("serviceid"), "serviceid_rand");
+	
 	lr_save_string(lr_paramarr_random("servicename"), "servicename_rand");
 	
-	web_url("inventoryNumbers", 
+	web_url("api/inventoryNumber", 
 		"URL=http://{Host_Name}:{Port}/api/inventoryNumbers?serviceId={serviceid_rand}&shopid={shopid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2829,13 +2830,13 @@ Action()
 
 	lr_end_transaction("UC01_CI05_Theme",2);
 
-	lr_think_time(5);
+	lr_think_time(ThinkTime);
 
 	lr_start_transaction("UC01_CI06_Change_Theme");
 
 	lr_save_string(lr_paramarr_random("serviceid"), "serviceid_rand");
 	
-	web_url("inventoryNumbers_2", 
+	web_url("api/inventoryNumber_2", 
 		"URL=http://{Host_Name}:{Port}/api/inventoryNumbers?serviceId={serviceid_rand}&shopid={shopid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2847,7 +2848,7 @@ Action()
 
 	lr_end_transaction("UC01_CI06_Change_Theme",2);
 
-	lr_think_time(5);
+	lr_think_time(ThinkTime);
 
 	lr_start_transaction("UC01_CI07_Inventory");
 		
@@ -2858,8 +2859,9 @@ Action()
     	"NotFound=warning",
 		"LAST" );
 	
-	web_url("inventoryNumbers_3", 
-		"URL=http://{Host_Name}:{Port}/api/inventoryNumbers?shopid={shopid_rand}&serviceId={serviceid_rand}&serviceId={serviceid_rand}&q=&page=0", 
+	web_url("api/inventoryNumber_3", 
+		"URL=http://{Host_Name}:{Port}/api/inventoryNumbers?shopid={shopid_rand}&" 
+		"serviceId={serviceid_rand}&serviceId={serviceid_rand}&q=&page=0",
 		"TargetFrame=", 
 		"Resource=0", 
 		"RecContentType=application/json", 
@@ -2868,48 +2870,19 @@ Action()
 		"Mode=HTML", 
 		"LAST");
 
-	if(atoi(lr_eval_string("{inventoryid_count}"))>0)
-	{
+	if (atoi(lr_eval_string("{inventoryid_count}")) > 0)	{
 		lr_save_string(lr_paramarr_random("inventoryid"), "inventoryid_rand");
-	}
-	
-	else
-	{
+	} else {
 		lr_save_string("", "inventoryid_rand");
 	}
 	
 	lr_end_transaction("UC01_CI07_Inventory",2);
 
-	lr_think_time(5);
+	lr_think_time(ThinkTime);
 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+	lr_start_transaction("UC01_CI08_Create_inc_and_add_description");
 
-	lr_think_time(5);
-
-	lr_start_transaction("UC01_CI09_Create_inc_and_add_description");
-
-	web_custom_request("ticket_2", 
+	web_custom_request("api/ticket_2", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/", 
 		"Method=POST", 
 		"TargetFrame=", 
@@ -2923,38 +2896,26 @@ Action()
 		"\"header\":\"{servicename_rand}\"," 
 		"\"ticketStateId\":0," 
 		"\"serviceId\":\"{serviceid_rand}\"," 
- 
 		"\"inventoryNumberId\":\"{inventoryid_rand}\"," 
 		"\"shopId\":\"{shopid_rand}\"}",
 		"LAST");
 
-	lr_end_transaction("UC01_CI09_Create_inc_and_add_description",2);
+	lr_end_transaction("UC01_CI08_Create_inc_and_add_description",2);
 
-	lr_start_transaction("UC01_CI010_Confirm");
+	lr_start_transaction("UC01_CI09_Confirm");
 
- 
+	lr_think_time(ThinkTime);
 
-	lr_think_time(5);
-
-	web_url("{Host_Name}:{Port}_2", 
+	web_url("Url_2", 
 		"URL=http://{Host_Name}:{Port}/", 
 		"TargetFrame=", 
 		"Resource=0", 
 		"Referer=http://{Host_Name}:{Port}/", 
 		"Snapshot=t21.inf", 
 		"Mode=HTML", 
- 
- 
- 
- 
- 
- 
 		"LAST");
 
- 
- 
-
-	web_url("checkLogin_2", 
+	web_url("api/checkLogin_2", 
 		"URL=http://{Host_Name}:{Port}/api/checkLogin", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2964,7 +2925,7 @@ Action()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("info_2", 
+	web_url("api/user/info_2", 
 		"URL=http://{Host_Name}:{Port}/api/user/info", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2974,7 +2935,7 @@ Action()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("4_2", 
+	web_url("api/ticket/countByState_3", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/4", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2984,7 +2945,7 @@ Action()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("countByState_2", 
+	web_url("api/ticket/countByState_4", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2994,7 +2955,7 @@ Action()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("countByState_3", 
+	web_url("api/ticket/countByState_5", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -3004,7 +2965,7 @@ Action()
 		"Mode=HTML", 
 		"LAST");
 
-	web_custom_request("ticket_3", 
+	web_custom_request("api/ticket_3", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/?state=-1,0,1,5&page=0&size=10", 
 		"Method=GET", 
 		"TargetFrame=", 
@@ -3016,7 +2977,7 @@ Action()
 		"EncType=application/json; charset=utf-8", 
 		"LAST");
 
-	web_custom_request("ticket_4", 
+	web_custom_request("api/ticket_4", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/?state=-1,0,1,5&page=0&size=10", 
 		"Method=GET", 
 		"TargetFrame=", 
@@ -3028,9 +2989,9 @@ Action()
 		"EncType=application/json; charset=utf-8", 
 		"LAST");
 
-	lr_end_transaction("UC01_CI010_Confirm",2);
+	lr_end_transaction("UC01_CI09_Confirm",2);
 
-	lr_think_time(5);
+	lr_think_time(ThinkTime);
 
 	return 0;
 }
@@ -3039,9 +3000,9 @@ Action()
 # 1 "Logout.c" 1
 Logout()
 {
-	lr_start_transaction("UC01_CI011_Logout");
+	lr_start_transaction("UC01_CI010_Logout");
 
-	web_url("logout", 
+	web_url("api/logout", 
 		"URL=http://{Host_Name}:{Port}/api/logout", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -3049,10 +3010,6 @@ Logout()
 		"Snapshot=t29.inf", 
 		"Mode=HTML", 
 		"LAST");
-
- 
-
- 
 
 	web_url("login_3", 
 		"URL=http://{Host_Name}:{Port}/login", 
@@ -3064,7 +3021,7 @@ Logout()
 		"Mode=HTML", 
 		"LAST");
 
-	lr_end_transaction("UC01_CI011_Logout",2);
+	lr_end_transaction("UC01_CI010_Logout",2);
 	
 	return 0;
 }

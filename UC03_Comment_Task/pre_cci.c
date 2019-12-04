@@ -2586,7 +2586,7 @@ void
 
  
  
-
+int ThinkTime = 5;
 
 
 # 3 "c:\\users\\student\\xdesk\\uc03_comment_task\\\\combined_UC03_Comment_Task.c" 2
@@ -2615,11 +2615,11 @@ Login()
 	
 	lr_end_transaction("UC03_CT01_Home_Page",2);
 
-	lr_think_time(5);
+	lr_think_time(ThinkTime);
 
 	lr_start_transaction("UC03_CT02_Login");
 
-	web_submit_data("login_2", 
+	web_submit_data("api/login", 
 		"Action=http://{Host_Name}:{Port}/api/login", 
 		"Method=POST", 
 		"TargetFrame=", 
@@ -2632,7 +2632,7 @@ Login()
 		"Name=rememberMe", "Value={RememberMe}", "ENDITEM", 
 		"LAST");
 
-	web_url("Host_Name:Port", 
+	web_url("Url", 
 		"URL=http://{Host_Name}:{Port}/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2642,7 +2642,7 @@ Login()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("checkLogin", 
+	web_url("api/checkLogin", 
 		"URL=http://{Host_Name}:{Port}/api/checkLogin", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2652,7 +2652,7 @@ Login()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("info", 
+	web_url("api/user/info", 
 		"URL=http://{Host_Name}:{Port}/api/user/info", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2662,7 +2662,7 @@ Login()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("4", 
+	web_url("api/ticket/countByState", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/4", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2672,7 +2672,7 @@ Login()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("countByState", 
+	web_url("api/ticket/countByState_2", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2682,7 +2682,7 @@ Login()
 		"Mode=HTML", 
 		"LAST");
 
-	web_custom_request("ticket", 
+	web_custom_request("api/ticket", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/?state=-1,0,1,5&page=0&size=10", 
 		"Method=GET", 
 		"TargetFrame=", 
@@ -2706,7 +2706,7 @@ Action()
 
 	lr_start_transaction("UC03_CT03_Select_Tasks");
 
-	web_url("countByState_2", 
+	web_url("api/task/countByState_3", 
 		"URL=http://{Host_Name}:{Port}/api/task/countByState/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2722,7 +2722,7 @@ Action()
     	"Ordinal=All",
 		"LAST" );
 		
-	web_custom_request("task", 
+	web_custom_request("api/task", 
 		"URL=http://{Host_Name}:{Port}/api/task/?state=1&page=0&size=10", 
 		"Method=GET", 
 		"TargetFrame=", 
@@ -2740,7 +2740,7 @@ Action()
 
 	lr_save_string(lr_paramarr_random("taskid"), "taskid_rand");
 	
-	web_url("taskid", 
+	web_url("api/task", 
 		"URL=http://{Host_Name}:{Port}/api/task/{taskid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2750,7 +2750,7 @@ Action()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("checkLogin_2", 
+	web_url("api/checkLogin_2", 
 		"URL=http://{Host_Name}:{Port}/api/checkLogin", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2760,7 +2760,7 @@ Action()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("comment", 
+	web_url("api/ticket_2", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/{taskid_rand}/comment/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2772,36 +2772,11 @@ Action()
 
 	lr_end_transaction("UC03_CT04_Choose_Task",2);
 
-	lr_think_time(5);
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
-	lr_think_time(5);
+	lr_think_time(ThinkTime);
 
 	lr_start_transaction("UC03_CT05_Comment_and_Send");
 
-	web_custom_request("comment_2", 
+	web_custom_request("api/ticket_3", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/{taskid_rand}/comment/", 
 		"Method=POST", 
 		"TargetFrame=", 
@@ -2814,7 +2789,7 @@ Action()
 		"Body={\"text\":\"DTelekhin {Comment}\"}", 
 		"LAST");
 
-	web_url("comment_3", 
+	web_url("api/ticket_4", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/{taskid_rand}/comment/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2826,7 +2801,7 @@ Action()
 
 	lr_end_transaction("UC03_CT05_Comment_and_Send",2);
 
-	lr_think_time(5);
+	lr_think_time(ThinkTime);
 
 	return 0;
 }
@@ -2837,7 +2812,7 @@ Logout()
 {
 	lr_start_transaction("UC03_CT06_Logout");
 
-	web_url("logout", 
+	web_url("api/logout", 
 		"URL=http://{Host_Name}:{Port}/api/logout", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2846,7 +2821,7 @@ Logout()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("login_3", 
+	web_url("login_2", 
 		"URL=http://{Host_Name}:{Port}/login", 
 		"TargetFrame=", 
 		"Resource=0", 

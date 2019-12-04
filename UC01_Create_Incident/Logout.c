@@ -2,7 +2,7 @@ Logout()
 {
 	lr_start_transaction("UC01_CI010_Logout");
 
-	web_url("logout", 
+	web_url("api/logout", 
 		"URL=http://{Host_Name}:{Port}/api/logout", 
 		"TargetFrame=", 
 		"Resource=0", 

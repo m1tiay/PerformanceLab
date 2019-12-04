@@ -14,11 +14,11 @@ Login()
 	
 	lr_end_transaction("UC03_CT01_Home_Page",LR_AUTO);
 
-	lr_think_time(5);
+	lr_think_time(ThinkTime);
 
 	lr_start_transaction("UC03_CT02_Login");
 
-	web_submit_data("login_2", 
+	web_submit_data("api/login", 
 		"Action=http://{Host_Name}:{Port}/api/login", 
 		"Method=POST", 
 		"TargetFrame=", 
@@ -31,7 +31,7 @@ Login()
 		"Name=rememberMe", "Value={RememberMe}", ENDITEM, 
 		LAST);
 
-	web_url("Host_Name:Port", 
+	web_url("Url", 
 		"URL=http://{Host_Name}:{Port}/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -41,7 +41,7 @@ Login()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("checkLogin", 
+	web_url("api/checkLogin", 
 		"URL=http://{Host_Name}:{Port}/api/checkLogin", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -51,7 +51,7 @@ Login()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("info", 
+	web_url("api/user/info", 
 		"URL=http://{Host_Name}:{Port}/api/user/info", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -61,7 +61,7 @@ Login()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("4", 
+	web_url("api/ticket/countByState", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/4", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -71,7 +71,7 @@ Login()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("countByState", 
+	web_url("api/ticket/countByState_2", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -81,7 +81,7 @@ Login()
 		"Mode=HTML", 
 		LAST);
 
-	web_custom_request("ticket", 
+	web_custom_request("api/ticket", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/?state=-1,0,1,5&page=0&size=10", 
 		"Method=GET", 
 		"TargetFrame=", 

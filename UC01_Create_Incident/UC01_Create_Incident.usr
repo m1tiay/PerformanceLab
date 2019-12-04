@@ -63,7 +63,7 @@ vuser_end=cci
 [TransactionsOrder]
 Order="UC01_CI01_Home_Page__*delimiter*__UC01_CI02_Login__*delimiter*__UC01_CI03_New_Incident__*delimiter*__UC01_CI04_Location__*delimiter*__UC01_CI05_Theme__*delimiter*__UC01_CI06_Change_Theme__*delimiter*__UC01_CI07_Inventory__*delimiter*__UC01_CI08_Create_inc_and_add_description__*delimiter*__UC01_CI09_Confirm__*delimiter*__UC01_CI010_Logout"
 [StateManagement]
-LastReplayStatus=1
+LastReplayStatus=0
 [ActiveReplay]
 LastReplayedRunName=result1
 ActiveRunName=result1

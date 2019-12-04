@@ -1,3 +1,0 @@
-"{"text":"DTelekhin test description test description test description","header":"Двери м"
-"едленно движутся","ticketStateId":0,"serviceId":"2944","inventoryNumberId":"",""
-"shopId":"1"}"

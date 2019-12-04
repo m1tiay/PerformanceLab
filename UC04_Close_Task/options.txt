@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\Users\student\XDesk\UC04_Close_Task
+-IC:\Program Files (x86)\Micro Focus\LoadRunner\include
+-ec:\users\student\xdesk\uc04_close_task\\logfile.log
+c:\users\student\xdesk\uc04_close_task\\combined_UC04_Close_Task.c
+c:\users\student\xdesk\uc04_close_task\\pre_cci.c

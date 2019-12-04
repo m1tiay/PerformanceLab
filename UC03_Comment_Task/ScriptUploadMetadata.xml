@@ -22,8 +22,11 @@
     <FileEntry Name="combined_UC03_Comment_Task.c" Filter="2" />
     <FileEntry Name="pre_cci.c" Filter="2" />
     <FileEntry Name="103433910440.idx" Filter="1" />
+    <FileEntry Name="10343391044_sfG.388.idx" Filter="1" />
     <FileEntry Name="177760952440.idx" Filter="1" />
+    <FileEntry Name="17776095244_RrB.389.idx" Filter="1" />
     <FileEntry Name="86555370440.idx" Filter="1" />
+    <FileEntry Name="8655537044_b7m.387.idx" Filter="1" />
     <FileEntry Name="Bookmarks.xml" Filter="1" />
     <FileEntry Name="Breakpoints.xml" Filter="1" />
     <FileEntry Name="CompilerLogMetadata.xml" Filter="1" />
@@ -37,6 +40,7 @@
     <FileEntry Name="output.bak" Filter="1" />
     <FileEntry Name="output.txt" Filter="1" />
     <FileEntry Name="OutputColoringDatabase.json" Filter="1" />
+    <FileEntry Name="pre_cci.c.pickle" Filter="1" />
     <FileEntry Name="replay.har" Filter="1" />
     <FileEntry Name="ReplaySummaryReport.xml" Filter="1" />
     <FileEntry Name="ScriptUploadMetadata.xml" Filter="1" />

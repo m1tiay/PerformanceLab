@@ -1,0 +1,13 @@
+[t30]
+FileName1=t30.json
+URL1=http://learning2.pflb.ru:56902/api/task/?state=1&page=0&size=10
+Total=2
+ContentType=application/json
+SnapshotXmlFile=snapshot_30.xml
+RequestHeaderFile=t30_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t30_ResponseHeader.txt
+FileName2=t30_149933.pdf
+URL2=http://learning2.pflb.ru:56902/api/report/149933?timeZoneOffset=3
+[ProtocolInfo]
+ProtocolId=QTWeb

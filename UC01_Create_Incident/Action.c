@@ -2,7 +2,7 @@ Action()
 {
 	lr_start_transaction("UC01_CI03_New_Incident");
 
-	web_url("children", 
+	web_url("api/user/catalog/node/0/children", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/node/0/children/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -14,7 +14,7 @@ Action()
 
 	lr_end_transaction("UC01_CI03_New_Incident",LR_AUTO);
 
-	lr_think_time(5);
+	lr_think_time(ThinkTime);
 
 	lr_start_transaction("UC01_CI04_Location");
 
@@ -25,7 +25,7 @@ Action()
     	"Ordinal=All",
 		LAST );
 	
-	web_url("shops", 
+	web_url("api/shops", 
 		"URL=http://{Host_Name}:{Port}/api/shops?q=&page=0", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -35,9 +35,9 @@ Action()
 		"Mode=HTML", 
 		LAST);
 
-	lr_think_time(5);
+	lr_think_time(ThinkTime);
 
-	web_url("children_2", 
+	web_url("api/user/catalog/node/0/children_2", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/node/0/children/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -55,7 +55,7 @@ Action()
     	"Ordinal=All",
 		LAST );
 	
-	web_url("treeview", 
+	web_url("api/user/catalog/treeview", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/treeview?shopid={shopid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -71,7 +71,7 @@ Action()
 	
 	lr_start_transaction("UC01_CI05_Theme");
 
-	web_url("children_3", 
+	web_url("api/user/catalog", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/node/{parentid_rand}/children/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -93,7 +93,7 @@ Action()
     	"Ordinal=All",
 		LAST );
 		
-	web_url("service", 
+	web_url("api/user/catalog_2", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/node/{parentid_rand}/service/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -103,7 +103,7 @@ Action()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("{parentid_rand}", 
+	web_url("api/user/catalog/breadcrumbs", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/breadcrumbs/{parentid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -117,7 +117,7 @@ Action()
 	
 	lr_save_string(lr_paramarr_random("servicename"), "servicename_rand");
 	
-	web_url("inventoryNumbers", 
+	web_url("api/inventoryNumber", 
 		"URL=http://{Host_Name}:{Port}/api/inventoryNumbers?serviceId={serviceid_rand}&shopid={shopid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -129,13 +129,13 @@ Action()
 
 	lr_end_transaction("UC01_CI05_Theme",LR_AUTO);
 
-	lr_think_time(5);
+	lr_think_time(ThinkTime);
 
 	lr_start_transaction("UC01_CI06_Change_Theme");
 
 	lr_save_string(lr_paramarr_random("serviceid"), "serviceid_rand");
 	
-	web_url("inventoryNumbers_2", 
+	web_url("api/inventoryNumber_2", 
 		"URL=http://{Host_Name}:{Port}/api/inventoryNumbers?serviceId={serviceid_rand}&shopid={shopid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -147,7 +147,7 @@ Action()
 
 	lr_end_transaction("UC01_CI06_Change_Theme",LR_AUTO);
 
-	lr_think_time(5);
+	lr_think_time(ThinkTime);
 
 	lr_start_transaction("UC01_CI07_Inventory");
 		
@@ -158,7 +158,7 @@ Action()
     	"NotFound=warning",
 		LAST );
 	
-	web_url("inventoryNumbers_3", 
+	web_url("api/inventoryNumber_3", 
 		"URL=http://{Host_Name}:{Port}/api/inventoryNumbers?shopid={shopid_rand}&" 
 		"serviceId={serviceid_rand}&serviceId={serviceid_rand}&q=&page=0",
 		"TargetFrame=", 
@@ -169,23 +169,19 @@ Action()
 		"Mode=HTML", 
 		LAST);
 
-	if(atoi(lr_eval_string("{inventoryid_count}"))>0)
-	{
+	if (atoi(lr_eval_string("{inventoryid_count}")) > 0)	{
 		lr_save_string(lr_paramarr_random("inventoryid"), "inventoryid_rand");
-	}
-	
-	else
-	{
+	} else {
 		lr_save_string("", "inventoryid_rand");
 	}
 	
 	lr_end_transaction("UC01_CI07_Inventory",LR_AUTO);
 
-	lr_think_time(5);
+	lr_think_time(ThinkTime);
 
 	lr_start_transaction("UC01_CI08_Create_inc_and_add_description");
 
-	web_custom_request("ticket_2", 
+	web_custom_request("api/ticket_2", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/", 
 		"Method=POST", 
 		"TargetFrame=", 
@@ -207,9 +203,9 @@ Action()
 
 	lr_start_transaction("UC01_CI09_Confirm");
 
-	lr_think_time(5);
+	lr_think_time(ThinkTime);
 
-	web_url("Host_Name:Port_2", 
+	web_url("Url_2", 
 		"URL=http://{Host_Name}:{Port}/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -218,7 +214,7 @@ Action()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("checkLogin_2", 
+	web_url("api/checkLogin_2", 
 		"URL=http://{Host_Name}:{Port}/api/checkLogin", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -228,7 +224,7 @@ Action()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("info_2", 
+	web_url("api/user/info_2", 
 		"URL=http://{Host_Name}:{Port}/api/user/info", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -238,7 +234,7 @@ Action()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("4_2", 
+	web_url("api/ticket/countByState_3", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/4", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -248,7 +244,7 @@ Action()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("countByState_2", 
+	web_url("api/ticket/countByState_4", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -258,7 +254,7 @@ Action()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("countByState_3", 
+	web_url("api/ticket/countByState_5", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -268,7 +264,7 @@ Action()
 		"Mode=HTML", 
 		LAST);
 
-	web_custom_request("ticket_3", 
+	web_custom_request("api/ticket_3", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/?state=-1,0,1,5&page=0&size=10", 
 		"Method=GET", 
 		"TargetFrame=", 
@@ -280,7 +276,7 @@ Action()
 		"EncType=application/json; charset=utf-8", 
 		LAST);
 
-	web_custom_request("ticket_4", 
+	web_custom_request("api/ticket_4", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/?state=-1,0,1,5&page=0&size=10", 
 		"Method=GET", 
 		"TargetFrame=", 
@@ -294,7 +290,7 @@ Action()
 
 	lr_end_transaction("UC01_CI09_Confirm",LR_AUTO);
 
-	lr_think_time(5);
+	lr_think_time(ThinkTime);
 
 	return 0;
 }

@@ -1,0 +1,15 @@
+[t20]
+FileName1=t20_149933.json
+URL1=http://learning2.pflb.ru:56902/api/ticket/149933
+Total=3
+ContentType=application/json
+SnapshotXmlFile=snapshot_20.xml
+RequestHeaderFile=t20_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t20_ResponseHeader.txt
+FileName2=t20_custom.png
+URL2=http://learning2.pflb.ru:56902/images/custom.png
+FileName3=t20_comment.html
+URL3=http://learning2.pflb.ru:56902/tpl/comment.dust
+[ProtocolInfo]
+ProtocolId=QTWeb

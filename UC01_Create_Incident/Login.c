@@ -14,7 +14,7 @@ Login()
 
 	lr_end_transaction("UC01_CI01_Home_Page",LR_AUTO);
 
-	lr_think_time(5);
+	lr_think_time(ThinkTime);
 
 	lr_start_transaction("UC01_CI02_Login");
 
@@ -31,7 +31,7 @@ Login()
 		"Name=rememberMe", "Value={RememberMe}", ENDITEM,
 		LAST);
 
-	web_url("Host_Name:Port",
+	web_url("Url",
 		"URL=http://{Host_Name}:{Port}/",
 		"TargetFrame=",
 		"Resource=0",
@@ -61,7 +61,7 @@ Login()
 		"Mode=HTML",
 		LAST);
 
-	web_url("api/ticket/countByState/4",
+	web_url("api/ticket/countByState",
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/4",
 		"TargetFrame=",
 		"Resource=0",
@@ -71,7 +71,7 @@ Login()
 		"Mode=HTML",
 		LAST);
 
-	web_url("api/ticket/countByState",
+	web_url("api/ticket/countByState_2",
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/",
 		"TargetFrame=",
 		"Resource=0",
