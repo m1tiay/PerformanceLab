@@ -1,19 +1,21 @@
-Virtual User Script started at: 02.12.2019 18:21:45
+Virtual User Script started at: 05.12.2019 12:02:31
 Starting action vuser_init.
 Ending action vuser_init.
 Running Vuser...
 Starting iteration 1.
 Starting action Actions.
-Actions.java(20): Notify: Transaction "UC02_CS01_Insert" started.
+Actions.java(49): Notify: Transaction "UC02_CS01_Insert" started.
+jdbc:oracle:thin:@192.168.14.53:1522:orcl
 JDBC Connection Successful
 SQL Query Executed Successfully
 Commit complete
-Actions.java(68): Notify: Transaction "UC02_CS01_Insert" ended with a "Pass" status (Duration: 1,3657).
-Actions.java(70): Notify: Transaction "UC02_CS02_Update" started.
+Actions.java(97): Notify: Transaction "UC02_CS01_Insert" ended with a "Pass" status (Duration: 1,3992).
+Actions.java(99): Notify: Transaction "UC02_CS02_Update" started.
+jdbc:oracle:thin:@192.168.14.53:1522:orcl
 JDBC Connection Successful
 SQL Query Executed Successfully
 Commit complete
-Actions.java(72): Notify: Transaction "UC02_CS02_Update" ended with a "Pass" status (Duration: 0,1129).
+Actions.java(101): Notify: Transaction "UC02_CS02_Update" ended with a "Pass" status (Duration: 0,1448).
 Ending action Actions.
 Ending iteration 1.
 Ending Vuser...

@@ -1,16 +1,16 @@
 import lrapi.lr;
 import java.sql.*;
 
-public class Actions{
+public class Actions{	   
+    
 	public int init() {
-
   		try {
     		Class.forName("oracle.jdbc.driver.OracleDriver");
   		} catch (ClassNotFoundException ex) {
     		lr.log_message("Database Driver not found");
     		lr.abort();
   		}
-  		
+		
   		return 0;
 	}
 
@@ -70,23 +70,22 @@ public class Actions{
 		lr.start_transaction("UC02_CS02_Update");
 		database_query("UPDATE Ticket SET state_id = 1 WHERE state_id = -1 AND TEXT LIKE 'DTelekhin%'");
 		lr.end_transaction("UC02_CS02_Update", lr.AUTO);
-
+		
 		return 0;
 	}
-
 	
 	public int end() {
 		return 0;
 	}
 	
-    public int database_query(String SQL_QUERY) {
-       String url = "jdbc:oracle:thin:@192.168.14.53:1522:orcl";
+	public int database_query(String SQL_QUERY) {
 
-       try (Connection connection = DriverManager.getConnection(url, "c##x5", "c##x5"); 
+       String url = "jdbc:oracle:thin:@" + lr.eval_string("{Host_Name}") + ":" + lr.eval_string("{Port}") + ":orcl";
+       
+       try (Connection connection = DriverManager.getConnection(url, lr.eval_string("{Username}"), lr.eval_string("{Password}")); 
             Statement statement = connection.createStatement()) {
             	lr.log_message("JDBC Connection Successful");
             	connection.setAutoCommit(false);
-            	
             	try {
             		statement.executeQuery(SQL_QUERY);
 	   				lr.log_message("SQL Query Executed Successfully");
@@ -104,4 +103,5 @@ public class Actions{
             }
 	return 0;
     }
+	
 }
