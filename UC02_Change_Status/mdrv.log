@@ -1,1 +1,26 @@
-Notify: JDK found at C:/Program Files (x86)/Java/jdk1.8.0_231	[MsgId: MMSG-22194]	[MsgId: MMSG-22986]
+Notify: JDK found at C:/Program Files (x86)/Java/jdk1.8.0_231
+Virtual User Script started at: 05.12.2019 17:30:28
+Starting action vuser_init.
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Actions.
+JDBC Connection Successful
+Actions.java(24): Notify: Transaction "UC02_CS01_Update" started.
+SQL Query Executed Successfully
+Commit complete
+Actions.java(27): Notify: Transaction "UC02_CS01_Update" ended with a "Pass" status (Duration: 0,0332).
+Actions.java(29): Notify: Transaction "UC02_CS02_Insert" started.
+SQL Query Executed Successfully
+Commit complete
+Actions.java(78): Notify: Transaction "UC02_CS02_Insert" ended with a "Pass" status (Duration: 0,0296).
+Actions.java(80): Notify: Transaction "UC02_CS03_Update" started.
+SQL Query Executed Successfully
+Commit complete
+Actions.java(83): Notify: Transaction "UC02_CS03_Update" ended with a "Pass" status (Duration: 0,0275).
+Ending action Actions.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.
