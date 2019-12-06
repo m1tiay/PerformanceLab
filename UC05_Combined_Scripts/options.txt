@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\Users\student\XDesk\UC05_Combined_Scripts
+-IC:\Program Files (x86)\Micro Focus\LoadRunner\include
+-ec:\users\student\xdesk\uc05_combined_scripts\\logfile.log
+c:\users\student\xdesk\uc05_combined_scripts\\combined_UC05_Combined_Scripts.c
+c:\users\student\xdesk\uc05_combined_scripts\\pre_cci.c

@@ -1,0 +1,135 @@
+Virtual User Script started at: 06.12.2019 19:02:17
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 10; build 971 (рту 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)  	[MsgId: MMSG-26988]
+Runtime Settings file: "C:\Users\student\XDesk\UC05_Combined_Scripts\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Login.
+Login.c(3): Notify: Transaction "Home_Page" started.
+Login.c(5): web_url("login") started  	[MsgId: MMSG-26355]
+Login.c(5): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(5): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(5): Found resource "http://learning2.pflb.ru:56902/css/core/material_icons.css" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
+Login.c(5): Found resource "http://learning2.pflb.ru:56902/css/core/materialize.css" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
+Login.c(5): Found resource "http://learning2.pflb.ru:56902/css/style.css" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
+Login.c(5): Found resource "http://learning2.pflb.ru:56902/js/core/legacy.js" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
+Login.c(5): Found resource "http://learning2.pflb.ru:56902/js/core/jquery-3.1.1.js" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
+Login.c(5): Found resource "http://learning2.pflb.ru:56902/js/core/dust.js" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
+Login.c(5): Found resource "http://learning2.pflb.ru:56902/js/core/jquery.cookie.js" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
+Login.c(5): Found resource "http://learning2.pflb.ru:56902/js/core/materialize.js" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
+Login.c(5): Found resource "http://learning2.pflb.ru:56902/js/page/authorisation.js" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
+Login.c(5): web_url("login") was successful, 1012641 body bytes, 2125 header bytes  	[MsgId: MMSG-26386]
+Login.c(15): Notify: Transaction "Home_Page" ended with a "Pass" status (Duration: 0.6896 Wasted Time: 0.1391).
+Login.c(19): Notify: Transaction "Login" started.
+Login.c(21): web_submit_data("api/login") started  	[MsgId: MMSG-26355]
+Login.c(21): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(21): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(21): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(21): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(21): Notify: Parameter Substitution: parameter "Username" =  "master"
+Login.c(21): Notify: Parameter Substitution: parameter "Password" =  "123"
+Login.c(21): Notify: Parameter Substitution: parameter "RememberMe" =  "false"
+Login.c(21): web_submit_data("api/login") was successful, 146 body bytes, 339 header bytes  	[MsgId: MMSG-26386]
+Login.c(34): web_url("Url") started  	[MsgId: MMSG-26355]
+Login.c(34): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(34): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(34): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(34): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(34): Resource "http://learning2.pflb.ru:56902/css/core/material_icons.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/css/core/materialize.min.css" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/css/core/uploadfile.css" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/css/core/quill.snow.css" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/css/core/select2.min.css" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/css/core/ee-file-upload.css" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): Resource "http://learning2.pflb.ru:56902/css/style.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/css/company_2.css" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): Resource "http://learning2.pflb.ru:56902/js/core/legacy.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Login.c(34): Resource "http://learning2.pflb.ru:56902/js/core/jquery-3.1.1.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/js/core/clamp.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): Resource "http://learning2.pflb.ru:56902/js/core/jquery.cookie.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/js/core/jquery.uploadfile.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/js/core/jquery.maskedinput.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/js/core/jquery.ee.router.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/js/core/select2.full.min.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/js/core/readmore.min.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): Resource "http://learning2.pflb.ru:56902/js/core/dust.js" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/js/core/dust-helpers.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/js/core/custom-helpers.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/js/core/materialize.min.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/js/core/materialize-select.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/js/core/materialize-pagination.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/js/core/polyphills.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/js/core/helpers.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/js/index.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): Found resource "http://learning2.pflb.ru:56902/js/core/materialTable.js" in HTML "http://learning2.pflb.ru:56902/"  	[MsgId: MMSG-26659]
+Login.c(34): web_url("Url") was successful, 559905 body bytes, 4251 header bytes  	[MsgId: MMSG-26386]
+Login.c(44): web_url("api/checkLogin") started  	[MsgId: MMSG-26355]
+Login.c(44): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(44): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(44): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(44): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(44): web_url("api/checkLogin") was successful, 92 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Login.c(54): web_url("api/user/info") started  	[MsgId: MMSG-26355]
+Login.c(54): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(54): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(54): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(54): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(54): web_url("api/user/info") was successful, 277 body bytes, 316 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+Login.c(64): web_url("api/ticket/countByState") started  	[MsgId: MMSG-26355]
+Login.c(64): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(64): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(64): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(64): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(64): web_url("api/ticket/countByState") was successful, 52 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Login.c(74): web_url("api/ticket/countByState_2") started  	[MsgId: MMSG-26355]
+Login.c(74): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(74): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(74): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(74): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(74): web_url("api/ticket/countByState_2") was successful, 221 body bytes, 316 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Login.c(84): web_custom_request("api/ticket") started  	[MsgId: MMSG-26355]
+Login.c(84): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(84): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(84): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Login.c(84): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Login.c(84): web_custom_request("api/ticket") was successful, 15508 body bytes, 316 header bytes, 21 chunking overhead bytes  	[MsgId: MMSG-26385]
+Login.c(96): Notify: Transaction "Login" ended with a "Pass" status (Duration: 5.4949 Wasted Time: 0.1747).
+Ending action Login.
+Starting action Action_UC01.
+Action_UC01.c(3): Notify: Transaction "UC01_CI01_New_Incident" started.
+Action_UC01.c(5): web_get_int_property started  	[MsgId: MMSG-26355]
+Action_UC01.c(5): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action_UC01.c(6): web_get_int_property started  	[MsgId: MMSG-26355]
+Action_UC01.c(6): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action_UC01.c(8): web_url("api/user/catalog/node/0/children") started  	[MsgId: MMSG-26355]
+Action_UC01.c(8): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action_UC01.c(8): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action_UC01.c(8): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
+Action_UC01.c(8): Notify: Parameter Substitution: parameter "Port" =  "56902"
+Action_UC01.c(8): web_url("api/user/catalog/node/0/children") was successful, 907 body bytes, 316 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action_UC01.c(18): web_get_int_property started  	[MsgId: MMSG-26355]
+Action_UC01.c(18): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action_UC01.c(26): web_get_int_property started  	[MsgId: MMSG-26355]
+Action_UC01.c(26): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action_UC01.c(27): web_get_int_property started  	[MsgId: MMSG-26355]
+Action_UC01.c(27): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action_UC01.c(29): web_get_int_property started  	[MsgId: MMSG-26355]
+Action_UC01.c(29): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action_UC01.c(31): Notify: Saving Parameter "timeStamp = 1575648143874188".
+loadrunner,label=/api/user/catalog/node/0/children,responseCode=200,success=true responseTime=43,bytes = 1235,sentBytes = 325,URL="http://{Host_Name}:{Port}/api/user/catalog/node/0/children/" (null)000
+Action_UC01.c(36): Notify: Parameter Substitution: parameter "timeStamp" =  "1575648143874188"
+Action_UC01.c(36): Notify: Saving Parameter "resultParam = loadrunner,label=/api/user/catalog/node/0/children,responseCode=200,success=true responseTime=43,bytes=1235,sentBytes=325,URL="http://{Host_Name}:{Port}/api/user/catalog/node/0/children/" 1575648143874188000".
+Action_UC01.c(40): Notify: Saving Parameter "resultBody = ".
+Action_UC01.c(42): Notify: Parameter Substitution: parameter "resultBody" =  ""
+resultBody
+Action_UC01.c(46): Notify: Transaction "UC01_CI01_New_Incident" ended with a "Pass" status (Duration: 0.1531 Wasted Time: 0.0169).
+Abort was called from an action.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.
+Vuser 0 (thread 6972), ended OK."
