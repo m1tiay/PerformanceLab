@@ -6,7 +6,7 @@ public class Actions{
 	public int init() {
   		try {
     		Class.forName("oracle.jdbc.driver.OracleDriver");
-  		} catch (ClassNotFoundException ex) {
+  		} catch (Exception ex) {
     		lr.log_message("Database Driver not found");
     		lr.abort();
   		}
@@ -15,19 +15,20 @@ public class Actions{
 	}
 
 	public int action() {
-		String url = "jdbc:oracle:thin:@" + lr.eval_string("{Host_Name}") + ":" + lr.eval_string("{Port}") + ":orcl";
+		String url = "jdbc:oracle:thin:@" + lr.eval_string("{Host_Name}") + ":" + lr.eval_string("{Port}") + ":" + lr.eval_string("{DB_Name}") + "";
 		
 		try (Connection connection = DriverManager.getConnection(url, lr.eval_string("{Username}"), lr.eval_string("{Password}"));
 		     Statement statement = connection.createStatement()) {
-			lr.log_message("JDBC Connection Successful");
+				lr.log_message("JDBC Connection Successful");
+				connection.setAutoCommit(false);
 				
-			lr.start_transaction("UC02_CS01_Update");
-			String updateExSys = "UPDATE Ticket SET external_system = 'ASKO' WHERE external_system NOT LIKE 'ASKO' AND TEXT LIKE 'DTelekhin%'";
-			database_query(connection, statement, updateExSys);	
-			lr.end_transaction("UC02_CS01_Update", lr.AUTO);
+				lr.start_transaction("UC02_CS01_Update");
+				String updateExSys = "UPDATE Ticket SET external_system = 'ASKO' WHERE external_system NOT LIKE 'ASKO' AND TEXT LIKE 'DTelekhin%'";
+				database_query(statement, updateExSys);
+				lr.end_transaction("UC02_CS01_Update", lr.AUTO);
 			
-			lr.start_transaction("UC02_CS02_Insert");
-			String insertToTask = "INSERT INTO Task t1(t1.id, " +
+				lr.start_transaction("UC02_CS02_Insert");
+				String insertToTask = "INSERT INTO Task t1(t1.id, " +
 				"t1.change_id, "+
                 "t1.ticket_id, "+
                 "t1.guid, "+
@@ -74,33 +75,17 @@ public class Actions{
 			"FROM Ticket t2 "+
 			"WHERE t2.text LIKE 'DTelekhin%' "+
 			"AND t2.state_id = -1";	
-			database_query(connection, statement, insertToTask);
+			database_query(statement, insertToTask);
 			lr.end_transaction("UC02_CS02_Insert", lr.AUTO);
 
 			lr.start_transaction("UC02_CS03_Update");
 			String updateTicket = "UPDATE Ticket SET state_id = 1 WHERE state_id = -1 AND TEXT LIKE 'DTelekhin%'";
-			database_query(connection, statement, updateTicket);
+			database_query(statement, updateTicket);
 			lr.end_transaction("UC02_CS03_Update", lr.AUTO);
+			
+			connection.commit();
+			lr.log_message("Commit complete");
 		
-		} catch (SQLException e) {
-			lr.log_message("Caught Exception: " + e.getMessage());
-	    	lr.set_transaction_status(lr.STOP);
-	    	return 1;
-        }
-		return 0;
-    } 
-	
-	public int end() {
-		return 0;
-	}
-	
-	public int database_query(Connection connection, Statement statement, String SQL_QUERY) {
-		try {
-        	connection.setAutoCommit(false);
-        	statement.executeQuery(SQL_QUERY);
-        	lr.log_message("SQL Query Executed Successfully");
-        	connection.commit();
-        	lr.log_message("Commit complete");
 		} catch (SQLException e) {
 			lr.log_message("Caught Exception: " + e.getMessage());
 			try {
@@ -109,9 +94,23 @@ public class Actions{
 			} catch (SQLException ex) {
 				ex.printStackTrace();
 			}
-			lr.set_transaction_status(lr.STOP);
-			return 1;
-		}
+        }
+		return 0;
+    } 
+	
+	public int end() {
 		return 0;
 	}
+	
+	public int database_query(Statement statement, String SQL_QUERY) {
+    	 try {
+                statement.executeQuery(SQL_QUERY);
+                lr.log_message("SQL Query Executed Successfully");
+            } catch (SQLException e) {
+                lr.log_message("Caught Exception: " + e.getMessage());
+                lr.set_transaction_status(lr.STOP);
+            	return 1;
+			}
+        return 0;
+    }
 }

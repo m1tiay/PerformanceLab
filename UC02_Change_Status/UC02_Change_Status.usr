@@ -49,13 +49,13 @@ vuser_init=Java-Interpreter
 Actions=Java-Interpreter
 vuser_end=Java-Interpreter
 [TransactionsOrder]
-Order="UC02_CS02_Insert__*delimiter*__UC02_CS03_Update__*delimiter*__UC02_CS01_Update"
+Order="UC02_CS01_Update__*delimiter*__UC02_CS02_Insert__*delimiter*__UC02_CS03_Update"
 [StateManagement]
-LastReplayStatus=1
+LastReplayStatus=0
 [ActiveReplay]
 LastReplayedRunName=
 ActiveRunName=
 [Transactions]
+UC02_CS01_Update=
 UC02_CS02_Insert=
 UC02_CS03_Update=
-UC02_CS01_Update=

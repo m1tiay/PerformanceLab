@@ -1,2 +1,2 @@
-Host_Name,Port
-192.168.14.53,1522
+Host_Name,Port,DB_Name
+192.168.14.53,1522,orcl
