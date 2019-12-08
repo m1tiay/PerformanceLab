@@ -11,7 +11,7 @@ Logout()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("login_3", 
+	web_url("/login_3", 
 		"URL=http://{Host_Name}:{Port}/login", 
 		"TargetFrame=", 
 		"Resource=0", 

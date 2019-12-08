@@ -18,49 +18,30 @@
     <FileEntry Name="UC05_Combined_Scripts.prm" Filter="2" />
     <FileEntry Name="globals.h" Filter="2" />
     <FileEntry Name="Host_Name.dat" Filter="2" />
+    <FileEntry Name="Unflux_Host.dat" Filter="2" />
     <FileEntry Name="Description.dat" Filter="2" />
     <FileEntry Name="Comment.dat" Filter="2" />
     <FileEntry Name="Username.dat" Filter="2" />
     <FileEntry Name="combined_UC05_Combined_Scripts.c" Filter="2" />
     <FileEntry Name="pre_cci.c" Filter="2" />
-    <FileEntry Name="100117460440.idx" Filter="1" />
-    <FileEntry Name="148021782440.idx" Filter="1" />
-    <FileEntry Name="14803434440.idx" Filter="1" />
-    <FileEntry Name="148152854440.idx" Filter="1" />
-    <FileEntry Name="148349494440.idx" Filter="1" />
-    <FileEntry Name="153733108440.idx" Filter="1" />
-    <FileEntry Name="160226640440.idx" Filter="1" />
-    <FileEntry Name="251628884440.idx" Filter="1" />
-    <FileEntry Name="267570759440.idx" Filter="1" />
-    <FileEntry Name="33187987440.idx" Filter="1" />
-    <FileEntry Name="33515699440.idx" Filter="1" />
-    <FileEntry Name="40091181440.idx" Filter="1" />
-    <FileEntry Name="40222285440.idx" Filter="1" />
-    <FileEntry Name="40287869440.idx" Filter="1" />
-    <FileEntry Name="40353389440.idx" Filter="1" />
-    <FileEntry Name="40418973440.idx" Filter="1" />
-    <FileEntry Name="40681181440.idx" Filter="1" />
-    <FileEntry Name="41533069440.idx" Filter="1" />
-    <FileEntry Name="41598653440.idx" Filter="1" />
-    <FileEntry Name="5971189440.idx" Filter="1" />
-    <FileEntry Name="60821015440.idx" Filter="1" />
+    <FileEntry Name="104154662440.idx" Filter="1" />
+    <FileEntry Name="10578050440.idx" Filter="1" />
+    <FileEntry Name="224722806440.idx" Filter="1" />
+    <FileEntry Name="264966858440.idx" Filter="1" />
+    <FileEntry Name="60290424440.idx" Filter="1" />
     <FileEntry Name="Bookmarks.xml" Filter="1" />
     <FileEntry Name="Breakpoints.xml" Filter="1" />
     <FileEntry Name="CompilerLogMetadata.xml" Filter="1" />
     <FileEntry Name="custom_body_variables.txt" Filter="1" />
     <FileEntry Name="logfile.log" Filter="1" />
     <FileEntry Name="lrw_custom_body.h" Filter="1" />
-    <FileEntry Name="mdrv.log" Filter="1" />
     <FileEntry Name="mdrv_cmd.txt" Filter="1" />
     <FileEntry Name="options.txt" Filter="1" />
     <FileEntry Name="output.bak" Filter="1" />
     <FileEntry Name="output.txt" Filter="1" />
     <FileEntry Name="OutputColoringDatabase.json" Filter="1" />
-    <FileEntry Name="replay.har" Filter="1" />
     <FileEntry Name="ReplaySummaryReport.xml" Filter="1" />
     <FileEntry Name="ScriptUploadMetadata.xml" Filter="1" />
-    <FileEntry Name="shunra.shunra" Filter="1" />
-    <FileEntry Name="TransactionsData.db" Filter="1" />
     <FileEntry Name="UC05_Combined_Scripts.c.pickle" Filter="1" />
     <FileEntry Name="UC05_Combined_Scripts.ci" Filter="1" />
     <FileEntry Name="UC05_Combined_Scripts.prm.bak" Filter="1" />

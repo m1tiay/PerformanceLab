@@ -3,7 +3,7 @@ Action_UC04()
 
 	lr_start_transaction("UC04_CT01_Select_Tasks");
 
-	web_url("api/task/countByState", 
+	web_url("/api/task/countByState", 
 		"URL=http://{Host_Name}:{Port}/api/task/countByState/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -19,7 +19,7 @@ Action_UC04()
     	"Ordinal=All",
 		LAST );
 		
-	web_custom_request("api/task", 
+	web_custom_request("/api/task", 
 		"URL=http://{Host_Name}:{Port}/api/task/?state=1&page=0&size=10", 
 		"Method=GET", 
 		"TargetFrame=", 
@@ -39,7 +39,7 @@ Action_UC04()
 
 	lr_save_string(lr_paramarr_random("taskid"), "taskid_rand");
 	
-	web_url("api/task_2", 
+	web_url("/api/task_2", 
 		"URL=http://{Host_Name}:{Port}/api/task/{taskid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -49,7 +49,7 @@ Action_UC04()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("api/ticket", 
+	web_url("/api/ticket", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/{taskid_rand}/comment/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -65,7 +65,7 @@ Action_UC04()
 
 	lr_start_transaction("UC04_CT03_To_the_Incident");
 
-	web_custom_request("api/ticket_2", 
+	web_custom_request("/api/ticket_2", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/{taskid_rand}", 
 		"Method=GET", 
 		"TargetFrame=", 
@@ -76,7 +76,7 @@ Action_UC04()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("api/ticket_3", 
+	web_url("/api/ticket_3", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/{taskid_rand}/comment/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -92,7 +92,7 @@ Action_UC04()
 
 	lr_start_transaction("UC04_CT04_Close_Incident");
 
-	web_custom_request("solve", 
+	web_custom_request("/solve", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/{taskid_rand}/solve/", 
 		"Method=POST", 
 		"TargetFrame=", 
@@ -104,7 +104,7 @@ Action_UC04()
 		"EncType=", 
 		LAST);
 
-	web_url("{Host_Name}:{Port}_2", 
+	web_url("/_2", 
 		"URL=http://{Host_Name}:{Port}/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -113,7 +113,7 @@ Action_UC04()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("api/user/info_2", 
+	web_url("/api/user/info_2", 
 		"URL=http://{Host_Name}:{Port}/api/user/info", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -123,7 +123,7 @@ Action_UC04()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("api/ticket/countByState_3", 
+	web_url("/api/ticket/countByState_3", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/4", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -133,7 +133,7 @@ Action_UC04()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("api/ticket/countByState_4", 
+	web_url("/api/ticket/countByState_4", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -143,7 +143,7 @@ Action_UC04()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("api/ticket/countByState_5", 
+	web_url("/api/ticket/countByState_5", 
 		"URL=http://{Host_Name}:{Port}/api/task/countByState/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -153,7 +153,7 @@ Action_UC04()
 		"Mode=HTML", 
 		LAST);
 
-	web_custom_request("api/ticket_4", 
+	web_custom_request("/api/ticket_4", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/?state=-1,0,1,5&page=0&size=10", 
 		"Method=GET", 
 		"TargetFrame=", 
@@ -165,7 +165,7 @@ Action_UC04()
 		"EncType=application/json; charset=utf-8", 
 		LAST);
 
-	web_custom_request("api/task_3", 
+	web_custom_request("/api/task_3", 
 		"URL=http://{Host_Name}:{Port}/api/task/?state=1&page=0&size=10", 
 		"Method=GET", 
 		"TargetFrame=", 

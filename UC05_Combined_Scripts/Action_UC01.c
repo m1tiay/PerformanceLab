@@ -5,7 +5,7 @@ Action_UC01()
 	before_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
 	before_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
 	
-	web_url("api/user/catalog/node/0/children", 
+	web_url("/api/user/catalog/node/0/children", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/node/0/children/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -30,18 +30,17 @@ Action_UC01()
     submit_sentBytes = after_sentBytes - before_sentBytes; 
     lr_save_timestamp("timeStamp", "DIGITS=16", LAST);
     
-    lr_message("loadrunner,label=%s,responseCode=%d,success=%s responseTime=%d,bytes = %d,sentBytes = %d,URL=\"%s\" %s000", 
-               "/api/user/catalog/node/0/children", responseCode, success, responseTime, submit_bytes, submit_sentBytes,"http://{Host_Name}:{Port}/api/user/catalog/node/0/children/", timeStamp);
-    
-    lr_param_sprintf("resultParam",
-                     "loadrunner,label=%s,responseCode=%d,success=%s responseTime=%d,bytes=%d,sentBytes=%d,URL=\"%s\" %s000",
-                     "/api/user/catalog/node/0/children", responseCode, success, responseTime, submit_bytes, submit_sentBytes,"http://{Host_Name}:{Port}/api/user/catalog/node/0/children/", lr_eval_string("{timeStamp}"),100);
+    sprintf(resultParam,
+            "loadrunner,label=%s,responseCode=%d,success=%s responseTime=%d,bytes=%d,sentBytes=%d,URL=\"%s\" %s000",
+            "/api/user/catalog/node/0/children", responseCode, success, responseTime, submit_bytes, submit_sentBytes,"http://{Host_Name}:{Port}/api/user/catalog/node/0/children/", lr_eval_string("{timeStamp}"));
 	
     lr_save_string(resultParam, "resultBody");
     
-    lr_log_message("resultBody", lr_eval_string("{resultBody}"));
-    
-    
+    web_custom_request("/write",
+                       "Method=POST",
+                       "URL=http://{Unflux_Host}:{Unflux_Port}/write?db={Unflux_DB}",
+                       "Body={resultBody}",
+                       LAST);
     
 	lr_end_transaction("UC01_CI01_New_Incident",LR_AUTO);
 
@@ -55,7 +54,7 @@ Action_UC01()
     	"Ordinal=All",
 		LAST );
 	
-	web_url("api/shops", 
+	web_url("/api/shops", 
 		"URL=http://{Host_Name}:{Port}/api/shops?q=&page=0", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -65,7 +64,7 @@ Action_UC01()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("api/user/catalog/node/0/children_2", 
+	web_url("/api/user/catalog/node/0/children_2", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/node/0/children/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -83,7 +82,7 @@ Action_UC01()
     	"Ordinal=All",
 		LAST );
 	
-	web_url("api/user/catalog/treeview", 
+	web_url("/api/user/catalog/treeview", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/treeview?shopid={shopid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -101,7 +100,7 @@ Action_UC01()
 	
 	lr_start_transaction("UC01_CI03_Theme");
 
-	web_url("api/user/catalog", 
+	web_url("/api/user/catalog", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/node/{parentid_rand}/children/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -123,7 +122,7 @@ Action_UC01()
     	"Ordinal=All",
 		LAST );
 		
-	web_url("api/user/catalog_2", 
+	web_url("/api/user/catalog_2", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/node/{parentid_rand}/service/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -133,7 +132,7 @@ Action_UC01()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("api/user/catalog/breadcrumbs", 
+	web_url("/api/user/catalog/breadcrumbs", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/breadcrumbs/{parentid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -147,7 +146,7 @@ Action_UC01()
 	
 	lr_save_string(lr_paramarr_random("servicename"), "servicename_rand");
 	
-	web_url("api/inventoryNumber", 
+	web_url("/api/inventoryNumber", 
 		"URL=http://{Host_Name}:{Port}/api/inventoryNumbers?serviceId={serviceid_rand}&shopid={shopid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -165,7 +164,7 @@ Action_UC01()
 
 	lr_save_string(lr_paramarr_random("serviceid"), "serviceid_rand");
 	
-	web_url("api/inventoryNumber_2", 
+	web_url("/api/inventoryNumber_2", 
 		"URL=http://{Host_Name}:{Port}/api/inventoryNumbers?serviceId={serviceid_rand}&shopid={shopid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -188,7 +187,7 @@ Action_UC01()
     	"NotFound=warning",
 		LAST );
 	
-	web_url("api/inventoryNumber_3", 
+	web_url("/api/inventoryNumber_3", 
 		"URL=http://{Host_Name}:{Port}/api/inventoryNumbers?shopid={shopid_rand}&" 
 		"serviceId={serviceid_rand}&serviceId={serviceid_rand}&q=&page=0",
 		"TargetFrame=", 
@@ -211,7 +210,7 @@ Action_UC01()
 
 	lr_start_transaction("UC01_CI06_Create_inc_and_add_description");
 
-	web_custom_request("api/ticket_2", 
+	web_custom_request("/api/ticket_2", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/", 
 		"Method=POST", 
 		"TargetFrame=", 
@@ -235,7 +234,7 @@ Action_UC01()
 
 	lr_start_transaction("UC01_CI07_Confirm");
 
-	web_url("Url_2", 
+	web_url("/_2", 
 		"URL=http://{Host_Name}:{Port}/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -244,7 +243,7 @@ Action_UC01()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("api/checkLogin_2", 
+	web_url("/api/checkLogin_2", 
 		"URL=http://{Host_Name}:{Port}/api/checkLogin", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -254,7 +253,7 @@ Action_UC01()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("api/user/info_2", 
+	web_url("/api/user/info_2", 
 		"URL=http://{Host_Name}:{Port}/api/user/info", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -264,7 +263,7 @@ Action_UC01()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("api/ticket/countByState_3", 
+	web_url("/api/ticket/countByState_3", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/4", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -274,7 +273,7 @@ Action_UC01()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("api/ticket/countByState_4", 
+	web_url("/api/ticket/countByState_4", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -284,7 +283,7 @@ Action_UC01()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("api/ticket/countByState_5", 
+	web_url("/api/ticket/countByState_5", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -294,7 +293,7 @@ Action_UC01()
 		"Mode=HTML", 
 		LAST);
 
-	web_custom_request("api/ticket_3", 
+	web_custom_request("/api/ticket_3", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/?state=-1,0,1,5&page=0&size=10", 
 		"Method=GET", 
 		"TargetFrame=", 
@@ -306,7 +305,7 @@ Action_UC01()
 		"EncType=application/json; charset=utf-8", 
 		LAST);
 
-	web_custom_request("api/ticket_4", 
+	web_custom_request("/api/ticket_4", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/?state=-1,0,1,5&page=0&size=10", 
 		"Method=GET", 
 		"TargetFrame=", 

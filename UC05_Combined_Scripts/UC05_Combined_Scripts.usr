@@ -44,7 +44,7 @@ Login=1
 Action_UC01=1
 Action_UC03=1
 Action_UC04=1
-Logout=0
+Logout=1
 vuser_end=0
 [Recorded Actions]
 vuser_init=0
@@ -73,7 +73,7 @@ vuser_end=cci
 [TransactionsOrder]
 Order="Home_Page__*delimiter*__Login__*delimiter*__UC01_CI01_New_Incident__*delimiter*__UC01_CI02_Location__*delimiter*__UC01_CI03_Theme__*delimiter*__UC01_CI04_Change_Theme__*delimiter*__UC01_CI05_Inventory__*delimiter*__UC01_CI06_Create_inc_and_add_description__*delimiter*__UC01_CI07_Confirm__*delimiter*__UC03_CT01_Select_Tasks__*delimiter*__UC03_CT02_Choose_Task__*delimiter*__UC03_CT03_Comment_and_Send__*delimiter*__UC04_CT01_Select_Tasks__*delimiter*__UC04_CT02_Choose_Task__*delimiter*__UC04_CT03_To_the_Incident__*delimiter*__UC04_CT04_Close_Incident__*delimiter*__Logout"
 [StateManagement]
-LastReplayStatus=3
+LastReplayStatus=0
 [ActiveReplay]
 LastReplayedRunName=result1
 ActiveRunName=result1

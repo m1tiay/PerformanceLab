@@ -3,7 +3,7 @@ Action_UC03()
 
 	lr_start_transaction("UC03_CT01_Select_Tasks");
 
-	web_url("api/task/countByState_3", 
+	web_url("/api/task/countByState_3", 
 		"URL=http://{Host_Name}:{Port}/api/task/countByState/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -19,7 +19,7 @@ Action_UC03()
     	"Ordinal=All",
 		LAST );
 		
-	web_custom_request("api/task", 
+	web_custom_request("/api/task", 
 		"URL=http://{Host_Name}:{Port}/api/task/?state=1&page=0&size=10", 
 		"Method=GET", 
 		"TargetFrame=", 
@@ -39,7 +39,7 @@ Action_UC03()
 
 	lr_save_string(lr_paramarr_random("taskid"), "taskid_rand");
 	
-	web_url("api/task", 
+	web_url("/api/task", 
 		"URL=http://{Host_Name}:{Port}/api/task/{taskid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -49,7 +49,7 @@ Action_UC03()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("api/checkLogin_2", 
+	web_url("/api/checkLogin_2", 
 		"URL=http://{Host_Name}:{Port}/api/checkLogin", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -59,7 +59,7 @@ Action_UC03()
 		"Mode=HTML", 
 		LAST);
 
-	web_url("api/ticket_2", 
+	web_url("/api/ticket_2", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/{taskid_rand}/comment/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -75,7 +75,7 @@ Action_UC03()
 
 	lr_start_transaction("UC03_CT03_Comment_and_Send");
 
-	web_custom_request("api/ticket_3", 
+	web_custom_request("/api/ticket_3", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/{taskid_rand}/comment/", 
 		"Method=POST", 
 		"TargetFrame=", 
@@ -88,7 +88,7 @@ Action_UC03()
 		"Body={\"text\":\"DTelekhin {Comment}\"}", 
 		LAST);
 
-	web_url("api/ticket_4", 
+	web_url("/api/ticket_4", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/{taskid_rand}/comment/", 
 		"TargetFrame=", 
 		"Resource=0", 

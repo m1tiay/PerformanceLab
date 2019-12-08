@@ -1,9 +1,9 @@
-Virtual User Script started at: 06.12.2019 19:02:17
+Virtual User Script started at: 08.12.2019 22:44:45
 Starting action vuser_init.
 Web Turbo Replay of LoadRunner 12.60.0 for Windows 10; build 971 (рту 09 2018 11:27:13)  	[MsgId: MMSG-26983]
 Run mode: HTML  	[MsgId: MMSG-26993]
 Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)  	[MsgId: MMSG-26988]
-Runtime Settings file: "C:\Users\student\XDesk\UC05_Combined_Scripts\\default.cfg"  	[MsgId: MMSG-27141]
+Runtime Settings file: "D:\Documents\VuGen\Scripts\UC05_Combined_Scripts\\default.cfg"  	[MsgId: MMSG-27141]
 Ending action vuser_init.
 Running Vuser...
 Starting iteration 1.
@@ -23,7 +23,7 @@ Login.c(5): Found resource "http://learning2.pflb.ru:56902/js/core/jquery.cookie
 Login.c(5): Found resource "http://learning2.pflb.ru:56902/js/core/materialize.js" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
 Login.c(5): Found resource "http://learning2.pflb.ru:56902/js/page/authorisation.js" in HTML "http://learning2.pflb.ru:56902/login"  	[MsgId: MMSG-26659]
 Login.c(5): web_url("login") was successful, 1012641 body bytes, 2125 header bytes  	[MsgId: MMSG-26386]
-Login.c(15): Notify: Transaction "Home_Page" ended with a "Pass" status (Duration: 0.6896 Wasted Time: 0.1391).
+Login.c(15): Notify: Transaction "Home_Page" ended with a "Pass" status (Duration: 0,7261 Wasted Time: 0,1800).
 Login.c(19): Notify: Transaction "Login" started.
 Login.c(21): web_submit_data("api/login") started  	[MsgId: MMSG-26355]
 Login.c(21): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
@@ -97,7 +97,7 @@ Login.c(84): Notify: Parameter Substitution: parameter "Port" =  "56902"
 Login.c(84): Notify: Parameter Substitution: parameter "Host_Name" =  "learning2.pflb.ru"
 Login.c(84): Notify: Parameter Substitution: parameter "Port" =  "56902"
 Login.c(84): web_custom_request("api/ticket") was successful, 15508 body bytes, 316 header bytes, 21 chunking overhead bytes  	[MsgId: MMSG-26385]
-Login.c(96): Notify: Transaction "Login" ended with a "Pass" status (Duration: 5.4949 Wasted Time: 0.1747).
+Login.c(96): Notify: Transaction "Login" ended with a "Pass" status (Duration: 5,1071 Wasted Time: 0,1711).
 Ending action Login.
 Starting action Action_UC01.
 Action_UC01.c(3): Notify: Transaction "UC01_CI01_New_Incident" started.
@@ -119,14 +119,14 @@ Action_UC01.c(27): web_get_int_property started  	[MsgId: MMSG-26355]
 Action_UC01.c(27): web_get_int_property was successful  	[MsgId: MMSG-26392]
 Action_UC01.c(29): web_get_int_property started  	[MsgId: MMSG-26355]
 Action_UC01.c(29): web_get_int_property was successful  	[MsgId: MMSG-26392]
-Action_UC01.c(31): Notify: Saving Parameter "timeStamp = 1575648143874188".
-loadrunner,label=/api/user/catalog/node/0/children,responseCode=200,success=true responseTime=43,bytes = 1235,sentBytes = 325,URL="http://{Host_Name}:{Port}/api/user/catalog/node/0/children/" (null)000
-Action_UC01.c(36): Notify: Parameter Substitution: parameter "timeStamp" =  "1575648143874188"
-Action_UC01.c(36): Notify: Saving Parameter "resultParam = loadrunner,label=/api/user/catalog/node/0/children,responseCode=200,success=true responseTime=43,bytes=1235,sentBytes=325,URL="http://{Host_Name}:{Port}/api/user/catalog/node/0/children/" 1575648143874188000".
-Action_UC01.c(40): Notify: Saving Parameter "resultBody = ".
-Action_UC01.c(42): Notify: Parameter Substitution: parameter "resultBody" =  ""
+Action_UC01.c(31): Notify: Saving Parameter "timeStamp = 1575834291160445".
+Action_UC01.c(33): Notify: Parameter Substitution: parameter "timeStamp" =  "1575834291160445"
+loadrunner,label=/api/user/catalog/node/0/children,responseCode=200,success=true responseTime=16,bytes = 1235,sentBytes = 325,URL="http://{Host_Name}:{Port}/api/user/catalog/node/0/children/" 1575834291160445000
+Action_UC01.c(36): Notify: Parameter Substitution: parameter "timeStamp" =  "1575834291160445"
+Action_UC01.c(40): Notify: Saving Parameter "resultBody = loadrunner,label=/api/user/catalog/node/0/children,responseCode=200,success=true responseTime=16,bytes=1235,sentBytes=325,URL="http://{Host_Name}:{Port}/api/user/catalog/node/0/children/" 1575834291160445000".
+Action_UC01.c(42): Notify: Parameter Substitution: parameter "resultBody" =  "loadrunner,label=/api/user/catalog/node/0/children,responseCode=200,success=true responseTime=16,bytes=1235,sentBytes=325,URL="http://{Host_Name}:{Port}/api/user/catalog/node/0/children/" 1575834291160445000"
 resultBody
-Action_UC01.c(46): Notify: Transaction "UC01_CI01_New_Incident" ended with a "Pass" status (Duration: 0.1531 Wasted Time: 0.0169).
+Action_UC01.c(46): Notify: Transaction "UC01_CI01_New_Incident" ended with a "Pass" status (Duration: 0,0879 Wasted Time: 0,0202).
 Abort was called from an action.
 Ending Vuser...
 Starting action vuser_end.

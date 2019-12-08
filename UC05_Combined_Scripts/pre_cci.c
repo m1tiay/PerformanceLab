@@ -1,4 +1,4 @@
-# 1 "c:\\users\\student\\xdesk\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c"
+# 1 "d:\\documents\\vugen\\scripts\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c"
 # 1 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/lrun.h" 1
  
  
@@ -964,7 +964,7 @@ int lr_db_getvalue(char * pFirstArg, ...);
 
 
 
-# 1 "c:\\users\\student\\xdesk\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c" 2
+# 1 "d:\\documents\\vugen\\scripts\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c" 2
 
 # 1 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/SharedParameter.h" 1
 
@@ -1130,7 +1130,7 @@ extern VTCERR2  lrvtc_noop();
 
 
 
-# 2 "c:\\users\\student\\xdesk\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c" 2
+# 2 "d:\\documents\\vugen\\scripts\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c" 2
 
 # 1 "globals.h" 1
 
@@ -2596,21 +2596,21 @@ int timeStamp;
 char resultParam[100];
 
 
-# 3 "c:\\users\\student\\xdesk\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c" 2
+# 3 "d:\\documents\\vugen\\scripts\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c" 2
 
 # 1 "vuser_init.c" 1
 vuser_init()
 {
 	return 0;
 }
-# 4 "c:\\users\\student\\xdesk\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c" 2
+# 4 "d:\\documents\\vugen\\scripts\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c" 2
 
 # 1 "Login.c" 1
 Login()
 {
 	lr_start_transaction("Home_Page");
 
-	web_url("login",
+	web_url("/login",
 		"URL=http://{Host_Name}:{Port}/login",
 		"TargetFrame=",
 		"Resource=0",
@@ -2626,7 +2626,7 @@ Login()
 
 	lr_start_transaction("Login");
 
-	web_submit_data("api/login",
+	web_submit_data("/api/login",
 		"Action=http://{Host_Name}:{Port}/api/login",
 		"Method=POST",
 		"TargetFrame=",
@@ -2639,7 +2639,7 @@ Login()
 		"Name=rememberMe", "Value={RememberMe}", "ENDITEM",
 		"LAST");
 
-	web_url("Url",
+	web_url("/",
 		"URL=http://{Host_Name}:{Port}/",
 		"TargetFrame=",
 		"Resource=0",
@@ -2649,7 +2649,7 @@ Login()
 		"Mode=HTML",
 		"LAST");
 
-	web_url("api/checkLogin",
+	web_url("/api/checkLogin",
 		"URL=http://{Host_Name}:{Port}/api/checkLogin",
 		"TargetFrame=",
 		"Resource=0",
@@ -2659,7 +2659,7 @@ Login()
 		"Mode=HTML",
 		"LAST");
 
-	web_url("api/user/info",
+	web_url("/api/user/info",
 		"URL=http://{Host_Name}:{Port}/api/user/info",
 		"TargetFrame=",
 		"Resource=0",
@@ -2669,7 +2669,7 @@ Login()
 		"Mode=HTML",
 		"LAST");
 
-	web_url("api/ticket/countByState",
+	web_url("/api/ticket/countByState",
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/4",
 		"TargetFrame=",
 		"Resource=0",
@@ -2679,7 +2679,7 @@ Login()
 		"Mode=HTML",
 		"LAST");
 
-	web_url("api/ticket/countByState_2",
+	web_url("/api/ticket/countByState_2",
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/",
 		"TargetFrame=",
 		"Resource=0",
@@ -2689,7 +2689,7 @@ Login()
 		"Mode=HTML",
 		"LAST");
 
-	web_custom_request("api/ticket", 
+	web_custom_request("/api/ticket", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/?state=-1,0,1,5&page=0&size=10",
 		"Method=GET",
 		"TargetFrame=",
@@ -2707,7 +2707,7 @@ Login()
 
 	return 0;
 }
-# 5 "c:\\users\\student\\xdesk\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c" 2
+# 5 "d:\\documents\\vugen\\scripts\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c" 2
 
 # 1 "Action_UC01.c" 1
 Action_UC01()
@@ -2717,7 +2717,7 @@ Action_UC01()
 	before_bytes = web_get_int_property(5);
 	before_sentBytes = web_get_int_property(4);
 	
-	web_url("api/user/catalog/node/0/children", 
+	web_url("/api/user/catalog/node/0/children", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/node/0/children/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2742,18 +2742,17 @@ Action_UC01()
     submit_sentBytes = after_sentBytes - before_sentBytes; 
     lr_save_timestamp("timeStamp", "DIGITS=16", "LAST");
     
-    lr_message("loadrunner,label=%s,responseCode=%d,success=%s responseTime=%d,bytes = %d,sentBytes = %d,URL=\"%s\" %s000", 
-               "/api/user/catalog/node/0/children", responseCode, success, responseTime, submit_bytes, submit_sentBytes,"http://{Host_Name}:{Port}/api/user/catalog/node/0/children/", timeStamp);
-    
-    lr_param_sprintf("resultParam",
-                     "loadrunner,label=%s,responseCode=%d,success=%s responseTime=%d,bytes=%d,sentBytes=%d,URL=\"%s\" %s000",
-                     "/api/user/catalog/node/0/children", responseCode, success, responseTime, submit_bytes, submit_sentBytes,"http://{Host_Name}:{Port}/api/user/catalog/node/0/children/", lr_eval_string("{timeStamp}"),100);
+    sprintf(resultParam,
+            "loadrunner,label=%s,responseCode=%d,success=%s responseTime=%d,bytes=%d,sentBytes=%d,URL=\"%s\" %s000",
+            "/api/user/catalog/node/0/children", responseCode, success, responseTime, submit_bytes, submit_sentBytes,"http://{Host_Name}:{Port}/api/user/catalog/node/0/children/", lr_eval_string("{timeStamp}"));
 	
     lr_save_string(resultParam, "resultBody");
     
-    lr_log_message("resultBody", lr_eval_string("{resultBody}"));
-    
-    
+    web_custom_request("/write",
+                       "Method=POST",
+                       "URL=http://{Unflux_Host}:{Unflux_Port}/write?db={Unflux_DB}",
+                       "Body={resultBody}",
+                       "LAST");
     
 	lr_end_transaction("UC01_CI01_New_Incident",2);
 
@@ -2767,7 +2766,7 @@ Action_UC01()
     	"Ordinal=All",
 		"LAST" );
 	
-	web_url("api/shops", 
+	web_url("/api/shops", 
 		"URL=http://{Host_Name}:{Port}/api/shops?q=&page=0", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2777,7 +2776,7 @@ Action_UC01()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("api/user/catalog/node/0/children_2", 
+	web_url("/api/user/catalog/node/0/children_2", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/node/0/children/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2795,7 +2794,7 @@ Action_UC01()
     	"Ordinal=All",
 		"LAST" );
 	
-	web_url("api/user/catalog/treeview", 
+	web_url("/api/user/catalog/treeview", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/treeview?shopid={shopid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2813,7 +2812,7 @@ Action_UC01()
 	
 	lr_start_transaction("UC01_CI03_Theme");
 
-	web_url("api/user/catalog", 
+	web_url("/api/user/catalog", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/node/{parentid_rand}/children/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2835,7 +2834,7 @@ Action_UC01()
     	"Ordinal=All",
 		"LAST" );
 		
-	web_url("api/user/catalog_2", 
+	web_url("/api/user/catalog_2", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/node/{parentid_rand}/service/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2845,7 +2844,7 @@ Action_UC01()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("api/user/catalog/breadcrumbs", 
+	web_url("/api/user/catalog/breadcrumbs", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/breadcrumbs/{parentid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2859,7 +2858,7 @@ Action_UC01()
 	
 	lr_save_string(lr_paramarr_random("servicename"), "servicename_rand");
 	
-	web_url("api/inventoryNumber", 
+	web_url("/api/inventoryNumber", 
 		"URL=http://{Host_Name}:{Port}/api/inventoryNumbers?serviceId={serviceid_rand}&shopid={shopid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2877,7 +2876,7 @@ Action_UC01()
 
 	lr_save_string(lr_paramarr_random("serviceid"), "serviceid_rand");
 	
-	web_url("api/inventoryNumber_2", 
+	web_url("/api/inventoryNumber_2", 
 		"URL=http://{Host_Name}:{Port}/api/inventoryNumbers?serviceId={serviceid_rand}&shopid={shopid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2900,7 +2899,7 @@ Action_UC01()
     	"NotFound=warning",
 		"LAST" );
 	
-	web_url("api/inventoryNumber_3", 
+	web_url("/api/inventoryNumber_3", 
 		"URL=http://{Host_Name}:{Port}/api/inventoryNumbers?shopid={shopid_rand}&" 
 		"serviceId={serviceid_rand}&serviceId={serviceid_rand}&q=&page=0",
 		"TargetFrame=", 
@@ -2923,7 +2922,7 @@ Action_UC01()
 
 	lr_start_transaction("UC01_CI06_Create_inc_and_add_description");
 
-	web_custom_request("api/ticket_2", 
+	web_custom_request("/api/ticket_2", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/", 
 		"Method=POST", 
 		"TargetFrame=", 
@@ -2947,7 +2946,7 @@ Action_UC01()
 
 	lr_start_transaction("UC01_CI07_Confirm");
 
-	web_url("Url_2", 
+	web_url("/_2", 
 		"URL=http://{Host_Name}:{Port}/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2956,7 +2955,7 @@ Action_UC01()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("api/checkLogin_2", 
+	web_url("/api/checkLogin_2", 
 		"URL=http://{Host_Name}:{Port}/api/checkLogin", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2966,7 +2965,7 @@ Action_UC01()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("api/user/info_2", 
+	web_url("/api/user/info_2", 
 		"URL=http://{Host_Name}:{Port}/api/user/info", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2976,7 +2975,7 @@ Action_UC01()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("api/ticket/countByState_3", 
+	web_url("/api/ticket/countByState_3", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/4", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2986,7 +2985,7 @@ Action_UC01()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("api/ticket/countByState_4", 
+	web_url("/api/ticket/countByState_4", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -2996,7 +2995,7 @@ Action_UC01()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("api/ticket/countByState_5", 
+	web_url("/api/ticket/countByState_5", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -3006,7 +3005,7 @@ Action_UC01()
 		"Mode=HTML", 
 		"LAST");
 
-	web_custom_request("api/ticket_3", 
+	web_custom_request("/api/ticket_3", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/?state=-1,0,1,5&page=0&size=10", 
 		"Method=GET", 
 		"TargetFrame=", 
@@ -3018,7 +3017,7 @@ Action_UC01()
 		"EncType=application/json; charset=utf-8", 
 		"LAST");
 
-	web_custom_request("api/ticket_4", 
+	web_custom_request("/api/ticket_4", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/?state=-1,0,1,5&page=0&size=10", 
 		"Method=GET", 
 		"TargetFrame=", 
@@ -3036,7 +3035,7 @@ Action_UC01()
 
 	return 0;
 }
-# 6 "c:\\users\\student\\xdesk\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c" 2
+# 6 "d:\\documents\\vugen\\scripts\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c" 2
 
 # 1 "Action_UC03.c" 1
 Action_UC03()
@@ -3044,7 +3043,7 @@ Action_UC03()
 
 	lr_start_transaction("UC03_CT01_Select_Tasks");
 
-	web_url("api/task/countByState_3", 
+	web_url("/api/task/countByState_3", 
 		"URL=http://{Host_Name}:{Port}/api/task/countByState/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -3060,7 +3059,7 @@ Action_UC03()
     	"Ordinal=All",
 		"LAST" );
 		
-	web_custom_request("api/task", 
+	web_custom_request("/api/task", 
 		"URL=http://{Host_Name}:{Port}/api/task/?state=1&page=0&size=10", 
 		"Method=GET", 
 		"TargetFrame=", 
@@ -3080,7 +3079,7 @@ Action_UC03()
 
 	lr_save_string(lr_paramarr_random("taskid"), "taskid_rand");
 	
-	web_url("api/task", 
+	web_url("/api/task", 
 		"URL=http://{Host_Name}:{Port}/api/task/{taskid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -3090,7 +3089,7 @@ Action_UC03()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("api/checkLogin_2", 
+	web_url("/api/checkLogin_2", 
 		"URL=http://{Host_Name}:{Port}/api/checkLogin", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -3100,7 +3099,7 @@ Action_UC03()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("api/ticket_2", 
+	web_url("/api/ticket_2", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/{taskid_rand}/comment/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -3116,7 +3115,7 @@ Action_UC03()
 
 	lr_start_transaction("UC03_CT03_Comment_and_Send");
 
-	web_custom_request("api/ticket_3", 
+	web_custom_request("/api/ticket_3", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/{taskid_rand}/comment/", 
 		"Method=POST", 
 		"TargetFrame=", 
@@ -3129,7 +3128,7 @@ Action_UC03()
 		"Body={\"text\":\"DTelekhin {Comment}\"}", 
 		"LAST");
 
-	web_url("api/ticket_4", 
+	web_url("/api/ticket_4", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/{taskid_rand}/comment/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -3145,7 +3144,7 @@ Action_UC03()
 
 	return 0;
 }
-# 7 "c:\\users\\student\\xdesk\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c" 2
+# 7 "d:\\documents\\vugen\\scripts\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c" 2
 
 # 1 "Action_UC04.c" 1
 Action_UC04()
@@ -3153,7 +3152,7 @@ Action_UC04()
 
 	lr_start_transaction("UC04_CT01_Select_Tasks");
 
-	web_url("api/task/countByState", 
+	web_url("/api/task/countByState", 
 		"URL=http://{Host_Name}:{Port}/api/task/countByState/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -3169,7 +3168,7 @@ Action_UC04()
     	"Ordinal=All",
 		"LAST" );
 		
-	web_custom_request("api/task", 
+	web_custom_request("/api/task", 
 		"URL=http://{Host_Name}:{Port}/api/task/?state=1&page=0&size=10", 
 		"Method=GET", 
 		"TargetFrame=", 
@@ -3189,7 +3188,7 @@ Action_UC04()
 
 	lr_save_string(lr_paramarr_random("taskid"), "taskid_rand");
 	
-	web_url("api/task_2", 
+	web_url("/api/task_2", 
 		"URL=http://{Host_Name}:{Port}/api/task/{taskid_rand}", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -3199,7 +3198,7 @@ Action_UC04()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("api/ticket", 
+	web_url("/api/ticket", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/{taskid_rand}/comment/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -3215,7 +3214,7 @@ Action_UC04()
 
 	lr_start_transaction("UC04_CT03_To_the_Incident");
 
-	web_custom_request("api/ticket_2", 
+	web_custom_request("/api/ticket_2", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/{taskid_rand}", 
 		"Method=GET", 
 		"TargetFrame=", 
@@ -3226,7 +3225,7 @@ Action_UC04()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("api/ticket_3", 
+	web_url("/api/ticket_3", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/{taskid_rand}/comment/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -3242,7 +3241,7 @@ Action_UC04()
 
 	lr_start_transaction("UC04_CT04_Close_Incident");
 
-	web_custom_request("solve", 
+	web_custom_request("/solve", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/{taskid_rand}/solve/", 
 		"Method=POST", 
 		"TargetFrame=", 
@@ -3254,7 +3253,7 @@ Action_UC04()
 		"EncType=", 
 		"LAST");
 
-	web_url("{Host_Name}:{Port}_2", 
+	web_url("/_2", 
 		"URL=http://{Host_Name}:{Port}/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -3263,7 +3262,7 @@ Action_UC04()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("api/user/info_2", 
+	web_url("/api/user/info_2", 
 		"URL=http://{Host_Name}:{Port}/api/user/info", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -3273,7 +3272,7 @@ Action_UC04()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("api/ticket/countByState_3", 
+	web_url("/api/ticket/countByState_3", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/4", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -3283,7 +3282,7 @@ Action_UC04()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("api/ticket/countByState_4", 
+	web_url("/api/ticket/countByState_4", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -3293,7 +3292,7 @@ Action_UC04()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("api/ticket/countByState_5", 
+	web_url("/api/ticket/countByState_5", 
 		"URL=http://{Host_Name}:{Port}/api/task/countByState/", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -3303,7 +3302,7 @@ Action_UC04()
 		"Mode=HTML", 
 		"LAST");
 
-	web_custom_request("api/ticket_4", 
+	web_custom_request("/api/ticket_4", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/?state=-1,0,1,5&page=0&size=10", 
 		"Method=GET", 
 		"TargetFrame=", 
@@ -3315,7 +3314,7 @@ Action_UC04()
 		"EncType=application/json; charset=utf-8", 
 		"LAST");
 
-	web_custom_request("api/task_3", 
+	web_custom_request("/api/task_3", 
 		"URL=http://{Host_Name}:{Port}/api/task/?state=1&page=0&size=10", 
 		"Method=GET", 
 		"TargetFrame=", 
@@ -3333,7 +3332,7 @@ Action_UC04()
 
 	return 0;
 }
-# 8 "c:\\users\\student\\xdesk\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c" 2
+# 8 "d:\\documents\\vugen\\scripts\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c" 2
 
 # 1 "Logout.c" 1
 Logout()
@@ -3349,7 +3348,7 @@ Logout()
 		"Mode=HTML", 
 		"LAST");
 
-	web_url("login_3", 
+	web_url("/login_3", 
 		"URL=http://{Host_Name}:{Port}/login", 
 		"TargetFrame=", 
 		"Resource=0", 
@@ -3363,12 +3362,12 @@ Logout()
 	
 	return 0;
 }
-# 9 "c:\\users\\student\\xdesk\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c" 2
+# 9 "d:\\documents\\vugen\\scripts\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c" 2
 
 # 1 "vuser_end.c" 1
 vuser_end()
 {
 	return 0;
 }
-# 10 "c:\\users\\student\\xdesk\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c" 2
+# 10 "d:\\documents\\vugen\\scripts\\uc05_combined_scripts\\\\combined_UC05_Combined_Scripts.c" 2
 
