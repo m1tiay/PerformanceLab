@@ -54,6 +54,9 @@ Action_UC01()
     	"Ordinal=All",
 		LAST );
 	
+	before_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+	before_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+	
 	web_url("/api/shops", 
 		"URL=http://{Host_Name}:{Port}/api/shops?q=&page=0", 
 		"TargetFrame=", 
@@ -64,6 +67,36 @@ Action_UC01()
 		"Mode=HTML", 
 		LAST);
 
+    responseCode = web_get_int_property(HTTP_INFO_RETURN_CODE);
+    
+    if (responseCode >= 200 || responseCode <= 300) {
+    	success = "true";
+    } else {
+    	success = "false";
+    }
+    
+    responseTime = web_get_int_property(HTTP_INFO_DOWNLOAD_TIME);
+    after_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+    submit_bytes = after_bytes - before_bytes; 
+    after_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+    submit_sentBytes = after_sentBytes - before_sentBytes; 
+    lr_save_timestamp("timeStamp", "DIGITS=16", LAST);
+    
+    sprintf(resultParam,
+            "loadrunner,label=%s,responseCode=%d,success=%s responseTime=%d,bytes=%d,sentBytes=%d,URL=\"%s\" %s000",
+            "/api/shops", responseCode, success, responseTime, submit_bytes, submit_sentBytes,"http://{Host_Name}:{Port}/api/shops?q=&page=0", lr_eval_string("{timeStamp}"));
+	
+    lr_save_string(resultParam, "resultBody");
+    
+    web_custom_request("/write",
+                       "Method=POST",
+                       "URL=http://{Unflux_Host}:{Unflux_Port}/write?db={Unflux_DB}",
+                       "Body={resultBody}",
+                       LAST);
+    
+	before_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+	before_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+	
 	web_url("/api/user/catalog/node/0/children_2", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/node/0/children/", 
 		"TargetFrame=", 
@@ -74,6 +107,33 @@ Action_UC01()
 		"Mode=HTML", 
 		LAST);
 
+    responseCode = web_get_int_property(HTTP_INFO_RETURN_CODE);
+    
+    if (responseCode >= 200 || responseCode <= 300) {
+    	success = "true";
+    } else {
+    	success = "false";
+    }
+    
+    responseTime = web_get_int_property(HTTP_INFO_DOWNLOAD_TIME);
+    after_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+    submit_bytes = after_bytes - before_bytes; 
+    after_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+    submit_sentBytes = after_sentBytes - before_sentBytes; 
+    lr_save_timestamp("timeStamp", "DIGITS=16", LAST);
+    
+    sprintf(resultParam,
+            "loadrunner,label=%s,responseCode=%d,success=%s responseTime=%d,bytes=%d,sentBytes=%d,URL=\"%s\" %s000",
+            "/api/user/catalog/node/0/children_2", responseCode, success, responseTime, submit_bytes, submit_sentBytes,"http://{Host_Name}:{Port}/api/user/catalog/node/0/children/", lr_eval_string("{timeStamp}"));
+	
+    lr_save_string(resultParam, "resultBody");
+    
+    web_custom_request("/write",
+                       "Method=POST",
+                       "URL=http://{Unflux_Host}:{Unflux_Port}/write?db={Unflux_DB}",
+                       "Body={resultBody}",
+                       LAST);
+    
 	lr_save_string(lr_paramarr_random("shopid"), "shopid_rand");
 		
 	web_reg_save_param_regexp (
@@ -81,6 +141,9 @@ Action_UC01()
     	"RegExp=\"parentId\":(.+?),\"parentName\"",
     	"Ordinal=All",
 		LAST );
+	
+	before_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+	before_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
 	
 	web_url("/api/user/catalog/treeview", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/treeview?shopid={shopid_rand}", 
@@ -92,6 +155,33 @@ Action_UC01()
 		"Mode=HTML", 
 		LAST);
 
+    responseCode = web_get_int_property(HTTP_INFO_RETURN_CODE);
+    
+    if (responseCode >= 200 || responseCode <= 300) {
+    	success = "true";
+    } else {
+    	success = "false";
+    }
+    
+    responseTime = web_get_int_property(HTTP_INFO_DOWNLOAD_TIME);
+    after_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+    submit_bytes = after_bytes - before_bytes; 
+    after_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+    submit_sentBytes = after_sentBytes - before_sentBytes; 
+    lr_save_timestamp("timeStamp", "DIGITS=16", LAST);
+    
+    sprintf(resultParam,
+            "loadrunner,label=%s,responseCode=%d,success=%s responseTime=%d,bytes=%d,sentBytes=%d,URL=\"%s\" %s000",
+            "/api/user/catalog/treeview", responseCode, success, responseTime, submit_bytes, submit_sentBytes,"http://{Host_Name}:{Port}/api/user/catalog/treeview?shopid={shopid_rand}", lr_eval_string("{timeStamp}"));
+	
+    lr_save_string(resultParam, "resultBody");
+    
+    web_custom_request("/write",
+                       "Method=POST",
+                       "URL=http://{Unflux_Host}:{Unflux_Port}/write?db={Unflux_DB}",
+                       "Body={resultBody}",
+                       LAST);
+    
 	lr_end_transaction("UC01_CI02_Location",LR_AUTO);
 
 	lr_think_time(ThinkTime);
@@ -122,6 +212,9 @@ Action_UC01()
     	"Ordinal=All",
 		LAST );
 		
+	before_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+	before_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+	
 	web_url("/api/user/catalog_2", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/node/{parentid_rand}/service/", 
 		"TargetFrame=", 
@@ -132,6 +225,36 @@ Action_UC01()
 		"Mode=HTML", 
 		LAST);
 
+    responseCode = web_get_int_property(HTTP_INFO_RETURN_CODE);
+    
+    if (responseCode >= 200 || responseCode <= 300) {
+    	success = "true";
+    } else {
+    	success = "false";
+    }
+    
+    responseTime = web_get_int_property(HTTP_INFO_DOWNLOAD_TIME);
+    after_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+    submit_bytes = after_bytes - before_bytes; 
+    after_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+    submit_sentBytes = after_sentBytes - before_sentBytes; 
+    lr_save_timestamp("timeStamp", "DIGITS=16", LAST);
+    
+    sprintf(resultParam,
+            "loadrunner,label=%s,responseCode=%d,success=%s responseTime=%d,bytes=%d,sentBytes=%d,URL=\"%s\" %s000",
+            "/api/user/catalog_2", responseCode, success, responseTime, submit_bytes, submit_sentBytes,"http://{Host_Name}:{Port}/api/user/catalog/node/{parentid_rand}/service/", lr_eval_string("{timeStamp}"));
+	
+    lr_save_string(resultParam, "resultBody");
+    
+    web_custom_request("/write",
+                       "Method=POST",
+                       "URL=http://{Unflux_Host}:{Unflux_Port}/write?db={Unflux_DB}",
+                       "Body={resultBody}",
+                       LAST);
+    
+	before_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+	before_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+	
 	web_url("/api/user/catalog/breadcrumbs", 
 		"URL=http://{Host_Name}:{Port}/api/user/catalog/breadcrumbs/{parentid_rand}", 
 		"TargetFrame=", 
@@ -142,9 +265,39 @@ Action_UC01()
 		"Mode=HTML", 
 		LAST);
 
+    responseCode = web_get_int_property(HTTP_INFO_RETURN_CODE);
+    
+    if (responseCode >= 200 || responseCode <= 300) {
+    	success = "true";
+    } else {
+    	success = "false";
+    }
+    
+    responseTime = web_get_int_property(HTTP_INFO_DOWNLOAD_TIME);
+    after_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+    submit_bytes = after_bytes - before_bytes; 
+    after_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+    submit_sentBytes = after_sentBytes - before_sentBytes; 
+    lr_save_timestamp("timeStamp", "DIGITS=16", LAST);
+    
+    sprintf(resultParam,
+            "loadrunner,label=%s,responseCode=%d,success=%s responseTime=%d,bytes=%d,sentBytes=%d,URL=\"%s\" %s000",
+            "/api/user/catalog/breadcrumbs", responseCode, success, responseTime, submit_bytes, submit_sentBytes,"http://{Host_Name}:{Port}/api/user/catalog/breadcrumbs/{parentid_rand}", lr_eval_string("{timeStamp}"));
+	
+    lr_save_string(resultParam, "resultBody");
+    
+    web_custom_request("/write",
+                       "Method=POST",
+                       "URL=http://{Unflux_Host}:{Unflux_Port}/write?db={Unflux_DB}",
+                       "Body={resultBody}",
+                       LAST);
+    
 	lr_save_string(lr_paramarr_random("serviceid"), "serviceid_rand");
 	
 	lr_save_string(lr_paramarr_random("servicename"), "servicename_rand");
+	
+	before_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+	before_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
 	
 	web_url("/api/inventoryNumber", 
 		"URL=http://{Host_Name}:{Port}/api/inventoryNumbers?serviceId={serviceid_rand}&shopid={shopid_rand}", 
@@ -156,6 +309,33 @@ Action_UC01()
 		"Mode=HTML", 
 		LAST);
 
+    responseCode = web_get_int_property(HTTP_INFO_RETURN_CODE);
+    
+    if (responseCode >= 200 || responseCode <= 300) {
+    	success = "true";
+    } else {
+    	success = "false";
+    }
+    
+    responseTime = web_get_int_property(HTTP_INFO_DOWNLOAD_TIME);
+    after_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+    submit_bytes = after_bytes - before_bytes; 
+    after_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+    submit_sentBytes = after_sentBytes - before_sentBytes; 
+    lr_save_timestamp("timeStamp", "DIGITS=16", LAST);
+    
+    sprintf(resultParam,
+            "loadrunner,label=%s,responseCode=%d,success=%s responseTime=%d,bytes=%d,sentBytes=%d,URL=\"%s\" %s000",
+            "/api/inventoryNumber", responseCode, success, responseTime, submit_bytes, submit_sentBytes,"http://{Host_Name}:{Port}/api/inventoryNumbers?serviceId={serviceid_rand}&shopid={shopid_rand}", lr_eval_string("{timeStamp}"));
+	
+    lr_save_string(resultParam, "resultBody");
+    
+    web_custom_request("/write",
+                       "Method=POST",
+                       "URL=http://{Unflux_Host}:{Unflux_Port}/write?db={Unflux_DB}",
+                       "Body={resultBody}",
+                       LAST);
+    
 	lr_end_transaction("UC01_CI03_Theme",LR_AUTO);
 
 	lr_think_time(ThinkTime);
@@ -187,6 +367,9 @@ Action_UC01()
     	"NotFound=warning",
 		LAST );
 	
+	before_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+	before_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+	
 	web_url("/api/inventoryNumber_3", 
 		"URL=http://{Host_Name}:{Port}/api/inventoryNumbers?shopid={shopid_rand}&" 
 		"serviceId={serviceid_rand}&serviceId={serviceid_rand}&q=&page=0",
@@ -198,6 +381,33 @@ Action_UC01()
 		"Mode=HTML", 
 		LAST);
 
+    responseCode = web_get_int_property(HTTP_INFO_RETURN_CODE);
+    
+    if (responseCode >= 200 || responseCode <= 300) {
+    	success = "true";
+    } else {
+    	success = "false";
+    }
+    
+    responseTime = web_get_int_property(HTTP_INFO_DOWNLOAD_TIME);
+    after_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+    submit_bytes = after_bytes - before_bytes; 
+    after_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+    submit_sentBytes = after_sentBytes - before_sentBytes; 
+    lr_save_timestamp("timeStamp", "DIGITS=16", LAST);
+    
+    sprintf(resultParam,
+            "loadrunner,label=%s,responseCode=%d,success=%s responseTime=%d,bytes=%d,sentBytes=%d,URL=\"%s\" %s000",
+            "/api/inventoryNumber_3", responseCode, success, responseTime, submit_bytes, submit_sentBytes,"http://{Host_Name}:{Port}/api/inventoryNumbers?shopid={shopid_rand}&", lr_eval_string("{timeStamp}"));
+	
+    lr_save_string(resultParam, "resultBody");
+    
+    web_custom_request("/write",
+                       "Method=POST",
+                       "URL=http://{Unflux_Host}:{Unflux_Port}/write?db={Unflux_DB}",
+                       "Body={resultBody}",
+                       LAST);
+    
 	if (atoi(lr_eval_string("{inventoryid_count}")) > 0)	{
 		lr_save_string(lr_paramarr_random("inventoryid"), "inventoryid_rand");
 	} else {
@@ -210,6 +420,9 @@ Action_UC01()
 
 	lr_start_transaction("UC01_CI06_Create_inc_and_add_description");
 
+	before_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+	before_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+	
 	web_custom_request("/api/ticket_2", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/", 
 		"Method=POST", 
@@ -228,6 +441,33 @@ Action_UC01()
 		"\"shopId\":\"{shopid_rand}\"}",
 		LAST);
 
+    responseCode = web_get_int_property(HTTP_INFO_RETURN_CODE);
+    
+    if (responseCode >= 200 || responseCode <= 300) {
+    	success = "true";
+    } else {
+    	success = "false";
+    }
+    
+    responseTime = web_get_int_property(HTTP_INFO_DOWNLOAD_TIME);
+    after_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+    submit_bytes = after_bytes - before_bytes; 
+    after_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+    submit_sentBytes = after_sentBytes - before_sentBytes; 
+    lr_save_timestamp("timeStamp", "DIGITS=16", LAST);
+    
+    sprintf(resultParam,
+            "loadrunner,label=%s,responseCode=%d,success=%s responseTime=%d,bytes=%d,sentBytes=%d,URL=\"%s\" %s000",
+            "/api/ticket_2", responseCode, success, responseTime, submit_bytes, submit_sentBytes,"http://{Host_Name}:{Port}/api/ticket/", lr_eval_string("{timeStamp}"));
+	
+    lr_save_string(resultParam, "resultBody");
+    
+    web_custom_request("/write",
+                       "Method=POST",
+                       "URL=http://{Unflux_Host}:{Unflux_Port}/write?db={Unflux_DB}",
+                       "Body={resultBody}",
+                       LAST);
+    
 	lr_end_transaction("UC01_CI06_Create_inc_and_add_description",LR_AUTO);
 
 	lr_think_time(ThinkTime);
@@ -243,6 +483,9 @@ Action_UC01()
 		"Mode=HTML", 
 		LAST);
 
+	before_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+	before_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+	
 	web_url("/api/checkLogin_2", 
 		"URL=http://{Host_Name}:{Port}/api/checkLogin", 
 		"TargetFrame=", 
@@ -253,6 +496,36 @@ Action_UC01()
 		"Mode=HTML", 
 		LAST);
 
+    responseCode = web_get_int_property(HTTP_INFO_RETURN_CODE);
+    
+    if (responseCode >= 200 || responseCode <= 300) {
+    	success = "true";
+    } else {
+    	success = "false";
+    }
+    
+    responseTime = web_get_int_property(HTTP_INFO_DOWNLOAD_TIME);
+    after_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+    submit_bytes = after_bytes - before_bytes; 
+    after_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+    submit_sentBytes = after_sentBytes - before_sentBytes; 
+    lr_save_timestamp("timeStamp", "DIGITS=16", LAST);
+    
+    sprintf(resultParam,
+            "loadrunner,label=%s,responseCode=%d,success=%s responseTime=%d,bytes=%d,sentBytes=%d,URL=\"%s\" %s000",
+            "/api/checkLogin_2", responseCode, success, responseTime, submit_bytes, submit_sentBytes,"http://{Host_Name}:{Port}/api/checkLogin", lr_eval_string("{timeStamp}"));
+	
+    lr_save_string(resultParam, "resultBody");
+    
+    web_custom_request("/write",
+                       "Method=POST",
+                       "URL=http://{Unflux_Host}:{Unflux_Port}/write?db={Unflux_DB}",
+                       "Body={resultBody}",
+                       LAST);
+    
+	before_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+	before_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+	
 	web_url("/api/user/info_2", 
 		"URL=http://{Host_Name}:{Port}/api/user/info", 
 		"TargetFrame=", 
@@ -263,6 +536,33 @@ Action_UC01()
 		"Mode=HTML", 
 		LAST);
 
+    responseCode = web_get_int_property(HTTP_INFO_RETURN_CODE);
+    
+    if (responseCode >= 200 || responseCode <= 300) {
+    	success = "true";
+    } else {
+    	success = "false";
+    }
+    
+    responseTime = web_get_int_property(HTTP_INFO_DOWNLOAD_TIME);
+    after_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+    submit_bytes = after_bytes - before_bytes; 
+    after_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+    submit_sentBytes = after_sentBytes - before_sentBytes; 
+    lr_save_timestamp("timeStamp", "DIGITS=16", LAST);
+    
+    sprintf(resultParam,
+            "loadrunner,label=%s,responseCode=%d,success=%s responseTime=%d,bytes=%d,sentBytes=%d,URL=\"%s\" %s000",
+            "/api/user/info_2", responseCode, success, responseTime, submit_bytes, submit_sentBytes,"http://{Host_Name}:{Port}/api/user/info", lr_eval_string("{timeStamp}"));
+	
+    lr_save_string(resultParam, "resultBody");
+    
+    web_custom_request("/write",
+                       "Method=POST",
+                       "URL=http://{Unflux_Host}:{Unflux_Port}/write?db={Unflux_DB}",
+                       "Body={resultBody}",
+                       LAST);
+    
 	web_url("/api/ticket/countByState_3", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/countByState/4", 
 		"TargetFrame=", 
@@ -293,6 +593,9 @@ Action_UC01()
 		"Mode=HTML", 
 		LAST);
 
+	before_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+	before_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+	
 	web_custom_request("/api/ticket_3", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/?state=-1,0,1,5&page=0&size=10", 
 		"Method=GET", 
@@ -305,6 +608,36 @@ Action_UC01()
 		"EncType=application/json; charset=utf-8", 
 		LAST);
 
+    responseCode = web_get_int_property(HTTP_INFO_RETURN_CODE);
+    
+    if (responseCode >= 200 || responseCode <= 300) {
+    	success = "true";
+    } else {
+    	success = "false";
+    }
+    
+    responseTime = web_get_int_property(HTTP_INFO_DOWNLOAD_TIME);
+    after_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+    submit_bytes = after_bytes - before_bytes; 
+    after_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+    submit_sentBytes = after_sentBytes - before_sentBytes; 
+    lr_save_timestamp("timeStamp", "DIGITS=16", LAST);
+    
+    sprintf(resultParam,
+            "loadrunner,label=%s,responseCode=%d,success=%s responseTime=%d,bytes=%d,sentBytes=%d,URL=\"%s\" %s000",
+            "/api/ticket_3", responseCode, success, responseTime, submit_bytes, submit_sentBytes,"http://{Host_Name}:{Port}/api/ticket/?state=-1,0,1,5&page=0&size=10", lr_eval_string("{timeStamp}"));
+	
+    lr_save_string(resultParam, "resultBody");
+    
+    web_custom_request("/write",
+                       "Method=POST",
+                       "URL=http://{Unflux_Host}:{Unflux_Port}/write?db={Unflux_DB}",
+                       "Body={resultBody}",
+                       LAST);
+    
+	before_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+	before_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+	
 	web_custom_request("/api/ticket_4", 
 		"URL=http://{Host_Name}:{Port}/api/ticket/?state=-1,0,1,5&page=0&size=10", 
 		"Method=GET", 
@@ -317,6 +650,33 @@ Action_UC01()
 		"EncType=application/json; charset=utf-8", 
 		LAST);
 
+    responseCode = web_get_int_property(HTTP_INFO_RETURN_CODE);
+    
+    if (responseCode >= 200 || responseCode <= 300) {
+    	success = "true";
+    } else {
+    	success = "false";
+    }
+    
+    responseTime = web_get_int_property(HTTP_INFO_DOWNLOAD_TIME);
+    after_bytes = web_get_int_property(HTTP_INFO_TOTAL_RESPONSE_STAT);
+    submit_bytes = after_bytes - before_bytes; 
+    after_sentBytes = web_get_int_property(HTTP_INFO_TOTAL_REQUEST_STAT);
+    submit_sentBytes = after_sentBytes - before_sentBytes; 
+    lr_save_timestamp("timeStamp", "DIGITS=16", LAST);
+    
+    sprintf(resultParam,
+            "loadrunner,label=%s,responseCode=%d,success=%s responseTime=%d,bytes=%d,sentBytes=%d,URL=\"%s\" %s000",
+            "/api/ticket_4", responseCode, success, responseTime, submit_bytes, submit_sentBytes,"http://{Host_Name}:{Port}/api/ticket/?state=-1,0,1,5&page=0&size=10", lr_eval_string("{timeStamp}"));
+	
+    lr_save_string(resultParam, "resultBody");
+    
+    web_custom_request("/write",
+                       "Method=POST",
+                       "URL=http://{Unflux_Host}:{Unflux_Port}/write?db={Unflux_DB}",
+                       "Body={resultBody}",
+                       LAST);
+    
 	lr_end_transaction("UC01_CI07_Confirm",LR_AUTO);
 
 	lr_think_time(ThinkTime);

@@ -1,7 +1,0 @@
-Notify: JDK found at C:/Program Files (x86)/Java/jdk1.8.0_231	[MsgId: MMSG-22194]	[MsgId: MMSG-22986]
-Error: D:\Documents\VuGen\Scripts\UC02_Change_Status\Actions.java:92: error: cannot find symbol	[MsgId: MERR-22986]
-Error: 				connection.rollback();	[MsgId: MERR-22986]
-Error: 				^	[MsgId: MERR-22986]
-Error:   symbol:   variable connection	[MsgId: MERR-22986]
-Error:   location: class Actions	[MsgId: MERR-22986]
-Error: 1 error	[MsgId: MERR-22986]

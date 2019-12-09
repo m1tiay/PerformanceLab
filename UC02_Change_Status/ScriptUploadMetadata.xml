@@ -14,8 +14,8 @@
     <FileEntry Name="UC02_Change_Status.prm" Filter="2" />
     <FileEntry Name="Host_Name.dat" Filter="2" />
     <FileEntry Name="Username.dat" Filter="2" />
-    <FileEntry Name="149084689440.idx" Filter="1" />
-    <FileEntry Name="159545210440.idx" Filter="1" />
+    <FileEntry Name="148301218440.idx" Filter="1" />
+    <FileEntry Name="92697316440.idx" Filter="1" />
     <FileEntry Name="Action.c" Filter="1" />
     <FileEntry Name="Actions.class" Filter="1" />
     <FileEntry Name="Actions.java.bak" Filter="1" />
@@ -36,6 +36,7 @@
     <FileEntry Name="OutputColoringDatabase.json" Filter="1" />
     <FileEntry Name="ReplaySummaryReport.xml" Filter="1" />
     <FileEntry Name="ScriptUploadMetadata.xml" Filter="1" />
+    <FileEntry Name="TransactionsData.db" Filter="1" />
     <FileEntry Name="UC02_Change_Status.prm.bak" Filter="1" />
     <FileEntry Name="UserTasks.xml" Filter="1" />
     <FileEntry Name="vuser_end.c" Filter="1" />

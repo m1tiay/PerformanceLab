@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------
 // Global Variables
 
-int ThinkTime = 5;
+int ThinkTime = 15;
 int responseCode;
 char * success;
 int responseTime;

@@ -24,24 +24,34 @@
     <FileEntry Name="Username.dat" Filter="2" />
     <FileEntry Name="combined_UC05_Combined_Scripts.c" Filter="2" />
     <FileEntry Name="pre_cci.c" Filter="2" />
-    <FileEntry Name="104154662440.idx" Filter="1" />
-    <FileEntry Name="10578050440.idx" Filter="1" />
-    <FileEntry Name="224722806440.idx" Filter="1" />
-    <FileEntry Name="264966858440.idx" Filter="1" />
-    <FileEntry Name="60290424440.idx" Filter="1" />
+    <FileEntry Name="14803434440.idx" Filter="1" />
+    <FileEntry Name="153733108440.idx" Filter="1" />
+    <FileEntry Name="216086523440.idx" Filter="1" />
+    <FileEntry Name="21608652344_AQS.195.idx" Filter="1" />
+    <FileEntry Name="21608652344_CXo.753.idx" Filter="1" />
+    <FileEntry Name="21608652344_FN5.171.idx" Filter="1" />
+    <FileEntry Name="21608652344_HBP.893.idx" Filter="1" />
+    <FileEntry Name="21608652344_Vlr.905.idx" Filter="1" />
+    <FileEntry Name="21608652344_YZU.161.idx" Filter="1" />
+    <FileEntry Name="251628884440.idx" Filter="1" />
+    <FileEntry Name="5971189440.idx" Filter="1" />
     <FileEntry Name="Bookmarks.xml" Filter="1" />
     <FileEntry Name="Breakpoints.xml" Filter="1" />
     <FileEntry Name="CompilerLogMetadata.xml" Filter="1" />
     <FileEntry Name="custom_body_variables.txt" Filter="1" />
     <FileEntry Name="logfile.log" Filter="1" />
     <FileEntry Name="lrw_custom_body.h" Filter="1" />
+    <FileEntry Name="mdrv.log" Filter="1" />
     <FileEntry Name="mdrv_cmd.txt" Filter="1" />
     <FileEntry Name="options.txt" Filter="1" />
     <FileEntry Name="output.bak" Filter="1" />
     <FileEntry Name="output.txt" Filter="1" />
     <FileEntry Name="OutputColoringDatabase.json" Filter="1" />
+    <FileEntry Name="replay.har" Filter="1" />
     <FileEntry Name="ReplaySummaryReport.xml" Filter="1" />
     <FileEntry Name="ScriptUploadMetadata.xml" Filter="1" />
+    <FileEntry Name="shunra.shunra" Filter="1" />
+    <FileEntry Name="TransactionsData.db" Filter="1" />
     <FileEntry Name="UC05_Combined_Scripts.c.pickle" Filter="1" />
     <FileEntry Name="UC05_Combined_Scripts.ci" Filter="1" />
     <FileEntry Name="UC05_Combined_Scripts.prm.bak" Filter="1" />
